@@ -1,0 +1,64 @@
+* Actual working space
+- http://bettermotherfuckingwebsite.com/
+- https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/
+
+  
+** On sidenotes
+- https://www.inkandswitch.com/local-first.html#git
+
+** On main page
+- https://themes.gohugo.io/theme/academic/
+- https://stackoverflow.com/questions/4538447/how-to-create-two-columns-on-a-web-page
+- 
+* Current project TODOs
+** TODO Make menus responsive
+ [2020-11-10 Tue 22:41]
+(see =.css=, I guess) -- so the top menu would work on a phone.
+** TODO Review site accessibility
+ [2020-11-10 Tue 22:49]
+
+ Especially footer and header.
+** TODO Automate footer/header social icons
+ [2020-11-10 Tue 23:02]
+
+ Sometime, for the theme...
+** TODO Create tags indices
+ [2020-11-13 Fri 09:34]
+
+ must be automatic, though
+** TODO href CSS
+ [2020-11-13 Fri 09:36]
+
+ main look and hover.
+** TODO Metadata block CSS
+ [2020-11-13 Fri 09:36]
+
+ Smaller fonts, gray (deaccent).
+** TODO Main page with photo
+ [2020-11-13 Fri 09:37]
+
+ (two cols layout)
+** TODO Research page with the INFORMS talk.
+ [2020-11-13 Fri 09:37]
+** TODO Create Archive page
+ [2020-11-13 Fri 09:37]
+ [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::</div>]]
+** TODO Create GPG page and the necessary keys.
+ [2020-11-13 Fri 09:38]
+** TODO Contacts page
+ [2020-11-13 Fri 09:38]
+ [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::</p>]]
+** TODO Floating TOC and such bells.
+ [2020-11-13 Fri 09:38]
+** TODO Sidenotes and a shortcode for that.
+ [2020-11-13 Fri 09:38]
+** TODO Metapost
+ [2020-11-13 Fri 09:40]
+** TODO Relevant footer
+ [2020-11-13 Fri 09:40]
+ [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::<br/>]]
+** TODO Disclaimer, terms and such technical pages
+ [2020-11-13 Fri 09:40]
+ (I have these already, I believe)
+** TODO Custom 404 page!
+ [2020-11-13 Fri 09:42]

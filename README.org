@@ -1,0 +1,9 @@
+* Personal website source
+
+This is home for my personal website source code. The theme is made from scratch
+with [[https://gohugo.io][Hugo]], powered by [[https://ox-hugo.scripter.co/][ox-hugo]] to author content with the wonderful and
+all-mighty [[https://orgmode.org/][orgmode]]. Uses SVG icons by [[https://svgrepo.com][svgrepo]].
+
+In case you have noticed a typo, or have any other suggestion or comment ---
+please open an issue here in the repo, or [[https://www.bochkarev.io/contact][contact]] me in any other
+convenient way.

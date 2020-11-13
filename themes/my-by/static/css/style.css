@@ -1,0 +1,117 @@
+/* Color scheme */
+:root {
+    --main-accent: #000080; /* navy blue */
+    --shadow: #d3d3d3;
+    --dark-shadow: #7e7e7e;
+    --main-bg: #FAF0E6 /* ivory */
+}
+
+/* Elements' parameters */
+
+nav-menu {
+    color: var(--main-accent);
+    margin: 0 0 0 0;
+}
+.text-center {
+    text-align: center;
+}
+
+/* Styling horizontal lines */
+hr.topline {
+    border: 5px solid var(--main-accent);
+    border-radius: 1px;
+    margin: 0 0 0 0;
+}
+
+/* Some general parameters */
+
+div.site-footer {
+    border-top-color: var(--dark-shadow);
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: var(--dark-shadow);
+}
+
+.footer-text {
+    margin-left: 10%;
+}
+
+/* navigation top panel */
+a.nav-link {
+    padding: 5px;
+    color: var(--main-accent);
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    color: var(--main-bg);
+    background-color: var(--main-accent);
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.menu {
+    text-align: center;
+    float: center;
+}
+
+/* sticky top menu */
+.row {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nav-icon-link {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: inherit;
+    color: inherit;
+    vertical-align: -0.125em;
+    fill: currentColor;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+/* note block (metadata) */
+.note-block {
+    border-left-color: var(--main-accent);
+    border-left-style: solid;
+    border-left-width: 3px;
+    padding-left: 10px;
+}
+
+/* general parameters */
+.main-text {
+    margin-left: 20%;
+    max-width: 70ch;
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    background: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+/* sticky footer */
+html, body {
+    height: 100%;
+}
+.container {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}

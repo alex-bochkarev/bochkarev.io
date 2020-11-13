@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "2006-01-02" }}
+    <div class="main-text">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        {{ range .Pages.ByPublishDate.Reverse }}
+            <div class="note-block">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> <!-- class="title"  -->
+                [ 𝚺 ] {{ .Summary }}
+                <p>
+                <div class="nav-icon-link">
+                    <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#i-date"></use></svg>
+                </div>
+                Last update: <time datetime="{{ $dateTime }}">{{ .Lastmod.Format $dateFormat }}</time>.
+                {{ with .Params.tags }}
+                    Tags: 
+                    {{ range . }}
+                        {{ $href := print (absURL "tags/") (urlize .) }}
+                        [<a href="{{ $href }}">#{{ . }}</a>]
+                    {{ end }}
+                {{ end }}
+                </p>
+            </div>
+        {{ end }}
+    </div>
+{{ end }}

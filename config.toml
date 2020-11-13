@@ -1,0 +1,67 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+theme = "my-by"
+
+title = "A.B."
+
+[Author]
+    name = "Alexey A. Bochkarev"
+
+# General parameters
+[params]
+    AuthorName = "Alexey A. Bochkarev"
+    emlString = "we<!-- zog -->b@<!-- several -->bo<!-- words -->chkarev<!-- this -->.<!-- not an Indian ocean -->io"
+    twitter = "a_bochka"
+    github = "alex-bochkarev"
+    keybase = "bochkarev"
+    tg = "abochka"
+
+# Menu
+[menu]
+    # Main topline menu
+    [[menu.main]]
+      name = "Me"
+      url = "/"
+      weight = 1
+    [[menu.main]]
+      name = "Research"
+      url = "/research/"
+      weight = 2
+    [[menu.main]]
+      name = "Tools"
+      url = "/tools/"
+      weight = 3
+    [[menu.main]]
+      name = "Edu"
+      url = "/edu/"
+      weight = 4
+    [[menu.main]]
+      name = "Contact"
+      url = "/contact/"
+      weight = 5
+    [[menu.main]]
+      name = "(Archive)"
+      url = "/arc/"
+      weight = 6
+
+    # Icons top-right-corner menu
+    [[menu.side]]
+      name="i-envelope"
+      url="mailto:web@bochkarev.io"
+      weight=1
+    [[menu.side]]
+      name="i-key"
+      url="/gpg"
+      weight=1
+    [[menu.side]]
+      name="i-twitter"
+      url="https://twitter.com/a_bochka"
+      weight=3
+    [[menu.side]]
+      name="i-gh"
+      url="https://github.com/alex-bochkarev"
+      weight=4
+    [[menu.side]]
+      name="i-keybase"
+      url="https://keybase.io/bochkarev"
+      weight=5

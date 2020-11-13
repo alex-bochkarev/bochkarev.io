@@ -1,0 +1,17 @@
+<div id="nav-panel" class="row">
+    <hr class="topline"/>
+    <div class="menu">
+        :::
+        {{ range .Site.Menus.main }}
+        <a class="nav-link" href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+        </a>
+        ::{{ end }}:
+        {{ range .Site.Menus.side }}
+            <a class="nav-link nav-icon-link" href="{{ .URL }}">
+                <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#{{.Name}}"></use></svg>
+            </a>
+        {{ end }}
+    </div>
+</div>
