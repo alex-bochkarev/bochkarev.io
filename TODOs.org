@@ -26,10 +26,12 @@
  [2020-11-13 Fri 09:34]
 
  must be automatic, though
-** TODO href CSS
+** DONE href CSS
+   CLOSED: [2020-11-13 Fri 23:06]
  [2020-11-13 Fri 09:36]
-
  main look and hover.
+** TODO link/href icons
+wikipedia, github, local, external.
 ** TODO Metadata block CSS
  [2020-11-13 Fri 09:36]
 
@@ -62,3 +64,13 @@
  (I have these already, I believe)
 ** TODO Custom 404 page!
  [2020-11-13 Fri 09:42]
+** TODO Make sticky menu look better (no overlay, maybe?)
+ [2020-11-13 Fri 10:30]
+** TODO Deal with long lines in =src= blocks.
+ [2020-11-13 Fri 10:30]
+** TODO Implement the =pi= button :)
+ [2020-11-13 Fri 10:33]
+ [[file:~/projects/bochkarev.io/TODOs.org::*Deal with long lines in =src= blocks.][Deal with long lines in =src= blocks.]]
+** TODO Transfer custom css classes from the previous edition
+ [2020-11-13 Fri 10:34]
+ Mostly dealing with images.

@@ -3,7 +3,7 @@
     --main-accent: #000080; /* navy blue */
     --shadow: #d3d3d3;
     --dark-shadow: #7e7e7e;
-    --main-bg: #FAF0E6 /* ivory */
+    --main-bg: #FFFFF0 /* ivory */
 }
 
 /* Elements' parameters */
@@ -50,6 +50,23 @@ a.nav-link:hover {
     border-radius: 2px;
 }
 
+/* normal links */
+
+a:not(.nav-link){
+    color: var(--main-accent);
+    border-top: 1px dashed var(--main-accent);
+    border-bottom: 1px dashed var(--main-accent);
+    text-decoration: none;
+    padding: 2px;
+}
+a:hover:not(.nav-link) {
+    color: var(--main-bg);
+    background-color: var(--main-accent);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+/* menu style */
 .menu {
     text-align: center;
     float: center;
@@ -82,12 +99,15 @@ a.nav-link:hover {
 
 /* note block (metadata) */
 .note-block {
-    border-left-color: var(--main-accent);
+    border-left-color: var(--shadow);
     border-left-style: solid;
     border-left-width: 3px;
     padding-left: 10px;
 }
 
+.metadata {
+    font-size: 70%;
+}
 /* general parameters */
 .main-text {
     margin-left: 20%;

@@ -8,19 +8,19 @@
             <div class="note-block">
                 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> <!-- class="title"  -->
                 [ 𝚺 ] {{ .Summary }}
-                <p>
-                <div class="nav-icon-link">
-                    <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#i-date"></use></svg>
-                </div>
-                Last update: <time datetime="{{ $dateTime }}">{{ .Lastmod.Format $dateFormat }}</time>.
-                {{ with .Params.tags }}
-                    Tags: 
-                    {{ range . }}
-                        {{ $href := print (absURL "tags/") (urlize .) }}
-                        [<a href="{{ $href }}">#{{ . }}</a>]
+                <div class="metadata">
+                    <div class="nav-icon-link">
+                        <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#i-date"></use></svg>
+                    </div>
+                    Last update: <time datetime="{{ $dateTime }}">{{ .Lastmod.Format $dateFormat }}</time>.
+                    {{ with .Params.tags }}
+                        Tags: 
+                        {{ range . }}
+                            {{ $href := print (absURL "tags/") (urlize .) }}
+                            [<a href="{{ $href }}">#{{ . }}</a>]
+                        {{ end }}
                     {{ end }}
-                {{ end }}
-                </p>
+                </div>
             </div>
         {{ end }}
     </div>
