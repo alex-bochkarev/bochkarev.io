@@ -42,8 +42,6 @@ PDF, Source, etc.
  [2020-11-13 Fri 09:38]
 ** TODO Contacts page
  [2020-11-13 Fri 09:38]
-** TODO Floating TOC and such bells.
- [2020-11-13 Fri 09:38]
 ** TODO Sidenotes and a shortcode for that.
  [2020-11-13 Fri 09:38]
 ** TODO Metapost
@@ -56,20 +54,27 @@ PDF, Source, etc.
  (I have these already, I believe)
 ** TODO Custom 404 page!
  [2020-11-13 Fri 09:42]
-** TODO Deal with long lines in =src= blocks.
- [2020-11-13 Fri 10:30]
 ** TODO Implement the =pi= button :)
  [2020-11-13 Fri 10:33]
  [[file:~/projects/bochkarev.io/TODOs.org::*Deal with long lines in =src= blocks.][Deal with long lines in =src= blocks.]]
-** TODO Transfer custom css classes from the previous edition
+** DONE Floating TOC and such bells.
+   CLOSED: [2020-11-14 Sat 23:45]
+ [2020-11-13 Fri 09:38]
+** DONE Deal with long lines in =src= blocks.
+   CLOSED: [2020-11-14 Sat 23:21]
+ [2020-11-13 Fri 10:30]
+** DONE Transfer custom css classes from the previous edition
+   CLOSED: [2020-11-14 Sat 23:20]
  [2020-11-13 Fri 10:34]
  Mostly dealing with images.
-** TODO Source code blocks
+** DONE Tables CSS (nice one)
+   CLOSED: [2020-11-14 Sat 23:20]
+** DONE Source code blocks
+   CLOSED: [2020-11-14 Sat 23:20]
 - long lines;
 - expand on hover;
 - padding;
 - (maybe lang name?)
-** TODO Tables CSS (nice one)
 ** DONE Metadata block CSS
    CLOSED: [2020-11-14 Sat 22:46]
  [2020-11-13 Fri 09:36]

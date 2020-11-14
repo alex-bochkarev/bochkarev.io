@@ -198,6 +198,16 @@ code:not([class*=language]) {
     font-family: monospace, monospace;
 }
 
+div.highlight > pre {
+    padding: 10px;
+    overflow-x: auto;
+}
+
+div.highlight:hover {
+    width: 100wv;
+    margin-right: calc(-50vw + 20%);
+}
+
 /* table styling */
 table {
     border-collapse: collapse;
@@ -216,4 +226,48 @@ table th {
 table td {
     padding: 10px;
     border: 1px solid var(--shadow);
+}
+
+/* Table of Contents */
+/* Inspired by: https://alhassy.github.io/AlBasmala#org9da168d */
+/*TOC inspired by https://orgmode.org/worg/ */
+#table-of-contents {
+    /* Place the toc in the top right corner */
+    position: fixed; left: 1em; top: 0em;
+    margin-top: 50px; /* offset from the top of the screen */
+    background-color: var(--main-bg);
+
+    /* It shrinks and grows as necessary */
+    padding: 0em  !important;
+    width: auto !important;
+    min-width: auto !important;
+
+    box-shadow: 0 0 1em var(--shadow);
+
+    /* Ensure doesn't flow off the screen when expanded */
+    max-height: 80%;
+    overflow: auto;
+}
+
+/* How big is the text “Table of Contents” and space around it */
+#table-of-contents h2 {
+    font-size: 13pt;
+    max-width: 9em;
+    border: 0;
+    font-weight: normal;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.05em;
+    padding-bottom: 0.05em; }
+
+/* Intially have the TOC folded up; show it if the mouse hovers it */
+#table-of-contents #text-table-of-contents {
+    display: none;
+    text-align: left;
+}
+
+#table-of-contents:hover #text-table-of-contents {
+    display: block;
+    padding: 0.5em;
+    margin-top: -1.5em;
 }
