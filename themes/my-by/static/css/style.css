@@ -39,6 +39,7 @@ div.site-footer {
 /* navigation top panel */
 a.nav-link {
     padding: 5px;
+    border-radius: 2px;
     color: var(--main-accent);
     text-decoration: none;
 }
@@ -47,7 +48,7 @@ a.nav-link:hover {
     color: var(--main-bg);
     background-color: var(--main-accent);
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 /* normal links */
@@ -108,6 +109,7 @@ a:hover::before
 .row {
     position: -webkit-sticky; /* Safari */
     position: sticky;
+    background-color: var(--main-bg);
     top: 0;
 }
 
@@ -143,7 +145,7 @@ a:hover::before
 /* general parameters */
 .main-text {
     margin-left: 20%;
-    max-width: 70ch;
+    max-width: 60ch;
 }
 
 body {
@@ -166,4 +168,14 @@ html, body {
 
 .footer {
     flex-shrink: 0;
+}
+
+/* some image classes */
+img[src*="#half-shadow"] {
+    max-width: 50%;
+    margin: 0px auto;
+	  box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.3); /* outer shadow */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

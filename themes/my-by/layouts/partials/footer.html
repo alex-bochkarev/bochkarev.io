@@ -1,5 +1,5 @@
 <div class="site-footer">
-    <p class="footer-text nav-link">Copyright (c) 2018&mdash;{{ now.Format "2006"}} {{ .Site.Author.name }}
+    <p class="footer-text nav-link">Copyright (c) 2018&mdash;{{ now.Format "2006"}} <b><a class="nav-link" href="/">{{ .Site.Author.name }}</a></b>
         <br/>
         {{ .Site.Params.emlString | safeHTML }} | <a href="/gpg">GPG</a> | <a class="nav-link" href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a> | <a class="nav-link" href="https://github.com/{{ .Site.Params.github }}">Github</a> | <a class="nav-link" href="https://keybase.io/{{ .Site.Params.keybase }}">Keybase</a> | <a class="nav-link" href="https://t.me/{{ .Site.Params.tg }}">Telegram</a>
     </p>

@@ -26,16 +26,13 @@
  [2020-11-13 Fri 09:34]
 
  must be automatic, though
-** DONE href CSS
-   CLOSED: [2020-11-13 Fri 23:06]
- [2020-11-13 Fri 09:36]
- main look and hover.
-** TODO link/href icons
-wikipedia, github, local, external.
 ** TODO Metadata block CSS
  [2020-11-13 Fri 09:36]
 
  Smaller fonts, gray (deaccent).
+** TODO Metadata: introduce stickers
+PDF, Source, etc.
+
 ** TODO Main page with photo
  [2020-11-13 Fri 09:37]
 
@@ -49,7 +46,6 @@ wikipedia, github, local, external.
  [2020-11-13 Fri 09:38]
 ** TODO Contacts page
  [2020-11-13 Fri 09:38]
- [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::</p>]]
 ** TODO Floating TOC and such bells.
  [2020-11-13 Fri 09:38]
 ** TODO Sidenotes and a shortcode for that.
@@ -64,8 +60,6 @@ wikipedia, github, local, external.
  (I have these already, I believe)
 ** TODO Custom 404 page!
  [2020-11-13 Fri 09:42]
-** TODO Make sticky menu look better (no overlay, maybe?)
- [2020-11-13 Fri 10:30]
 ** TODO Deal with long lines in =src= blocks.
  [2020-11-13 Fri 10:30]
 ** TODO Implement the =pi= button :)
@@ -74,3 +68,19 @@ wikipedia, github, local, external.
 ** TODO Transfer custom css classes from the previous edition
  [2020-11-13 Fri 10:34]
  Mostly dealing with images.
+** TODO Source code blocks
+- long lines;
+- expand on hover;
+- padding;
+- (maybe lang name?)
+** TODO Tables CSS (nice one)
+** DONE link/href icons
+   CLOSED: [2020-11-14 Sat 18:04]
+wikipedia, github, local, external.
+** DONE Make sticky menu look better (no overlay, maybe?)
+   CLOSED: [2020-11-14 Sat 18:16]
+ [2020-11-13 Fri 10:30]
+** DONE href CSS
+   CLOSED: [2020-11-13 Fri 23:06]
+ [2020-11-13 Fri 09:36]
+ main look and hover.
