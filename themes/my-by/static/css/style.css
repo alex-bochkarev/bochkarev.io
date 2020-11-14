@@ -77,7 +77,10 @@ a[href*="wikipedia.org"]:not(.nav-link)::before {
     vertical-align: -30%;
 }
 
-a[href*="bochkarev.io"]:not(.nav-link)::before {
+a[href*="bochkarev.io"]:not(.nav-link)::before,
+a[href^="/"]:not(.nav-link)::before,
+a[href^="#"]:not(.nav-link):not(.footnote-backref):not(.footnote-ref)::before
+{
     content: '§ '
 }
 
@@ -91,6 +94,7 @@ a:not([href*='bochkarev.io']):not([href^='#']):not([href^='/']):not([href*="gith
 a:hover::before
 {
     filter: invert(100%);
+    color: var(--main-accent);
 }
 
 

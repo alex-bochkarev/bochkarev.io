@@ -17,7 +17,7 @@
                         Tags: 
                         {{ range . }}
                             {{ $href := print (absURL "tags/") (urlize .) }}
-                            [<a href="{{ $href }}">#{{ . }}</a>]
+                            <a class="nav-link" href="{{ $href }}">#{{ . }}</a>
                         {{ end }}
                     {{ end }}
                 </div>

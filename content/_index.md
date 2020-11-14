@@ -9,5 +9,6 @@ tags: ["foo", "bar"]
 This is my main page. `here`.
 
 My website is [here](https://bochkarev.io "tooltip").
+Now here I have [relative current page](#test-this) link.
 
 Another link is [this one](www.ya.ru).
