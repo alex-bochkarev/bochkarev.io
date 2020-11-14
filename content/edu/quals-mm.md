@@ -9,15 +9,15 @@ profile: false
 summary: "An attempt to summarize some key OR concepts, inspired by the IE/OR Qualifying exams scope in 2019. Designed as an easy-to-overview mindmap."
 links:
   - icon_pack: fas
-    icon: file-pdf
+    icon: i-tg
     name: "Deterministic"
     url: post/2019-05-27-quals_mm/1_Deterministic_OR.pdf
   - icon_pack: fas
-    icon: file-pdf
+    icon: i-tg
     name: "Stochastic"
     url: "post/2019-05-27-quals_mm/2_Stochastic_OR.pdf"
   - icon_pack: fab
-    icon: github
+    icon: i-gh
     name: "Source"
     url: "https://github.com/alex-bochkarev/OR_mmap"
 ---

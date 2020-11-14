@@ -14,6 +14,7 @@
 ** TODO Make menus responsive
  [2020-11-10 Tue 22:41]
 (see =.css=, I guess) -- so the top menu would work on a phone.
+seems like there is a manual: https://w3bits.com/css-html-menu/
 ** TODO Review site accessibility
  [2020-11-10 Tue 22:49]
 
@@ -26,9 +27,6 @@
  [2020-11-13 Fri 09:34]
 
  must be automatic, though
-** TODO Metadata: introduce stickers
-PDF, Source, etc.
-
 ** TODO Main page with photo
  [2020-11-13 Fri 09:37]
 
@@ -57,6 +55,14 @@ PDF, Source, etc.
 ** TODO Implement the =pi= button :)
  [2020-11-13 Fri 10:33]
  [[file:~/projects/bochkarev.io/TODOs.org::*Deal with long lines in =src= blocks.][Deal with long lines in =src= blocks.]]
+** TODO Correct sticker icons
+(add as necessary)
+** TODO Correct local links in posts
+(dirname issue)
+** DONE Metadata: introduce stickers
+   CLOSED: [2020-11-15 Sun 00:26]
+PDF, Source, etc.
+
 ** DONE Floating TOC and such bells.
    CLOSED: [2020-11-14 Sat 23:45]
  [2020-11-13 Fri 09:38]

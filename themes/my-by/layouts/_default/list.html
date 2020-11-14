@@ -9,6 +9,17 @@
                 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> <!-- class="title"  -->
                 [ 𝚺 ] {{ .Summary }}
                 <div class="metadata">
+                    {{ with .Params.links }}
+                        {{ range . }}
+                        <a class="sticker" href="{{ .url }}">
+                            {{ if .icon }}
+                            <span class="nav-icon-link">
+                                <svg class="nav-link" viewBox="0 0 25 25"><use xlink:href="/icons.svg#{{ .icon }}"></use></svg>
+                            </span>
+                            {{ end }} {{ .name }}
+                        </a> &nbsp;
+                        {{ end }}<br/>
+                    {{ end }}
                     <div class="nav-icon-link">
                         <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#i-date"></use></svg>
                     </div>
