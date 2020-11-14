@@ -182,9 +182,38 @@ img[src*="#half-shadow"] {
     margin-right: auto;
 }
 
+img[src*="#full-shadow"] {
+    max-width: 100%;
+    margin: 0px auto;
+	  box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.3); /* outer shadow */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* syntax highlighting and code */
 code:not([class*=language]) {
     color: var(--code);
     padding: 5px;
     font-family: monospace, monospace;
+}
+
+/* table styling */
+table {
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th {
+    background: var(--main-accent);
+    color: var(--main-bg);
+    padding: 10px;
+    border: 1px solid var(--shadow);
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid var(--shadow);
 }

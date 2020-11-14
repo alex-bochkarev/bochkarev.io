@@ -26,10 +26,6 @@
  [2020-11-13 Fri 09:34]
 
  must be automatic, though
-** TODO Metadata block CSS
- [2020-11-13 Fri 09:36]
-
- Smaller fonts, gray (deaccent).
 ** TODO Metadata: introduce stickers
 PDF, Source, etc.
 
@@ -74,6 +70,11 @@ PDF, Source, etc.
 - padding;
 - (maybe lang name?)
 ** TODO Tables CSS (nice one)
+** DONE Metadata block CSS
+   CLOSED: [2020-11-14 Sat 22:46]
+ [2020-11-13 Fri 09:36]
+
+ Smaller fonts, gray (deaccent).
 ** DONE link/href icons
    CLOSED: [2020-11-14 Sat 18:04]
 wikipedia, github, local, external.

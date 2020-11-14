@@ -26,14 +26,14 @@ While I was getting ready for my IE qualifying exams here at Clemson University 
 ## Download
 **Recommended:** git clone the [repo 📁](https://github.com/alex-bochkarev/OR_mmap) with sources, [as usual](https://help.github.com/en/articles/cloning-a-repository) (or just download[^1] a `zip`-file). Also, download a [Freeplane](https://www.freeplane.org/wiki/index.php/Home) to open `mm`-files if you haven't done so yet (it is free and requires almost no installation, depending on the system). Alternatively:
 
-| Section             | PDF                                           | Other formats                                                                                  |
-| :-----------------: | :---:                                         | :-------------:                                                                                |
-| Deterministic OR    | [📁](1_Deterministic_OR.pdf) | [png](1_Deterministic_OR.png), [jpg](1_Deterministic_OR.jpg) |
-| Stochastic OR       | [📁](2_Stochastic_OR.pdf)    | [png](2_Stochastic_OR.png), [jpg](2_Stochastic_OR.jpg)       |
+| Section             | PDF                          | Other formats                                                |
+| :-----------------: | :---:                        | :-------------:                                              |
+| Deterministic OR    | [pdf](1_Deterministic_OR.pdf) | [png](1_Deterministic_OR.png), [jpg](1_Deterministic_OR.jpg) |
+| Stochastic OR       | [pdf](2_Stochastic_OR.pdf) | [png](2_Stochastic_OR.png), [jpg](2_Stochastic_OR.jpg)       |
 
 **A technical note:** To me, the most convenient way is to use Freeplane, as it allows to unfold only the nodes you are interested in and keep a conveniently scaled picture on your monitor, like this:
 
-![An overview](determ_overview_screen.png)
+![An overview](determ_overview_screen.png#full-shadow)
 
 Other than that, PDF seems to be the second best, although you might need some [proprietary software](https://get.adobe.com/reader/otherversions/) for the file to zoom properly[^3]. E.g., I know that it renders and, most importantly, zooms very well on an iPad (but, obviously, does not allow for node folding). If it does not work for you for some reason, PNG and JPG formats are fine, overall, but have some problems with inline pictures in the deterministic part.
 
@@ -49,7 +49,7 @@ So I prepared two mind-maps, corresponding to the structure of the IE coursework
 
 The first part allows to find specific details when needed, the second one -- to review the material before the exam efficiently. I sacrificed some exact and formal wording in favor of readability -- so I would rather call these an *informal reviews*, e.g.:
 
-![Simplex](simplex_screen.png)
+![Simplex](simplex_screen.png#full-shadow)
 
 ## What is not there / potential improvements
 There are some parts that I am not really happy with myself. If you think the format itself is useful for your teaching / in the studying process, and you have suggestions / corrections / notes you'd like to be added -- albeit connected to the points below or not -- please, feel free to drop me an email or even open an "issue" at github.
@@ -67,6 +67,5 @@ Besides, there is a separate question whether any other large (and maybe more "m
 - **queueing models** -- in fact, are almost not covered. From the other hand, they seem to be analyzed with MCs;
 - **MDP** -- Markov Decision Processes basics. Seems to be outside the basic course (but should it?..)
 
----
 [^1]: on the github repo page, click a green "Clone or download" button, and then "Download ZIP"
 [^3]: I had some issues on my linux system
