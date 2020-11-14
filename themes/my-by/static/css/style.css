@@ -66,6 +66,34 @@ a:hover:not(.nav-link) {
     padding: 2px;
 }
 
+/* special links type */
+a[href*="github.com"]:not(.nav-link)::before {
+    content: url('/gh.svg');
+    vertical-align: -30%;
+}
+
+a[href*="wikipedia.org"]:not(.nav-link)::before {
+    content: url('/wiki.svg');
+    vertical-align: -30%;
+}
+
+a[href*="bochkarev.io"]:not(.nav-link)::before {
+    content: '§ '
+}
+
+a:not([href*='bochkarev.io']):not([href^='#']):not([href^='/']):not([href*="github.com"]):not([href*="wikipedia.org"]):not(.nav-link)::before {
+    content: url('/outside.svg');
+    padding: 5px;
+}
+
+/* a[href*="github.com"]:not(.nav-link):hover::before, */
+/* a[href*="wikipedia.org"]:not(.nav-link):hover::before */
+a:hover::before
+{
+    filter: invert(100%);
+}
+
+
 /* menu style */
 .menu {
     text-align: center;

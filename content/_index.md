@@ -7,3 +7,7 @@ tags: ["foo", "bar"]
 
 # Main page
 This is my main page. `here`.
+
+My website is [here](https://bochkarev.io "tooltip").
+
+Another link is [this one](www.ya.ru).
