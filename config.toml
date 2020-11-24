@@ -65,3 +65,7 @@ title = "A.B."
       name="i-keybase"
       url="https://keybase.io/bochkarev"
       weight=5
+
+[markup.goldmark.renderer]
+unsafe= true
+

@@ -288,3 +288,32 @@ table td {
     padding: 0.5em;
     margin-top: -1.5em;
 }
+
+/* home page with a photo */
+.col-left {
+    width: 35%;
+    float: left;
+}
+
+.col-right {
+    width: 65%;
+    float: right;
+}
+
+/* the responsiveness magic :) */
+@media screen and (max-width: 767px){
+    .col-left, .col-right {
+        width: 100%;
+        float: none;
+    }
+
+    .col-left{
+        padding-bottom: 30px;
+    }
+}
+
+/* Avatar image style */
+.img-av {
+    border-radius: 50%;
+    max-width: 90%;
+}

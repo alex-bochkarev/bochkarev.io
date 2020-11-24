@@ -15,6 +15,9 @@
  [2020-11-10 Tue 22:41]
 (see =.css=, I guess) -- so the top menu would work on a phone.
 seems like there is a manual: https://w3bits.com/css-html-menu/
+
+Maybe a better source is: https://1stwebdesigner.com/how-to-create-a-responsive-dropdown-navigation-using-only-css/
+
 ** TODO Review site accessibility
  [2020-11-10 Tue 22:49]
 
@@ -27,10 +30,6 @@ seems like there is a manual: https://w3bits.com/css-html-menu/
  [2020-11-13 Fri 09:34]
 
  must be automatic, though
-** TODO Main page with photo
- [2020-11-13 Fri 09:37]
-
- (two cols layout)
 ** TODO Research page with the INFORMS talk.
  [2020-11-13 Fri 09:37]
 ** TODO Create Archive page
@@ -42,6 +41,7 @@ seems like there is a manual: https://w3bits.com/css-html-menu/
  [2020-11-13 Fri 09:38]
 ** TODO Sidenotes and a shortcode for that.
  [2020-11-13 Fri 09:38]
+ https://danilafe.com/blog/sidenotes/
 ** TODO Metapost
  [2020-11-13 Fri 09:40]
 ** TODO Relevant footer
@@ -57,8 +57,22 @@ seems like there is a manual: https://w3bits.com/css-html-menu/
  [[file:~/projects/bochkarev.io/TODOs.org::*Deal with long lines in =src= blocks.][Deal with long lines in =src= blocks.]]
 ** TODO Correct sticker icons
 (add as necessary)
+- menu items (lists)
+- posts themselves
+- correct =svg= icons / single vs. multiple files
 ** TODO Correct local links in posts
 (dirname issue)
+** TODO Add RSS/Atom feed!
+** TODO Migrate =biosnippets= repo, maybe?
+   seems slightly better, I guess, for snippets...
+** TODO I think, maybe add =download= icon?
+For downloading from the same website
+** TODO Add legend to the meta-post.
+** DONE Main page with photo
+   CLOSED: [2020-11-24 Tue 22:56]
+ [2020-11-13 Fri 09:37]
+
+ (two cols layout)
 ** DONE Metadata: introduce stickers
    CLOSED: [2020-11-15 Sun 00:26]
 PDF, Source, etc.
