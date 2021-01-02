@@ -7,11 +7,11 @@
             {{ $text := print .Name | safeHTML }}
             {{ $text }}
         </a>
-        🙣{{ end }}
-        {{ range .Site.Menus.side }}
+        🙣{{ end }} {{ range .Site.Menus.side }}
             <a class="nav-link nav-icon-link" href="{{ .URL }}">
                 <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#{{.Name}}"></use></svg>
             </a>
         {{ end }}
     </div>
 </div>
+<br/>

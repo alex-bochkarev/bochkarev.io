@@ -18,10 +18,12 @@ seems like there is a manual: https://w3bits.com/css-html-menu/
 
 Maybe a better source is: https://1stwebdesigner.com/how-to-create-a-responsive-dropdown-navigation-using-only-css/
 
-** TODO Review site accessibility
- [2020-11-10 Tue 22:49]
+Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
+** TODO Make the theme a separate repo
+** TODO Think: maybe pack into a tangled =.org= file?
+- at least the =CSS= file...
+- but also page structure seems interesting?.. would it be worth the hassle, though?
 
- Especially footer and header.
 ** TODO Automate footer/header social icons
  [2020-11-10 Tue 23:02]
 
@@ -68,6 +70,14 @@ Maybe a better source is: https://1stwebdesigner.com/how-to-create-a-responsive-
 ** TODO I think, maybe add =download= icon?
 For downloading from the same website
 ** TODO Add legend to the meta-post.
+** TODO Think about metadata
+How to make pages machine-readable by search engines and (possibly) custom bots?
+Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[file:../../zettelkasten/20201003093034-blogs.org][🕮:blogs]]) 
+
+** TODO Review site accessibility
+ [2020-11-10 Tue 22:49]
+
+ Especially footer and header.
 ** DONE Main page with photo
    CLOSED: [2020-11-24 Tue 22:56]
  [2020-11-13 Fri 09:37]
