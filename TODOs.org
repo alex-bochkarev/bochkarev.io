@@ -78,6 +78,9 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
  [2020-11-10 Tue 22:49]
 
  Especially footer and header.
+
+** TODO Fix the fonts
+   The symbol in the header does not show up on another system??..
 ** DONE Main page with photo
    CLOSED: [2020-11-24 Tue 22:56]
  [2020-11-13 Fri 09:37]
