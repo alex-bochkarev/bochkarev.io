@@ -19,12 +19,14 @@ seems like there is a manual: https://w3bits.com/css-html-menu/
 Maybe a better source is: https://1stwebdesigner.com/how-to-create-a-responsive-dropdown-navigation-using-only-css/
 
 Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
-** TODO Make the theme a separate repo
+** DONE Make the theme a separate repo
+   CLOSED: [2021-01-03 Sun 23:34]
 ** TODO Think: maybe pack into a tangled =.org= file?
 - at least the =CSS= file...
 - but also page structure seems interesting?.. would it be worth the hassle, though?
 
-** TODO Automate footer/header social icons
+** DONE Automate footer/header social icons
+   CLOSED: [2021-01-03 Sun 23:34]
  [2020-11-10 Tue 23:02]
 
  Sometime, for the theme...
@@ -46,9 +48,6 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
  https://danilafe.com/blog/sidenotes/
 ** TODO Metapost
  [2020-11-13 Fri 09:40]
-** TODO Relevant footer
- [2020-11-13 Fri 09:40]
- [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::<br/>]]
 ** TODO Disclaimer, terms and such technical pages
  [2020-11-13 Fri 09:40]
  (I have these already, I believe)
@@ -78,7 +77,6 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
  [2020-11-10 Tue 22:49]
 
  Especially footer and header.
-
 ** TODO Fix the fonts
    The symbol in the header does not show up on another system??..
 ** DONE Main page with photo

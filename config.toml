@@ -6,11 +6,11 @@ title = "A.B."
 
 [Author]
     name = "Alexey A. Bochkarev"
+    email = "web@bochkarev.io"
 
 # General parameters
 [params]
     AuthorName = "Alexey A. Bochkarev"
-    emlString = "we<!-- zog -->b@<!-- several -->bo<!-- words -->chkarev<!-- this -->.<!-- not an Indian ocean -->io"
     twitter = "a_bochka"
     github = "alex-bochkarev"
     keybase = "bochkarev"
