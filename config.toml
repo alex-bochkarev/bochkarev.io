@@ -39,10 +39,6 @@ title = "A.B."
       name = "Contact"
       url = "/contact/"
       weight = 5
-    [[menu.main]]
-      name = "(Archive)"
-      url = "/arc/"
-      weight = 6
 
     # Icons top-right-corner menu
     [[menu.side]]
@@ -61,10 +57,6 @@ title = "A.B."
       name="i-gh"
       url="https://github.com/alex-bochkarev"
       weight=4
-    [[menu.side]]
-      name="i-keybase"
-      url="https://keybase.io/bochkarev"
-      weight=5
 
 [markup.goldmark.renderer]
     unsafe= true

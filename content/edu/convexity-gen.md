@@ -5,10 +5,9 @@ tags: [deterministic, quals, short]
 summary: On convexity generalization concepts (quasiconvexity and such) -- a one-pager with examples.
 date: 2019-05-22
 links:
-  - icon_pack: fas
-    icon: file-pdf
+  - icon: i-pdf
     name: "PDF"
-    url: post/2019-05-22-convexity/convexity_generalizations.pdf
+    url: "/edu/convexity-gen/convexity_generalizations.pdf"
 ---
 
 The textbook by [Bazaraa et

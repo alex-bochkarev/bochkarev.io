@@ -8,28 +8,25 @@ lastmod: 2020-01-18
 profile: false
 summary: "An attempt to summarize some key OR concepts, inspired by the IE/OR Qualifying exams scope in 2019. Designed as an easy-to-overview mindmap."
 links:
-  - icon_pack: fas
-    icon: i-tg
+  - icon: i-pdf
     name: "Deterministic"
-    url: post/2019-05-27-quals_mm/1_Deterministic_OR.pdf
-  - icon_pack: fas
-    icon: i-tg
+    url: "/edu/quals-mm/1_Deterministic_OR.pdf"
+  - icon: i-pdf
     name: "Stochastic"
-    url: "post/2019-05-27-quals_mm/2_Stochastic_OR.pdf"
-  - icon_pack: fab
-    icon: i-gh
+    url: "/edu/quals-mm/2_Stochastic_OR.pdf"
+  - icon: i-gh
     name: "Source"
     url: "https://github.com/alex-bochkarev/OR_mmap"
 ---
 While I was getting ready for my IE qualifying exams here at Clemson University I needed a big-picture of some basic concepts to "pack" them into my head. So I produced a couple of mind-maps that loosely covered a first-year curriculum -- with the intention to make something like a "theoretical minimum" outline. That is, a structured list of topics that might serve as a foundation for PhD research in OR and allow to see the basic coursework structure at a glance. I'd appreciate any feedback on  whether the format seems useful and what topics should be included -- especially if we'd like to move away from "quals preparation map" towards a "solid theoretical minimum in OR".
 
 ## Download
-**Recommended:** git clone the [repo 📁](https://github.com/alex-bochkarev/OR_mmap) with sources, [as usual](https://help.github.com/en/articles/cloning-a-repository) (or just download[^1] a `zip`-file). Also, download a [Freeplane](https://www.freeplane.org/wiki/index.php/Home) to open `mm`-files if you haven't done so yet (it is free and requires almost no installation, depending on the system). Alternatively:
+**Recommended:** git clone the [repo](https://github.com/alex-bochkarev/OR_mmap) with sources, [as usual](https://help.github.com/en/articles/cloning-a-repository) (or just download[^1] a `zip`-file). Also, download a [Freeplane](https://www.freeplane.org/wiki/index.php/Home) to open `mm`-files if you haven't done so yet (it is free and requires almost no installation, depending on the system). Alternatively:
 
-| Section             | PDF                          | Other formats                                                |
-| :-----------------: | :---:                        | :-------------:                                              |
-| Deterministic OR    | [pdf](1_Deterministic_OR.pdf) | [png](1_Deterministic_OR.png), [jpg](1_Deterministic_OR.jpg) |
-| Stochastic OR       | [pdf](2_Stochastic_OR.pdf) | [png](2_Stochastic_OR.png), [jpg](2_Stochastic_OR.jpg)       |
+| Section             | PDF                                        | Other formats                                                                            |
+| :-----------------: | :---:                                      | :-------------:                                                                          |
+| Deterministic OR    | [📄](/edu/quals-mm/1_Deterministic_OR.pdf) | [png](/edu/quals-mm/1_Deterministic_OR.png), [jpg](/edu/quals-mm/1_Deterministic_OR.jpg) |
+| Stochastic OR       | [📄](/edu/quals-mm/2_Stochastic_OR.pdf)    | [png](/edu/quals-mm/2_Stochastic_OR.png), [jpg](/edu/quals-mm/2_Stochastic_OR.jpg)       |
 
 **A technical note:** To me, the most convenient way is to use Freeplane, as it allows to unfold only the nodes you are interested in and keep a conveniently scaled picture on your monitor, like this:
 

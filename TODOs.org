@@ -79,6 +79,10 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
  Especially footer and header.
 ** TODO Fix the fonts
    The symbol in the header does not show up on another system??..
+** Documentation
+*** front-matter parameters
+    - icons
+    - hidetoc
 ** DONE Main page with photo
    CLOSED: [2020-11-24 Tue 22:56]
  [2020-11-13 Fri 09:37]
@@ -121,3 +125,7 @@ wikipedia, github, local, external.
    CLOSED: [2020-11-13 Fri 23:06]
  [2020-11-13 Fri 09:36]
  main look and hover.
+** TODO add disclaimer
+ [2021-01-05 Tue 02:04]
+** TODO add privacy policy (GDPR)
+ [2021-01-05 Tue 02:04]
