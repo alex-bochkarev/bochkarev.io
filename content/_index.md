@@ -5,6 +5,7 @@ draft: false
 tags: ["foo", "bar"]
 ---
 # Alexey Bochkarev
+<br/>
 <div class="col-left">
   <img src="/home/AB.JPG" alt="my photo" class="img-av">
 </div>
@@ -23,9 +24,10 @@ focus on strategy and efficiency in grids, mostly electricity transmission
 
 **This website** keeps my personal notes on various topics along with my
 up-to-date [contact](/contact/) details. All opinions mine. Not an advice, no
-guarantees of any kind (see full [disclaimer](/terms)).
+guarantees of any kind (see full [disclaimer](/disclaimer)).
 
 <!-- Please, choose a topic in the header menu, or look into [Archive](/archive/) to -->
 <!-- see all notes (titles) on one page. -->
 
-<div style="text-align: right; font-size: 0.7em;"> <a href="/bio-snippets/" class="nav-link">♥</a></div>
+<br/>
+<div style="text-align: right; font-size: 0.5em;"> <a href="https://github.com/alex-bochkarev/bio-snippets" class="nav-link">♥</a></div>

@@ -1,0 +1,35 @@
+#!/bin/sh
+# -*- sh-mode -*-
+
+# If a command fails then the deploy stops
+set -e
+
+msg="rebuilding site $(date)"
+if [ -n "$*" ]; then
+	msg="$*"
+fi
+
+echo "Updating the theme..."
+cd themes/desk
+git add .
+git commit -m"$msg"
+git push origin master && echo "Theme updates pushed.\n"
+cd ../..
+
+# Build the project.
+hugo -t desk
+
+printf "\033[0;32mDeploying updates to GitHub Pages...\033[0m\n"
+# Go To Public folder
+cd public
+
+git add . # Add changes to git.
+git commit -m "$msg" # Commit changes.
+git push origin master && echo "Site deployed." # Push source and build repos.
+
+printf "\033[0;32mSaving sources to GitHub...\033[0m\n"
+
+cd ..
+git add .
+git commit -m"$msg"
+git push origin main && printf "\033[0;32mDone!\033[0m\n"

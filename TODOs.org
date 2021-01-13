@@ -11,7 +11,8 @@
 - https://stackoverflow.com/questions/4538447/how-to-create-two-columns-on-a-web-page
 - 
 * Current project TODOs
-** TODO Make menus responsive
+** DONE Make menus responsive
+   CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-10 Tue 22:41]
 (see =.css=, I guess) -- so the top menu would work on a phone.
 seems like there is a manual: https://w3bits.com/css-html-menu/
@@ -30,7 +31,8 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
  [2020-11-10 Tue 23:02]
 
  Sometime, for the theme...
-** TODO Create tags indices
+** DONE Create tags indices
+   CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-13 Fri 09:34]
 
  must be automatic, though
@@ -39,34 +41,40 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
 ** TODO Create Archive page
  [2020-11-13 Fri 09:37]
  [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::</div>]]
-** TODO Create GPG page and the necessary keys.
+** TODO Create GPG page 
  [2020-11-13 Fri 09:38]
-** TODO Contacts page
+- the necessary keys are there already.
+** DONE Contacts page
+   CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-13 Fri 09:38]
 ** TODO Sidenotes and a shortcode for that.
  [2020-11-13 Fri 09:38]
  https://danilafe.com/blog/sidenotes/
 ** TODO Metapost
  [2020-11-13 Fri 09:40]
-** TODO Disclaimer, terms and such technical pages
+** DONE Disclaimer, terms, privacy policy, and such technical pages
+   CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-13 Fri 09:40]
  (I have these already, I believe)
-** TODO Custom 404 page!
+** DONE Custom 404 page!
+   CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-13 Fri 09:42]
 ** TODO Implement the =pi= button :)
  [2020-11-13 Fri 10:33]
  [[file:~/projects/bochkarev.io/TODOs.org::*Deal with long lines in =src= blocks.][Deal with long lines in =src= blocks.]]
-** TODO Correct sticker icons
+** DONE Correct sticker icons
+   CLOSED: [2021-01-13 Wed 23:03]
 (add as necessary)
 - menu items (lists)
 - posts themselves
-- correct =svg= icons / single vs. multiple files
+** TODO correct =svg= icons / single vs. multiple files
 ** TODO Correct local links in posts
 (dirname issue)
 ** TODO Add RSS/Atom feed!
 ** TODO Migrate =biosnippets= repo, maybe?
    seems slightly better, I guess, for snippets...
-** TODO I think, maybe add =download= icon?
+** CANCELED I think, maybe add =download= icon?
+   CLOSED: [2021-01-13 Wed 23:04]
 For downloading from the same website
 ** TODO Add legend to the meta-post.
 ** TODO Think about metadata
@@ -77,8 +85,11 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
  [2020-11-10 Tue 22:49]
 
  Especially footer and header.
-** TODO Fix the fonts
+** DONE Fix the fonts
+   CLOSED: [2021-01-13 Wed 23:04]
    The symbol in the header does not show up on another system??..
+** DONE Fix =ul= CSS: =<ul>= after =<p>= has too large margins/padding  :css:
+   CLOSED: [2021-01-13 Wed 23:04]
 ** Documentation
 *** front-matter parameters
     - icons
@@ -125,7 +136,5 @@ wikipedia, github, local, external.
    CLOSED: [2020-11-13 Fri 23:06]
  [2020-11-13 Fri 09:36]
  main look and hover.
-** TODO add disclaimer
- [2021-01-05 Tue 02:04]
-** TODO add privacy policy (GDPR)
- [2021-01-05 Tue 02:04]
+** TODO Add bio-snippets page
+ [2021-01-05 Tue 02:15]

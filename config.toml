@@ -10,7 +10,6 @@ title = "A.B."
 
 # General parameters
 [params]
-    AuthorName = "Alexey A. Bochkarev"
     twitter = "a_bochka"
     github = "alex-bochkarev"
     keybase = "bochkarev"
@@ -23,10 +22,10 @@ title = "A.B."
       name = "Me"
       url = "/"
       weight = 1
-    [[menu.main]]
-      name = "Research"
-      url = "/research/"
-      weight = 2
+    # [[menu.main]]
+    #   name = "Research"
+    #   url = "/research/"
+    #   weight = 2
     [[menu.main]]
       name = "Tools"
       url = "/tools/"
@@ -47,7 +46,7 @@ title = "A.B."
       weight=1
     [[menu.side]]
       name="i-key"
-      url="/gpg"
+      url="/abochkarev-pubkey.asc"
       weight=1
     [[menu.side]]
       name="i-twitter"
