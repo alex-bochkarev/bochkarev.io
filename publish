@@ -2,7 +2,6 @@
 # -*- sh-mode -*-
 
 # If a command fails then the deploy stops
-set -e
 
 msg="rebuilding site $(date)"
 if [ -n "$*" ]; then
@@ -17,7 +16,7 @@ git push origin master && echo "Theme updates pushed.\n"
 cd ../..
 
 # Build the project.
-hugo -t desk
+hugo -t desk || exit 1
 
 printf "\033[0;32mDeploying updates to GitHub Pages...\033[0m\n"
 # Go To Public folder
