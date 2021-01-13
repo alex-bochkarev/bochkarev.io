@@ -31,4 +31,4 @@ printf "\033[0;32mSaving sources to GitHub...\033[0m\n"
 cd ..
 git add .
 git commit -m"$msg"
-git push origin main && printf "\033[0;32mDone!\033[0m\n"
+git push origin master && printf "\033[0;32mDone!\033[0m\n"
