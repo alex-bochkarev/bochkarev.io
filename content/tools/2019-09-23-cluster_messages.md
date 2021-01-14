@@ -4,7 +4,14 @@ title: Text and derive - getting notifications from the cluster
 categories: [tools]
 tags: [cluster, linux]
 date: 2019-09-23
-lastmod: 2020-08-04 
+lastmod: 2021-01-14 
+url: "/tools/cluster-msg"
+aliases:
+ - /tools/2019-09-23-cluster_messages/
+links:
+ - icon: "i-gh"
+   name: "A shell-based tool"
+   url: "https://github.com/alex-bochkarev/tgs-curl"
 summary: How to get notifications from a remote machine with Telegram. A really simple and universal approach.
 ---
 
@@ -39,7 +46,7 @@ Like, that's it. You have a personal bot. Write down / save somewhere the "token
 
 ![Creating a bot in Telegram](botfather.png#half-shadow) 
 
-Now, we need to do the only piece of magic in the whole process. Find your bot by the username you have just given it (for example, I have typed `@ab_wintermute_bot` into the "Search" field in the Telegram app). Open a chat and tell it `/start`. I also needed to tell something else -- like, `test`. The thing will listen but will not respond (obviously, since we haven't implemented anyone who could respond). We need this to obtain a so called "chat ID": now, open up your browser and open the URL: `https://api.telegram.org/botAAA:BBB/getUpdates`, replacing *AAA:BBB* with your "token ID" given by the `BotFather`. Look for the `chat id` and write it down somewhere:
+Now, we need to do the only piece of magic in the whole process. Find your bot by the username you have just given it (for example, I have typed `@ab_wintermute_bot` into the "Search" field in the Telegram app). Open a chat and tell it `/start`. I also needed to tell something else -- like, `test`. The thing will listen but will not respond (obviously, since we haven't implemented anyone who could respond). We need this to obtain a so called "chat ID"[^fn:auto]: now, open up your browser and open the URL: `https://api.telegram.org/botAAA:BBB/getUpdates`, replacing *AAA:BBB* with your "token ID" given by the `BotFather`. Look for the `chat id` and write it down somewhere:
 
 ![Chat ID](chat_id.png#half-shadow)
 
@@ -167,6 +174,7 @@ At first, I was thinking about the [matrix.org](https://matrix.org/faq/) client-
 
 Another note is that I was not considering security/privacy issues at all -- you might want to read the docs more carefully if you work with this anywere near ``production'' (whatever this might mean to you).
 
-[^1]: besides, for some reason this email thing never worked for me. Most probably, I was just doing something wrong. There might be even a good standard solution for the problem I am just not aware of. Please, share your experience if you were able to make it work, especially on our Palmetto cluster
+[^1]: this seems to work for me now, but obviously does not allow for pinging me *between* the job start and end moments, which is something I'd like to be able to do... Besides, sometimes I wanted my *laptop* (which does not have `PBS`) to be able to send a message to my phone!
 [^2]: still, if you happen to use it, I'd be interested to learn from your experience
 [^3]: for some magical reasons, whenever I tried to run interactive Julia and then do `Pkg.add` from it, the whole thing hanged. My guess is that doing `julia -e` from bash instead might be important
+[^fn:auto]: since the first publication, I have automated this and couple of other shell-related things -- see the [repo](https://github.com/alex-bochkarev/tgs-curl).
