@@ -4,11 +4,14 @@ categories: [edu]
 tags: [deterministic, quals, short]
 summary: On convexity generalization concepts (quasiconvexity and such) -- a one-pager with examples.
 date: 2019-05-22
+lastmod: 2021-01-14
 links:
   - icon: i-pdf
     name: "PDF"
     url: "/edu/convexity-gen/convexity_generalizations.pdf"
 ---
+
+[![Convexity generalizations](/images/conv-gen-pic.png#full-shadow)](/edu/convexity-gen/convexity_generalizations.pdf#notalink)
 
 The textbook by [Bazaraa et
 al](https://www.wiley.com/en-us/Nonlinear+Programming%3A+Theory+and+Algorithms%2C+3rd+Edition-p-9780471486008)

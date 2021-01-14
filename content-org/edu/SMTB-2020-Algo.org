@@ -1,0 +1,48 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+#+hugo_section: edu
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: (Talk) Glimpse into Algorithms
+
+#+date: 2020-07-29
+#+author: admin
+
+#+hugo_tags: SMTB
+#+hugo_categories: edu
+
+#+begin_src yaml :front_matter_extra t
+summary: This is a talk presented to high-school students during [SMTB](https://molbioschool.org/en/)-2020. Quick numerical illustrations for runtime, correctness and such fun things.
+
+links:
+- icon: "i-gh"
+  name: "Repo"
+  url: "https://github.com/alex-bochkarev/SMTB-Algo"
+- icon: "i-ipynb"
+  name: "View notebook"
+  url: "https://nbviewer.jupyter.org/github/alex-bochkarev/SMTB-Algo/blob/master/2020-07_SMTB_Algo_AB.ipynb"
+#+end_src
+
+This was a (slightly more than) one-hour lecture for high-school students during
+the wonderful [[https://molbioschool.org/en][School of Molecular and Theoretical Biology]] in 2020. I wanted to
+experiment with a couple of things, both in terms of content and the tech.
+
+** On the content
+   I wanted to take some simple, easy-to-present example of an algorithm
+   (sorting! what else?..) and illustrate the notion of asymptotic runtime
+   /numerically/. It turned out to be pretty fun to do with Python, as I (humbly)
+   think. It was pretty close to pseudocode, I suppose. Along the way we
+   discussed /correctness/ and ways to test an implementation against a set of
+   random instances. It already barely fit into an hour timeframe.
+
+   The second part of the talk was devoted to a brief discussion of data
+   structures -- also with numerical illustrations of lists and linked lists (and
+   insertion time).
+
+   As usual, comments are very [[/contact][welcome]].
+
+** On the tech
+   I tried to present from [[https://jupyter.org/][Jupyter notebook]] with [[https://rise.readthedocs.io/en/stable/][RISE]] plugin, which produced
+     pretty fancy [[https://revealjs.com/][Reveal.js]] slides. But the most important part is that this setting
+     allowed me to run code interactively and tweak things interactively, which
+     of course was very useful in a talk devoted to algorithms.
