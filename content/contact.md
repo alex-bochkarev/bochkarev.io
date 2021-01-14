@@ -8,7 +8,7 @@ hidetoc: true
 - **for urgent matters:** please consider [Signal](https://signal.org/), or:
   + [@abochka](https://t.me/abochka) on
     [Telegram](https://telegram.org/faq#q-how-is-telegram-different-from-whatsapp)
-  + [a@bochkarev.io](xmpp:a@bochkarev.io) on XMPP/"Jabber".
+  + [a at bochkarev.io](xmpp:a@bochkarev.io) on XMPP/"Jabber".
 - **other social media:** I mostly use [LinkedIn](https://www.linkedin.com/in/aabochkaryov) to keep my general public CV. (Not active on Facebook or VK.)
 
 ## Secure comm / Encryption

@@ -3,7 +3,7 @@
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
-#+title: (Talk) Glimpse into Algorithms
+#+title: (Talk) A Glimpse into Algorithms
 
 #+date: 2020-07-29
 #+author: admin

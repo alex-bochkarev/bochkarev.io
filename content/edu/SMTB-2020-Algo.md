@@ -1,8 +1,8 @@
 ---
-title: "(Talk) Glimpse into Algorithms"
+title: "(Talk) A Glimpse into Algorithms"
 author: ["admin"]
 date: 2020-07-29
-lastmod: 2021-01-14T10:52:36+01:00
+lastmod: 2021-01-14T22:34:59+01:00
 tags: ["SMTB"]
 categories: ["edu"]
 draft: false

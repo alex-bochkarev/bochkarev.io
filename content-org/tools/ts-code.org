@@ -1,0 +1,33 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+
+# hugo_section is a folder inside 'content'
+#+hugo_section: tools
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: Selected topics on programming
+
+#+date: 2021-01-14
+#+author: admin
+
+#+hugo_tags: tech-seminar
+#+hugo_categories: tools
+#+hugo_draft: t
+
+#+begin_src yaml :front_matter_extra t
+summary: Resources compilation and seminar materials on programming.
+#+end_src
+
+# available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
+# i-wiki, i-outside, i-date, hamburger, i-pdf, i-heart, i-ipynb
+
+* Learning python
+There are online courses -- see [[https://edx.org][EdX]], [[https://coursera.org][Coursera]], [[https://udemy.com][Udemy]], [[https://stepik.org][Stepik]], and such.
+Different people will like different courses, but I could mention:
+- [[https://www.coursera.org/learn/python][Programming for Everybody / Getting Started with Python]] from U. Michigan
+  (Coursera), for a more general intro.
+- [[https://www.edx.org/course/using-python-for-research][Python for Research]] from Harvard (EdX)
+
+** TODO Overviews
+** TODO Books
+** TODO Kaggles, maybe?
