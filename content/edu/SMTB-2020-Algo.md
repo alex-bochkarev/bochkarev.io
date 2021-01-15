@@ -2,8 +2,8 @@
 title: "(Talk) A Glimpse into Algorithms"
 author: ["admin"]
 date: 2020-07-29
-lastmod: 2021-01-14T22:34:59+01:00
-tags: ["SMTB"]
+lastmod: 2021-01-15T09:38:50+01:00
+tags: ["SMTB", "talk"]
 categories: ["edu"]
 draft: false
 summary: This is a talk presented to high-school students during [SMTB](https://molbioschool.org/en/)-2020. Quick numerical illustrations for runtime, correctness and such fun things.

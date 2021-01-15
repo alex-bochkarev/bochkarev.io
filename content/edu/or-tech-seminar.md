@@ -2,11 +2,13 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-14T23:42:03+01:00
+lastmod: 2021-01-15T09:42:09+01:00
 tags: ["tech-seminar"]
-categories: ["tools"]
+categories: ["tools", "edu"]
 draft: false
 summary: A quick note on OR Tech Seminar topics and logistics.
+aliases:
+  - /tools/or-tech-seminar
 ---
 
 This is an overview page for "OR Tech Seminar" organized with support from
@@ -26,7 +28,7 @@ suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io).
 
 We will be discussing various tools (in a very broad sense) we, as
 researchers, use -- to share experience, configs, and ideas. Each seminar will
-consist of a speaker presentation (with a discussion along the way), at most
+consist of a speaker presentation with a discussion along the way, at most
 one hour in total.
 
 
@@ -59,7 +61,7 @@ one hour in total.
 
 ## Additional topics (work in progress) {#additional-topics--work-in-progress}
 
-1.  💻 **Introductory materials for Python**:
+1.  💻 **Introductory materials on Python**:
     -   Syntax basics / learning resources.
     -   Versions, environments, managing packages (`conda`, `pip`)
     -   Jupyter notebooks (extracting code, presenting, exporting, JupyterHub,

@@ -1,7 +1,7 @@
 #+hugo_base_dir: ~/projects/bochkarev.io
 
 # hugo_section is a folder inside 'content'
-#+hugo_section: tools
+#+hugo_section: edu
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
@@ -10,10 +10,12 @@
 #+date: 2021-01-14
 
 #+hugo_tags: tech-seminar
-#+hugo_categories: tools
+#+hugo_categories: "tools" "edu"
 
 #+begin_src yaml :front_matter_extra t
 summary: A quick note on OR Tech Seminar topics and logistics.
+aliases:
+  - /tools/or-tech-seminar
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
@@ -34,7 +36,7 @@ suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
 * The format
   We will be discussing various tools (in a very broad sense) we, as
   researchers, use -- to share experience, configs, and ideas. Each seminar will
-  consist of a speaker presentation (with a discussion along the way), at most
+  consist of a speaker presentation with a discussion along the way, at most
   one hour in total.
 
 * Core discussion
@@ -63,7 +65,7 @@ suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
    + Possibly, [[https://en.wikipedia.org/wiki/Makefile][Makefiles]].
 
 * Additional topics (work in progress)
-1. 💻 *Introductory materials for Python*:
+1. 💻 *Introductory materials on Python*:
    + Syntax basics / learning resources.
    + Versions, environments, managing packages (=conda=, =pip=)
    + Jupyter notebooks (extracting code, presenting, exporting, JupyterHub,

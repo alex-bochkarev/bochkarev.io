@@ -1,0 +1,34 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+
+# hugo_section is a folder inside 'content'
+#+hugo_section: tools
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: 📰 Working with the literature: tools and approaches
+
+#+date: 2021-01-15
+
+#+hugo_tags: tech-seminar
+#+hugo_categories: tools
+#+hugo_draft: t
+
+#+begin_src yaml :front_matter_extra t
+summary: "A collection of notes on literature: discoery, reading, keeping track of references, and using them in writing."
+#+end_src
+
+* Managing references
+
+* Using the references (in writing)
+
+** LaTeX ecosystem
+   - https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
+
+* Discovering the literature
+  - Feeds: RSS, atom
+  - Mailing lists
+  - Journal/reading club
+
+* A note on notes.
+  - reading notes
+  - Zettelkasten
