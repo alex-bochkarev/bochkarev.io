@@ -22,7 +22,7 @@ aliases:
 # i-wiki, i-outside, i-date, hamburger, i-pdf, i-heart, i-ipynb
 
 This is an overview page for "OR Tech Seminar" organized with support from
-[[https://cecas.clemson.edu/informs/][Clemson INFORMS Student Chapter]]. Dates for specific events will be posted here
+[[https://cecas.clemson.edu/informs/][Clemson INFORMS Student Chapter]]. Date and time[fn:time] for specific events will be posted here
 once agreed upon. All materials will be also linked from the seminar descriptions
 below. Everything is subject to change. Comments and
 suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
@@ -40,7 +40,7 @@ suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
   one hour in total.
 
 * Core discussion
-1. 📰 *Working with the literature:* tools and approaches.
+1. [2021-01-25 Mon 10:00]: 📰 *Working with the literature:* tools and approaches.
    + Managing references: relevant software (*Zotero*, JabRef, Mendeley and friends).
    + Using the literature: latex/bibtex, editor integrations, etc. (very brief)
    + Discovering the literature: how to? (feeds, mailing lists, reading club, etc.)
@@ -73,8 +73,16 @@ suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
    + Optimization in Python (with [[https://www.gurobi.com/][Gurobi]] solver and =gurobipy=) -- a quick example.
    + A word on scripting in Python (maybe a quick example).
    + Further reading.
-2. 👓 *Selected topics on programming.* 
+2. 💻 *Selected materials on Julia*. Note: we have a collection of materials on
+   different topics related to [[https://julialang.org/][Julia]] from the previous year seminars by [[https://msiddig.people.clemson.edu/][Murwan
+   Siddig]] -- see his [[https://github.com/murwansiddig/Julia_tutorials][Julia tutorials]] repo.
+3. 👓 *Selected topics on programming.*
    + Speeding up code in Python: special libraries, loops, vectorized computations, =map=,
      etc.
    + "Profiling" python code ("what's so slow?")
    + ... and in Julia: very brief notes on parallel computations and precompiling.
+
+
+* Footnotes
+
+[fn:time] Clemson local time.

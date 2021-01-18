@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-15T09:42:09+01:00
+lastmod: 2021-01-18T20:12:40+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -12,7 +12,7 @@ aliases:
 ---
 
 This is an overview page for "OR Tech Seminar" organized with support from
-[Clemson INFORMS Student Chapter](https://cecas.clemson.edu/informs/). Dates for specific events will be posted here
+[Clemson INFORMS Student Chapter](https://cecas.clemson.edu/informs/). Date and time[^fn:1] for specific events will be posted here
 once agreed upon. All materials will be also linked from the seminar descriptions
 below. Everything is subject to change. Comments and
 suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io).
@@ -34,7 +34,7 @@ one hour in total.
 
 ## Core discussion {#core-discussion}
 
-1.  📰 **Working with the literature:** tools and approaches.
+1.  <span class="timestamp-wrapper"><span class="timestamp">[2021-01-25 Mon 10:00]</span></span>: 📰 **Working with the literature:** tools and approaches.
     -   Managing references: relevant software (**Zotero**, JabRef, Mendeley and friends).
     -   Using the literature: latex/bibtex, editor integrations, etc. (very brief)
     -   Discovering the literature: how to? (feeds, mailing lists, reading club, etc.)
@@ -69,8 +69,13 @@ one hour in total.
     -   Optimization in Python (with [Gurobi](https://www.gurobi.com/) solver and `gurobipy`) -- a quick example.
     -   A word on scripting in Python (maybe a quick example).
     -   Further reading.
-2.  👓 **Selected topics on programming.**
+2.  💻 **Selected materials on Julia**. Note: we have a collection of materials on
+    different topics related to [Julia](https://julialang.org/) from the previous year seminars by [Murwan
+    Siddig](https://msiddig.people.clemson.edu/) -- see his [Julia tutorials](https://github.com/murwansiddig/Julia%5Ftutorials) repo.
+3.  👓 **Selected topics on programming.**
     -   Speeding up code in Python: special libraries, loops, vectorized computations, `map`,
         etc.
     -   "Profiling" python code ("what's so slow?")
     -   ... and in Julia: very brief notes on parallel computations and precompiling.
+
+[^fn:1]: Clemson local time.
