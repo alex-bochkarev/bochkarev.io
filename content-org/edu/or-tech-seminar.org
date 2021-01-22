@@ -21,6 +21,8 @@ aliases:
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
 # i-wiki, i-outside, i-date, hamburger, i-pdf, i-heart, i-ipynb
 
+[[/images/TechSeminar_logo.png]]
+
 This is an overview page for "OR Tech Seminar" organized with support from
 [[https://cecas.clemson.edu/informs/][Clemson INFORMS Student Chapter]]. Date and time[fn:time] for specific events will be posted here
 once agreed upon. All materials will be also linked from the seminar descriptions

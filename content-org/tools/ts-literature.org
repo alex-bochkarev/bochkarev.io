@@ -25,7 +25,7 @@ summary: "A collection of notes on literature: discovery, reading, keeping track
   therefore, useless by itself) description of the relevant workflow:
   
 #+NAME: dia_process
-#+begin_src plantuml :file ./literature.png
+#+begin_src plantuml :file ./literature.svg
 @startuml
 cloud Literature
 collections papers [
@@ -57,7 +57,7 @@ note --> doc : (5) Use
 #+end_src
 
 #+RESULTS: dia_process
-[[file:./literature.png]]
+[[file:./literature.svg]]
 
 This is a large topic, but roughly speaking the system[fn:PIM] has two
 key components that manage:
@@ -103,12 +103,15 @@ more on this below). I had the following specific *requirements* in mind:
     place to start, but the number of options is overwhelming.
   - Another detailed comparison was made in [[https://mediatum.ub.tum.de/doc/1320978/1320978.pdf][Technische Universität München]]. 
   - University libraries usually have brief overviews of the software they
-    recommend: e.g., a nice one from [[https://ucsd.libguides.com/howtocite/compare][UCSD]], [[https://guides.library.upenn.edu/citationmgmt][U. of Pennsylvania]]. Also:
-    [[https://libguides.mit.edu/cite-write][MiT]] (specifically on [[https://libguides.mit.edu/cite-write/citetools][citation management]]), [[https://guides.library.harvard.edu/cite][Harvard]], [[https://library.stanford.edu/research/bibliography-management][Stanford]], [[https://guides.lib.uw.edu/research/citations/citation-tools][U. of
+    recommend: e.g., a nice one from [[https://ucsd.libguides.com/howtocite/compare][UCSD]], [[https://guides.lib.berkeley.edu/publichealth/citations][UC Berkeley]], [[https://guides.library.upenn.edu/citationmgmt][U. of Pennsylvania]].
+    Also: [[https://libguides.mit.edu/cite-write][MiT]] (specifically on [[https://libguides.mit.edu/cite-write/citetools][citation management]]), [[https://guides.library.harvard.edu/cite][Harvard]], [[https://library.stanford.edu/research/bibliography-management][Stanford]], [[https://guides.lib.uw.edu/research/citations/citation-tools][U. of
     Washington]],
   - There are numerous Reddit discussions (such as: [[https://www.reddit.com/r/LaTeX/comments/iouswl/jabref_vs_zotero_vs_orgref_which_one_do_you/][JabRef vs Zotero vs org-ref]])
   - Of course, there is a paper[fn:recursive] on that: cite:ivey2018. 
     
+
+  /Before we start: it might be important what your colleagues are using. Using
+  the "lab-default" tools might make the choice very simple and efficient./
 
   My personal short list would overlap with the Clemson Library's [[https://libraries.clemson.edu/research/citation-management/][one]]
   (at the time of writing this): [[https://www.zotero.org/][Zotero]], [[https://www.jabref.org/][JabRef]]; plus [[https://mendeley.com/][Mendeley]], [[https://refworks.proquest.com/researcher/][Refworks]]
@@ -206,11 +209,49 @@ YouTube and other places (most probably, including a dedicated training in your
 university library).
 
 * A word on LaTeX ecosystem.
+  I was somehow confused with the LaTeX-related systems, and found a relevant
+  [[https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib][TeX.StackExchange]] question. In a nutshell:
 
+#+NAME: latex_system
+#+begin_src plantuml :file ./latex.svg
+@startuml
+database bib as "Bibliography (.bib)" 
+file tex as "Manuscript (.tex document)"
+folder soft as "External programs ('backend')" {
+        node bibtex
+        node biber
+}
+
+folder packages as "LaTeX packages" {
+        node natbib
+        node biblatex
+}
+
+file style as "Style description"
+note top of style: Package-specific (e.g., <b>.bst</b> for natbib)
+
+bib --> soft
+bibtex --> natbib
+bibtex --> biblatex
+biber --> biblatex
+style --> packages
+packages --> tex
+
+note right of bib : Keeps bibliography data
+note bottom of soft: An interface - processes the .bib
+note left of packages: format citations and bibliographies.
+@enduml
+#+end_src
+
+#+RESULTS: latex_system
+[[file:./latex.svg]]
   
-** LaTeX ecosystem
-   - https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
-
+  
+As far as I understand, one of the ideas behind =biblatex= was to move away from
+a separate style definition language, =BST= (see also a [[http://tug.ctan.org/info/bibtex/tamethebeast/ttb_en.pdf][manual]] on BibTeX). While
+the SE question mentioned above helped my understanding, but I believe this
+topic is better suited for another day. Eventually, everything is determined by
+the journal -- style description format they provide.
 
 * A note on notes.
   This is, actually, a separate topic. But if you feel the necessity to take
@@ -221,7 +262,8 @@ university library).
   several relevant "keywords" out there that I would like to mention.
   - First, one might take a technological perspective and look for software that
     allows to manage notes. This is, of course, good old Evernote[fn:evernote],
-    a newer and open source[fn:MIT] [[https://joplinapp.org/][Joplin]].
+    a newer and open source[fn:MIT] [[https://joplinapp.org/][Joplin]]. (There are people among my friends
+    who keep their research notes there.)
   - There is and a vast variety of [[https://en.wikipedia.org/wiki/List_of_wiki_software][wiki software]] (such as [[https://www.dokuwiki.org/dokuwiki][DokuWiki]] or [[https://www.mediawiki.org/wiki/MediaWiki][MediaWiki]],
     just to name a couple. But the list is huge.) Some of them are specifically
     positioned as a [[https://en.wikipedia.org/wiki/Personal_wiki][Personal Wiki]] (e.g., such as [[https://tiddlywiki.com/][TiddlyWiki]] -- see a nice 2.5
@@ -239,13 +281,130 @@ university library).
     + [[https://www.orgroam.com/][Org-roam]]. This is a part of [[https://www.gnu.org/software/emacs/][Emacs]] ecosystem over the all-mighty[fn:org]
       [[https://orgmode.org/][orgmode]]. Free and open source, local solution. This is what I use
       currently.
-  - Then, there is a story about Zettelkasten.
+  - Then, there is a story about [[https://en.wikipedia.org/wiki/Zettelkasten][Zettelkasten]]. A slip-box with notes.
+    Essentially, this is a /method/ for keeping a grid of interlinked, small
+    notes (and letting them evolve over time). The idea is that after some time
+    you actually build such an "external brain" that conversations with it
+    becomes surprisingly productive, letting you to create new connections and
+    ideas. Again, this is a /method/, not a software tool. In fact, [[https://en.wikipedia.org/wiki/Niklas_Luhmann#Note-taking_system_(Zettelkasten)][one]] of the
+    most famous /Zettelkästen/ was implemented as a wooden box with drawers,
+    filled with small (paper) notes. It is worth noting: its author, [[https://en.wikipedia.org/wiki/Niklas_Luhmann#Note-taking_system_(Zettelkasten)][Niklas
+    Luhmann]], was doing Sociology, and this approach might (or might not) be less
+    effective for math-heavy fields. Anyways: It seems to be a vast topic, and
+    there is a lot of resources out there, if you are interested further, including:
+    + 🗎 *Paper:* the original Luhmann's paper cite:luhmann1981 /"Kommunikation mit
+      Zettelkästen"/ (in German 🇩🇪);
+    + 💬 *Community:* [[https://www.reddit.com/r/Zettelkasten/comments/b566a4/what_is_a_zettelkasten/][r/Zettelkasten]] on Reddit (the linked note includes couple of
+      good links on the subject; and there is a community [[https://zk.zettel.page/][wiki]], hosted
+      separately)
+    + 📖 *Book:* [[https://openlibrary.org/works/OL18635700W/How_to_Take_Smart_Notes]["How to Take Smart Notes..."]] by Sönke Ahrens.
+      Despite it has the sort of title I dislike very much, I found the book
+      pretty useful and informative[fn:newport]. (It might be still a little
+      longer than necessary, to my taste.)
+  - On the contrary, someone from my friends just work on a relatively small
+    number of notes in =.tex= format (something like "internal papers" in his
+    lab).
+
+    
+  *Finally:* it seems to me that specific /tools/ are not as important as
+    discipline, habits and procedures we set up for ourselves. Of course, a
+    labjournal in one form or another is a must. I liked a point that came up in
+    one of private conversations recently, that /notes/ is your product when you
+    are not working on a specific paper. And when you accumulate enough of them
+    -- all this can "graduate" to a paper. (Which is surprisingly along the
+    lines Dr. Luhmann as saying, as far as I understand.)
 
 * Discovering the literature
-  - Feeds: RSS, atom
-  - Mailing lists
-  - Journal/reading club
+  
+  I wanted to jot down a couple of words on (and discuss) /discovering/ the
+  literature. Like, where do papers new can come from.
 
+  Before we start: your library might provide a surprising amount of useful
+  resources! E.g., Clemson University Libraries offer [[https://libraries.clemson.edu/find/research-course-guides/]["Research & Course Guides"]]
+  (with specific sections on [[https://clemson.libguides.com/IE][Industrial Engineering]], [[https://clemson.libguides.com/Mathematics][Mathematics]], and [[https://clemson.libguides.com/ComputerScience][Computer
+  Science]]). I would like to thank our Librarian Jennifer Groff for a very
+  productive email conversation, which helped me a lot in preparing this
+  discussion and research in general. There might be more useful sources --
+  check out the website!
+
+** 🔎 Proactive search
+   Who doesn't know about free search? Right, right... But still:
+   - Just Google search is (un)surprisingly good, sometimes.
+   - [[https://scholar.google.com][Google.Scholar]] is handy when you are specifically looking for research
+     papers. (It also provides citation data along the way.) What is more
+     important: having a paper =X=, it allows to make more complicated requests,
+     e.g., find all the papers that cite =X=, find new papers by keywords among
+     those citing =X=, and such things.
+   - There are specialized (commercial, usually subscription-based)
+     resources/databases to search for papers: the most general ones are,
+     perhaps, (Elsevier's) [[https://en.wikipedia.org/wiki/Scopus][Scopus]] and (Clarivate's) [[https://en.wikipedia.org/wiki/Web_of_Science][Web of Science]]. Also, there
+     is [[https://en.wikipedia.org/wiki/MathSciNet][MathSciNet]], [[https://www.engineeringvillage.com/][EngineeringVillage]], etc. Of course, there is [[https://en.wikipedia.org/wiki/List_of_academic_databases_and_search_engines][more]] -- these
+     are just random examples. For me, this is something that would allow more
+     complicated searches than Google Scholar can handle (at least at the moment
+     of writing these notes). I never used these for long periods of time
+     directly -- it seemed like the simple option was good enough (but I'd love
+     to learn your experience, if it is different!).
+   - (surprise!) The University Library. For example, Clemson Libraries has
+     subscriptions to many databases, and allows to (1) search across these,
+     and (2) retrieve paywalled papers. So, I found this [[https://libraries.clemson.edu/]["everything" library
+     search]] pretty useful. Note that there are some other databases (check out
+     the "Library databases" button) that might be useful. It seems pointless to
+     provide lists (ask your librarian!), but to give a random sample from more
+     than *500* (!) databases:
+     + [[https://methods.sagepub.com/][SAGE Research Methods]]
+     + [[https://credoreference.com][CREDO reference]] (search across encyclopedias, dictionaries, etc.)
+     + [[https://about.proquest.com/libraries/academic/dissertations-theses/pqdtglobal.html][ProQuest Disserations and Theses Global]]
+   - as a separate note: if you are at CU: note that Clemson Libraries provide
+     trainings on what is out there and how to use it: e.g., see /"Introducing
+     Library Research Strategies and Navigating the Clemson Libraries"/ from
+     [[https://grad360.sites.clemson.edu/index.php][Grad360]] -- seems to be scheduled for [2021-01-29].
+     
+   Now, that was /proactive/ search. There are also more or less obvious methods
+   to receive papers, well, automatically. Apart from the obvious Twitter (or
+   whatever other social networks are used in your subfield's community) these are:
+   
+** 📰 Feeds: RSS, atom
+   There is a web [[https://en.wikipedia.org/wiki/Atom_(Web_standard)][standard]] for "feeds", making websites machine readable. The
+   idea is that instead of checking relevant websites frequently yourself, you
+   delegate this task to the computer (we're engineers, after all, right?). A
+   special program, feed /reader/, or a feed /aggregator/ checks out the websites that support such
+   technology, and lets you know if a new paper / blog post / web page on the
+   site was published. As simple as that. A couple of notes here:
+   + Speaking about software, I would mention Mozilla [[https://www.thunderbird.net][Thunderbird]] or [[https://github.com/skeeto/elfeed][Elfeed]] (if
+     you are into Emacs ecosystem) -- this is what I tried to use, but I don't
+     really have an overview, so can't comment. Chances are, your default
+     desktop email client (if you happen to use it), or a browser (Safari?) also
+     can do that. Of course, there is a huge [[https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators][comparison table]] on Wiki. There are
+     web solutions (e.g., [[https://feedly.com/][Feedly]]), which I have no clue about.
+   + Now, for this to work it must be supported by the /website/. Yeah, so it
+     wouldn't be able to show you ads (for example). So, not everyone is
+     supporting this. There are some solutions that try to circumvent this and
+     try to build an RSS feed for you (see [[https://feed43.com/][Feed43]])
+   + Some journals provide RSS/Atom feeds: e.g., IJOC, EJOR, OPRE, etc.
+   + Preprint servers might have feeds -- e.g., arXiv [[https://arxiv.org/help/rss][mentions]] subjects feeds,
+     updated daily. (unfortunately, to the best of my knowledge [[http://www.optimization-online.org/][Optimization
+     Online]] does not do this.
+   
+** 📨 Mailing lists
+   - Web of Science, Engineering Village, Google Scholar (and, perhaps, many
+     others) allow to set up citation alerts (e.g., weekly/monthly notifications
+     on your search results; alerts for new publications from a specific author,
+     etc.)
+   - Some journals offer email subscriptions instead of feeds, sending out list
+     of papers, abstracts, etc. (e.g., Mathematical Programming)
+   - There might be other mailing lists worth mentioning (seminars, departmental
+     lists, etc. -- please let me know if you think I missed something worth
+     mentioning separately).
+
+** 💬 Journal club and other seminars
+   - Usually there seem to be efforts to read and share relevant papers in the
+     community. I know at least one relatively large lab that systematically
+     keeps track of many relevant journals and present "fresh" papers during a
+     regular (internal) event.
+   - There are also studies-focused reading clubs (aimed to learn how to write
+     good papers, rather than to keep track of cutting-edge research).
+   - We might want to make one, but this is a topic for another day.
+     
 * Concluding remarks and further reading
   - We have Clemson Libraries [[https://clemson.libcal.com/calendar/training?cid=3593&t=d&d=0000-00-00&cal=3593&inc=0][trainings/events]], including [[https://clemson.libcal.com/event/7336551]["Zotero for Citation Management"]].
   - Now as I think about it: JabRef-based system might be better as it would
@@ -256,6 +415,9 @@ university library).
   bibliography:/home/bochkarev/Dropbox/bibliography/references.bib
 
 * Footnotes
+
+[fn:newport] It left me with the same kind of feeling as the brilliant [[https://www.calnewport.com/books/deep-work/]["Deep
+work"]] by Cal Newport.
 
 [fn:org] Speaking about orgmode: you can check out this great Bernt Hansen's
       page to see what's possible. But despite I like this technology *a lot*, I

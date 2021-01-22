@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-18T20:12:40+01:00
+lastmod: 2021-01-22T00:15:07+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -10,6 +10,8 @@ summary: A quick note on OR Tech Seminar topics and logistics.
 aliases:
   - /tools/or-tech-seminar
 ---
+
+{{< figure src="/images/TechSeminar_logo.png" >}}
 
 This is an overview page for "OR Tech Seminar" organized with support from
 [Clemson INFORMS Student Chapter](https://cecas.clemson.edu/informs/). Date and time[^fn:1] for specific events will be posted here
