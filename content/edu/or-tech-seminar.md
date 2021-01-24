@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-22T00:15:07+01:00
+lastmod: 2021-01-24T10:15:36+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -73,7 +73,7 @@ one hour in total.
     -   Further reading.
 2.  💻 **Selected materials on Julia**. Note: we have a collection of materials on
     different topics related to [Julia](https://julialang.org/) from the previous year seminars by [Murwan
-    Siddig](https://msiddig.people.clemson.edu/) -- see his [Julia tutorials](https://github.com/murwansiddig/Julia%5Ftutorials) repo.
+    Siddig](https://msiddig.people.clemson.edu/) -- see his  <a href="https://github.com/murwansiddig/Julia_tutorials">Julia tutorials</a> repo.
 3.  👓 **Selected topics on programming.**
     -   Speeding up code in Python: special libraries, loops, vectorized computations, `map`,
         etc.

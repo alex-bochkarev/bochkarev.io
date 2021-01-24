@@ -125,7 +125,7 @@ more on this below). I had the following specific *requirements* in mind:
   works for me.
 
 * My Zotero-based system.
-Here is my system in a nutshell, from a technology perspective:  
+  Here is my system in a nutshell, from a technology perspective:  
 #+NAME: dia_system
 #+begin_src plantuml :file ./ts-literature/system.svg
 @startuml
@@ -173,7 +173,7 @@ note bottom of latex_doc: Edit using my favorite editor (supporting many cool th
 #+end_src
 
 #+RESULTS: dia_system
-[[file:./system.svg]]
+[[file:./ts-literature/system.svg]]
 
 So, basically, I use the following tools:
 - Zotero desktop app
@@ -244,6 +244,7 @@ note left of packages: format citations and bibliographies.
 #+end_src
 
 #+RESULTS: latex_system
+[[file:./ts-literature/latex.svg]]
   
   
 As far as I understand, one of the ideas behind =biblatex= was to move away from

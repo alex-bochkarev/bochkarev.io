@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-23T11:44:05+01:00
+lastmod: 2021-01-24T11:47:48+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: true

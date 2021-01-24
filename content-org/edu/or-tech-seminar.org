@@ -77,7 +77,7 @@ suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
    + Further reading.
 2. 💻 *Selected materials on Julia*. Note: we have a collection of materials on
    different topics related to [[https://julialang.org/][Julia]] from the previous year seminars by [[https://msiddig.people.clemson.edu/][Murwan
-   Siddig]] -- see his [[https://github.com/murwansiddig/Julia_tutorials][Julia tutorials]] repo.
+   Siddig]] -- see his @@html: <a href="https://github.com/murwansiddig/Julia_tutorials">Julia tutorials</a>@@ repo.
 3. 👓 *Selected topics on programming.*
    + Speeding up code in Python: special libraries, loops, vectorized computations, =map=,
      etc.

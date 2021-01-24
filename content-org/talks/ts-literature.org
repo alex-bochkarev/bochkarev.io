@@ -1,0 +1,142 @@
+#+TITLE: (Talk) 📰 Working with the literature: tools and approaches
+
+* Before the talk
+  - launch org-roam server, find BDD note.
+  - launch / resize term window
+  - open figures in FF
+  - (open [[https://www.bochkarev.io/edu/or-tech-seminar/][topics]] in FF)
+
+* The Seminar intro
+
+  - Discussion of tools;
+  - *not* a complete tutorial on anything;
+  - we value good links and references;
+  - running list of topics is on the web.
+    (🌍 https://www.bochkarev.io/edu/or-tech-seminar/)
+  - *Contributions are welcome!*
+    (📨 tech_seminar@bochkarev.io, 📨 ClemsonInforms@g.clemson.edu)
+    + what do *you* use, if different / useful?
+    + add/remove topics?
+    + too simple/complicated?
+    
+* Intro
+  - the reading process 👉
+  - My requirements:
+    + future proof (preferably plain-text, FOSS, etc.)
+    + allow to capture, manage, and use refs easily.
+    + play well with LaTeX.
+  - Key component: /reference manager/
+ 
+* My Zotero-based system
+  - *Example:*
+    google "Graph-based algorithms for Boolean functions"
+    (store the ref)
+  - Can just copy plain-text citation.
+  - (LibreOffice / google doc example)
+  - (a latex example: cite, edit notes.)
+  - Moving parts in the system 👉
+    + Zotero (desktop) app
+    + Plugins: "Connector" (Firefox); ZotFile, BetterBibTex (Zotero)
+    + Text "editor"
+* A word on LaTeX =.bib=
+  - how citations work (a sketch) 👉
+    (=biber+biblatex= vs. =bibtex+natbib=)
+  - on "master =.bib=" vs. "paper =.bib="
+
+* On refs in general
+   
+  - software to manage refs data (surprise!)
+    search and organize data, produce citations and bibliography
+  - =data= + =cite style= --> =document=
+  - can have a server/sync/social components -- if you need these.
+  - available software:
+    + huge  [[https://en.wikipedia.org/wiki/Comparison_of_reference_management_software][comparison]] in the Wiki
+    + usually there's a guide from the library.
+      The university might have subscriptions / support.
+    + look what is used in the lab!
+    + numerous comparisons and discussions on the web
+      (see reddit, quora, etc.)
+    + I would mention:
+      * [[https://www.zotero.org/][Zotero]], [[https://www.jabref.org/][JabRef]];
+      * plus [[https://mendeley.com/][Mendeley]], [[https://refworks.proquest.com/researcher/][Refworks]](Clemson [[https://clemson.libguides.com/newrefworks][guide]]), [[https://endnote.com/][EndNote]] if we
+        allow for commercial products
+      * (maybe [[https://www.papersapp.com/][Papers]] -- don't really know about Mac)
+      * *not* an exhaustive list!
+  - Requirements might be different -- find the match!
+* A note on notes.
+
+  - taking notes:
+    + nothing (perhaps, a bad option)
+    + lab journal
+    + reading notes
+    + maybe other research notes
+      (even =.tex= / =.pdf= files?)
+    + maybe personal wiki
+  - notes software: e.g., [[https://joplinapp.org/][Joplin]] and [[https://evernote.com/][Evernote]].
+  - as a separate (minor) note: [[https://orgmode.org/][orgmode]] within [[https://www.gnu.org/software/emacs/][Emacs]].
+    *⚠ warning:* potential /huge/ time drain!
+  - wiki software
+    + [[https://www.dokuwiki.org/dokuwiki][DokuWiki]] or [[https://www.mediawiki.org/wiki/MediaWiki][MediaWiki]]
+    + maybe a /personal wiki/ -- e.g.,  [[https://tiddlywiki.com/][TiddlyWiki]]?
+    + /Zettelkasten/ thing: [[https://roamresearch.com/][Roam]], [[https://obsidian.md/][Obsidian]], [[https://www.orgroam.com/][Org-roam]] (Emacs 👹)
+      * (show =org-roam=)
+      * 📖 "How to Take Smart Notes..."
+      * quite some resources online
+  - method / discipline is more important than tools!
+* Discovering the literature
+  - check with the Library! Guides:
+    + [[https://clemson.libguides.com/IE][Industrial Engineering]]
+    + [[https://clemson.libguides.com/Mathematics][Mathematics]]
+    + [[https://clemson.libguides.com/ComputerScience][Computer Science]]
+** 🔎 Proactive search
+  - Just Google search is (un)surprisingly good, sometimes.
+  - [[https://scholar.google.com][Google.Scholar]] 
+  - Specialized (subscription-based) databases; random examples:
+    + (Elsevier's) [[https://en.wikipedia.org/wiki/Scopus][Scopus]]
+    + (Clarivate's) [[https://en.wikipedia.org/wiki/Web_of_Science][Web of Science]].
+    + Also, there is [[https://en.wikipedia.org/wiki/MathSciNet][MathSciNet]], [[https://www.engineeringvillage.com/][EngineeringVillage]], etc.
+    + Of course, there is [[https://en.wikipedia.org/wiki/List_of_academic_databases_and_search_engines][more]] (wiki)
+    + (surprise!) The University Library: [[https://libraries.clemson.edu/]["everything" library search]]
+      Random examples for databases:
+      * [[https://methods.sagepub.com/][SAGE Research Methods]]
+      * [[https://credoreference.com][CREDO reference]] (encyclopedias, dictionaries, etc.)
+      * [[https://about.proquest.com/libraries/academic/dissertations-theses/pqdtglobal.html][ProQuest Disserations and Theses Global]]
+  - separate note: Libraries provide might provide trainings, e.g. see
+    /"Introducing Library Research Strategies and Navigating the Clemson
+    Libraries"/ from [[https://grad360.sites.clemson.edu/index.php][Grad360]] -- seems to be scheduled for [2021-01-29].
+     
+** 📰 Feeds: RSS, atom
+   - There is a web [[https://en.wikipedia.org/wiki/Atom_(Web_standard)][standard]] for "feeds"
+   - Readers / "aggregators":
+   - I would mention Mozilla [[https://www.thunderbird.net][Thunderbird]] or [[https://github.com/skeeto/elfeed][Elfeed]] (Emacs ecosystem)
+   - (elfeed quick demo)
+   - I don't have an overview, but: [[https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators][huge comparison]] on Wiki. 
+   - Note: /website/ support needed.
+     Some services try to build RSS feed for you (see [[https://feed43.com/][Feed43]])
+   - Some journals provide RSS/Atom feeds: e.g., IJOC, EJOR, OPRE, etc.
+   - Preprint servers: e.g., arXiv [[https://arxiv.org/help/rss][mentions]] subjects feeds.
+   
+** 📨 Mailing lists
+   - WoScience, Engineering Village, GScholar can set up citation alerts
+   - Some journals offer mail notifications.
+     (e.g., Mathematical Programming)
+   - Might be other lists worth mentioning
+     (seminars, dept lists, etc.)
+
+** 💬 Journal club and other seminars
+
+   - Might be lab journal/reading clubs.
+   - Generally, can be *research-* or *study-* focused.
+   - We might want to make one, but this is a topic for another day.
+     
+** *Did I miss something important?*
+
+* Conclusion
+ - *ref management* is a part of PIM: helps to capture,
+   search, manage, and use your collection of sources.
+ - methods, habits, and content are *more important than tools*
+ - though, there are *good* tools out there
+ - *no universal solutions:* find out what works for you
+ - I'll upload a longer note on the topic.
+ 
+* *Notes, comments, suggestions?*
