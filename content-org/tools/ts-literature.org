@@ -25,7 +25,7 @@ summary: "A collection of notes on literature: discovery, reading, keeping track
   therefore, useless by itself) description of the relevant workflow:
   
 #+NAME: dia_process
-#+begin_src plantuml :file ./literature.svg
+#+begin_src plantuml :file ./ts-literature/process.svg
 @startuml
 cloud Literature
 collections papers [
@@ -57,7 +57,7 @@ note --> doc : (5) Use
 #+end_src
 
 #+RESULTS: dia_process
-[[file:./literature.svg]]
+[[file:./ts-literature/process.svg]]
 
 This is a large topic, but roughly speaking the system[fn:PIM] has two
 key components that manage:
@@ -127,7 +127,7 @@ more on this below). I had the following specific *requirements* in mind:
 * My Zotero-based system.
 Here is my system in a nutshell, from a technology perspective:  
 #+NAME: dia_system
-#+begin_src plantuml :file ./system.svg
+#+begin_src plantuml :file ./ts-literature/system.svg
 @startuml
 folder Docs as "Incoming docs" {
   cloud web as "Web pages"
@@ -213,7 +213,7 @@ university library).
   [[https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib][TeX.StackExchange]] question. In a nutshell:
 
 #+NAME: latex_system
-#+begin_src plantuml :file ./latex.svg
+#+begin_src plantuml :file ./ts-literature/latex.svg
 @startuml
 database bib as "Bibliography (.bib)" 
 file tex as "Manuscript (.tex document)"
@@ -244,7 +244,6 @@ note left of packages: format citations and bibliographies.
 #+end_src
 
 #+RESULTS: latex_system
-[[file:./latex.svg]]
   
   
 As far as I understand, one of the ideas behind =biblatex= was to move away from
@@ -444,3 +443,8 @@ with very important topics, especially for a researcher.
 
 [fn:hum] This is in Sociology -- but I believe the benefits should translate
 well to STEM, at least to some extent.
+
+* Technical code :noexport:
+# Local Variables:
+# org-preview-latex-image-directory: "ts-literature/ltximg/"
+# End:

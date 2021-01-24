@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-22T15:24:06+01:00
+lastmod: 2021-01-23T11:44:05+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: true
@@ -17,7 +17,7 @@ may or may not work for _you_ of course, but hopefully will provide some
 inputs to design your own IT "ecosystem". Here is a very general (and
 therefore, useless by itself) description of the relevant workflow:
 
-{{< figure src="/ox-hugo/literature.svg" >}}
+{{< figure src="/ox-hugo/process.svg" >}}
 
 This is a large topic, but roughly speaking the system[^fn:1] has two
 key components that manage:
