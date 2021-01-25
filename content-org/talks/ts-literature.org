@@ -1,6 +1,6 @@
 #+TITLE: (Talk) 📰 Working with the literature: tools and approaches
 
-* Before the talk
+* Before the talk :noexport:
   - launch org-roam server, find BDD note.
   - launch / resize term window
   - open figures in FF
@@ -25,19 +25,24 @@
     + future proof (preferably plain-text, FOSS, etc.)
     + allow to capture, manage, and use refs easily.
     + play well with LaTeX.
+
   - Key component: /reference manager/
  
 * My Zotero-based system
+  
   - *Example:*
     google "Graph-based algorithms for Boolean functions"
     (store the ref)
-  - Can just copy plain-text citation.
+  - Can just copy plain-text citation. 
   - (LibreOffice / google doc example)
   - (a latex example: cite, edit notes.)
   - Moving parts in the system 👉
     + Zotero (desktop) app
     + Plugins: "Connector" (Firefox); ZotFile, BetterBibTex (Zotero)
     + Text "editor"
+
+*A question:* is it possible to import stuff from =.bib= to Zotero?
+Especially PDFs... (perhaps, [[https://forums.zotero.org/discussion/29033/bibtex-and-other-bibliographic-import-adding-pdfs-as-links-instead-of-attachments][should work]] out of the box?).
 * A word on LaTeX =.bib=
   - how citations work (a sketch) 👉
     (=biber+biblatex= vs. =bibtex+natbib=)
@@ -64,7 +69,7 @@
       * *not* an exhaustive list!
   - Requirements might be different -- find the match!
 * A note on notes.
-
+  
   - taking notes:
     + nothing (perhaps, a bad option)
     + lab journal

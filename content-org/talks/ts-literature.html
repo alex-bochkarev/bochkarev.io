@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-01-25 Mon 12:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>(Talk) 📰 Working with the literature: tools and approaches</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Alexey Bochkarev" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">(Talk) 📰 Working with the literature: tools and approaches</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org526c127">1. The Seminar intro</a></li>
+<li><a href="#org371e7ab">2. Intro</a></li>
+<li><a href="#orgf1ed468">3. My Zotero-based system</a></li>
+<li><a href="#org483be98">4. A word on LaTeX <code>.bib</code></a></li>
+<li><a href="#org1e1318c">5. On refs in general</a></li>
+<li><a href="#org41dd2b5">6. A note on notes.</a></li>
+<li><a href="#org5f11a3b">7. Discovering the literature</a>
+<ul>
+<li><a href="#orgb79eb6e">7.1. 🔎 Proactive search</a></li>
+<li><a href="#org18bdbe6">7.2. 📰 Feeds: RSS, atom</a></li>
+<li><a href="#orgfe0203b">7.3. 📨 Mailing lists</a></li>
+<li><a href="#org66d99ff">7.4. 💬 Journal club and other seminars</a></li>
+<li><a href="#orgc284758">7.5. <b>Did I miss something important?</b></a></li>
+</ul>
+</li>
+<li><a href="#org951b57a">8. Conclusion</a></li>
+<li><a href="#org16141a6">9. <b>Notes, comments, suggestions?</b></a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org526c127" class="outline-2">
+<h2 id="org526c127"><span class="section-number-2">1</span> The Seminar intro</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Discussion of tools;</li>
+<li><b>not</b> a complete tutorial on anything;</li>
+<li>we value good links and references;</li>
+<li>running list of topics is on the web.
+(🌍 <a href="https://www.bochkarev.io/edu/or-tech-seminar/">https://www.bochkarev.io/edu/or-tech-seminar/</a>)</li>
+<li><b>Contributions are welcome!</b>
+(📨 tech_seminar@bochkarev.io, 📨 ClemsonInforms@g.clemson.edu)
+<ul class="org-ul">
+<li>what do <b>you</b> use, if different / useful?</li>
+<li>add/remove topics?</li>
+<li>too simple/complicated?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org371e7ab" class="outline-2">
+<h2 id="org371e7ab"><span class="section-number-2">2</span> Intro</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>the reading process 👉</li>
+<li>My requirements:
+<ul class="org-ul">
+<li>future proof (preferably plain-text, FOSS, etc.)</li>
+<li>allow to capture, manage, and use refs easily.</li>
+<li>play well with LaTeX.</li>
+</ul></li>
+
+<li>Key component: <i>reference manager</i></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf1ed468" class="outline-2">
+<h2 id="orgf1ed468"><span class="section-number-2">3</span> My Zotero-based system</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b>Example:</b>
+google "Graph-based algorithms for Boolean functions"
+(store the ref)</li>
+<li>Can just copy plain-text citation.</li>
+<li>(LibreOffice / google doc example)</li>
+<li>(a latex example: cite, edit notes.)</li>
+<li>Moving parts in the system 👉
+<ul class="org-ul">
+<li>Zotero (desktop) app</li>
+<li>Plugins: "Connector" (Firefox); ZotFile, BetterBibTex (Zotero)</li>
+<li>Text "editor"</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org483be98" class="outline-2">
+<h2 id="org483be98"><span class="section-number-2">4</span> A word on LaTeX <code>.bib</code></h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>how citations work (a sketch) 👉
+(<code>biber+biblatex</code> vs. <code>bibtex+natbib</code>)</li>
+<li>on "master <code>.bib</code>" vs. "paper <code>.bib</code>"</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1e1318c" class="outline-2">
+<h2 id="org1e1318c"><span class="section-number-2">5</span> On refs in general</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>software to manage refs data (surprise!)
+search and organize data, produce citations and bibliography</li>
+<li><code>data</code> + <code>cite style</code> &#x2013;&gt; <code>document</code></li>
+<li>can have a server/sync/social components &#x2013; if you need these.</li>
+<li>available software:
+<ul class="org-ul">
+<li>huge  <a href="https://en.wikipedia.org/wiki/Comparison_of_reference_management_software">comparison</a> in the Wiki</li>
+<li>usually there's a guide from the library.
+The university might have subscriptions / support.</li>
+<li>look what is used in the lab!</li>
+<li>numerous comparisons and discussions on the web
+(see reddit, quora, etc.)</li>
+<li>I would mention:
+<ul class="org-ul">
+<li><a href="https://www.zotero.org/">Zotero</a>, <a href="https://www.jabref.org/">JabRef</a>;</li>
+<li>plus <a href="https://mendeley.com/">Mendeley</a>, <a href="https://refworks.proquest.com/researcher/">Refworks</a>(Clemson <a href="https://clemson.libguides.com/newrefworks">guide</a>), <a href="https://endnote.com/">EndNote</a> if we
+allow for commercial products</li>
+<li>(maybe <a href="https://www.papersapp.com/">Papers</a> &#x2013; don't really know about Mac)</li>
+<li><b>not</b> an exhaustive list!</li>
+</ul></li>
+</ul></li>
+<li>Requirements might be different &#x2013; find the match!</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org41dd2b5" class="outline-2">
+<h2 id="org41dd2b5"><span class="section-number-2">6</span> A note on notes.</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>taking notes:
+<ul class="org-ul">
+<li>nothing (perhaps, a bad option)</li>
+<li>lab journal</li>
+<li>reading notes</li>
+<li>maybe other research notes
+(even <code>.tex</code> / <code>.pdf</code> files?)</li>
+<li>maybe personal wiki</li>
+</ul></li>
+<li>notes software: e.g., <a href="https://joplinapp.org/">Joplin</a> and <a href="https://evernote.com/">Evernote</a>.</li>
+<li>as a separate (minor) note: <a href="https://orgmode.org/">orgmode</a> within <a href="https://www.gnu.org/software/emacs/">Emacs</a>.
+<b>⚠ warning:</b> potential <i>huge</i> time drain!</li>
+<li>wiki software
+<ul class="org-ul">
+<li><a href="https://www.dokuwiki.org/dokuwiki">DokuWiki</a> or <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a></li>
+<li>maybe a <i>personal wiki</i> &#x2013; e.g.,  <a href="https://tiddlywiki.com/">TiddlyWiki</a>?</li>
+<li><i>Zettelkasten</i> thing: <a href="https://roamresearch.com/">Roam</a>, <a href="https://obsidian.md/">Obsidian</a>, <a href="https://www.orgroam.com/">Org-roam</a> (Emacs 👹)
+<ul class="org-ul">
+<li>(show <code>org-roam</code>)</li>
+<li>📖 "How to Take Smart Notes&#x2026;"</li>
+<li>quite some resources online</li>
+</ul></li>
+</ul></li>
+<li>method / discipline is more important than tools!</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5f11a3b" class="outline-2">
+<h2 id="org5f11a3b"><span class="section-number-2">7</span> Discovering the literature</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>check with the Library! Guides:
+<ul class="org-ul">
+<li><a href="https://clemson.libguides.com/IE">Industrial Engineering</a></li>
+<li><a href="https://clemson.libguides.com/Mathematics">Mathematics</a></li>
+<li><a href="https://clemson.libguides.com/ComputerScience">Computer Science</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgb79eb6e" class="outline-3">
+<h3 id="orgb79eb6e"><span class="section-number-3">7.1</span> 🔎 Proactive search</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Just Google search is (un)surprisingly good, sometimes.</li>
+<li><a href="https://scholar.google.com">Google.Scholar</a></li>
+<li>Specialized (subscription-based) databases; random examples:
+<ul class="org-ul">
+<li>(Elsevier's) <a href="https://en.wikipedia.org/wiki/Scopus">Scopus</a></li>
+<li>(Clarivate's) <a href="https://en.wikipedia.org/wiki/Web_of_Science">Web of Science</a>.</li>
+<li>Also, there is <a href="https://en.wikipedia.org/wiki/MathSciNet">MathSciNet</a>, <a href="https://www.engineeringvillage.com/">EngineeringVillage</a>, etc.</li>
+<li>Of course, there is <a href="https://en.wikipedia.org/wiki/List_of_academic_databases_and_search_engines">more</a> (wiki)</li>
+<li>(surprise!) The University Library: <a href="https://libraries.clemson.edu/">"everything" library search</a>
+Random examples for databases:
+<ul class="org-ul">
+<li><a href="https://methods.sagepub.com/">SAGE Research Methods</a></li>
+<li><a href="https://credoreference.com">CREDO reference</a> (encyclopedias, dictionaries, etc.)</li>
+<li><a href="https://about.proquest.com/libraries/academic/dissertations-theses/pqdtglobal.html">ProQuest Disserations and Theses Global</a></li>
+</ul></li>
+</ul></li>
+<li>separate note: Libraries provide might provide trainings, e.g. see
+<i>"Introducing Library Research Strategies and Navigating the Clemson
+Libraries"</i> from <a href="https://grad360.sites.clemson.edu/index.php">Grad360</a> &#x2013; seems to be scheduled for <span class="timestamp-wrapper"><span class="timestamp">[2021-01-29 Fri]</span></span>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org18bdbe6" class="outline-3">
+<h3 id="org18bdbe6"><span class="section-number-3">7.2</span> 📰 Feeds: RSS, atom</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>There is a web <a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">standard</a> for "feeds"</li>
+<li>Readers / "aggregators":</li>
+<li>I would mention Mozilla <a href="https://www.thunderbird.net">Thunderbird</a> or <a href="https://github.com/skeeto/elfeed">Elfeed</a> (Emacs ecosystem)</li>
+<li>(elfeed quick demo)</li>
+<li>I don't have an overview, but: <a href="https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators">huge comparison</a> on Wiki.</li>
+<li>Note: <i>website</i> support needed.
+Some services try to build RSS feed for you (see <a href="https://feed43.com/">Feed43</a>)</li>
+<li>Some journals provide RSS/Atom feeds: e.g., IJOC, EJOR, OPRE, etc.</li>
+<li>Preprint servers: e.g., arXiv <a href="https://arxiv.org/help/rss">mentions</a> subjects feeds.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfe0203b" class="outline-3">
+<h3 id="orgfe0203b"><span class="section-number-3">7.3</span> 📨 Mailing lists</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>WoScience, Engineering Village, GScholar can set up citation alerts</li>
+<li>Some journals offer mail notifications.
+(e.g., Mathematical Programming)</li>
+<li>Might be other lists worth mentioning
+(seminars, dept lists, etc.)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org66d99ff" class="outline-3">
+<h3 id="org66d99ff"><span class="section-number-3">7.4</span> 💬 Journal club and other seminars</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>Might be lab journal/reading clubs.</li>
+<li>Generally, can be <b>research-</b> or <b>study-</b> focused.</li>
+<li>We might want to make one, but this is a topic for another day.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc284758" class="outline-3">
+<h3 id="orgc284758"><span class="section-number-3">7.5</span> <b>Did I miss something important?</b></h3>
+</div>
+</div>
+
+<div id="outline-container-org951b57a" class="outline-2">
+<h2 id="org951b57a"><span class="section-number-2">8</span> Conclusion</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><b>ref management</b> is a part of PIM: helps to capture,
+search, manage, and use your collection of sources.</li>
+<li>methods, habits, and content are <b>more important than tools</b></li>
+<li>though, there are <b>good</b> tools out there</li>
+<li><b>no universal solutions:</b> find out what works for you</li>
+<li>I'll upload a longer note on the topic.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org16141a6" class="outline-2">
+<h2 id="org16141a6"><span class="section-number-2">9</span> <b>Notes, comments, suggestions?</b></h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Alexey Bochkarev</p>
+<p class="date">Created: 2021-01-25 Mon 12:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

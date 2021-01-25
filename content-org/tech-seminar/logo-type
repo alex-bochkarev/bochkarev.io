@@ -1,0 +1,15 @@
+#!/bin/bash
+
+file="./sem_banner.txt"
+
+clear
+
+while IFS= read -r line
+do
+	echo -e "$line"
+	sleep .5
+#  	while read -n2 c; do
+# 	    echo -e "$c"
+# 	    sleep .001
+# 	done <<< "$line"
+done <"$file"
