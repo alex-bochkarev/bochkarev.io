@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-27T21:58:37+01:00
+lastmod: 2021-01-27T23:35:56+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: false
@@ -16,14 +16,17 @@ images:
 
 **Summary** <hr>
 
--   ref management is a part of PIM: helps to capture,
+-   Ref management is a part of [PIM](https://en.wikipedia.org/wiki/Personal%5Finformation%5Fmanagement): helps to capture,
     search, manage, and use your collection of sources.
--   methods, habits, and content are more important than tools
--   though, there are good tools out there: personally, I use a system that is
-    based on [Zotero](https://www.zotero.org/) and some black magic involving [(Space)Emacs](https://www.spacemacs.org/) (the latter is
-    **not** really beginner-friendly)
--   there are several approaches to keep notes (and there are some good tools -- see [A note on notes.](#software));
--   no universal solutions: find out what works for you.
+-   I use a system based on [Zotero](https://www.zotero.org/) as reference manager.
+-   Key alternatives are [JabRef](https://www.jabref.org/), [Mendeley](https://www.mendeley.com), [Refworks](https://refworks.proquest.com/researcher/), [EndNote](https://endnote.com/) (there is more).
+-   Another crucial part is integration with the editor. I use (pure) black magic
+    involving [(Space)Emacs](https://www.spacemacs.org/) (**not** really beginner-friendly; there
+    are alternatives).
+-   Keeping notes in a streamlined way is useful. There are several
+    approaches, and several classes of tools -- see [A note on notes.](#software).
+-   No universal solutions: find out what works for you.
+-   Methods, habits, and content are more important than tools.
 
 Corrections, suggestions, and comments are very [welcome](mailto:tech%5Fseminar@bochkarev.io).
 
@@ -32,11 +35,11 @@ Corrections, suggestions, and comments are very [welcome](mailto:tech%5Fseminar@
 
 ## Introduction {#introduction}
 
-Here I am discussing mostly the system supporting my basic workflow,
-mentioning some of alternative options along the way. It may or may not work
-for you, of course, but hopefully will provide some inputs to design your own
-IT "ecosystem". Here is a very general (and therefore, useless by itself)
-description of the relevant workflow:<br><br>
+Here I am discussing the system supporting my workflow, mentioning some of
+alternative options. It may or may not work for you, of course, but hopefully
+will provide some inputs to design your own IT "ecosystem". Here is a very
+general (and therefore, useless by itself) description of the relevant
+workflow:<br><br>
 
 {{< figure src="/ox-hugo/process.svg" >}}
 
@@ -213,15 +216,13 @@ several relevant "keywords" out there that I would like to mention.
     Luhmann](https://en.wikipedia.org/wiki/Niklas%5FLuhmann#Note-taking%5Fsystem%5F(Zettelkasten)), was doing Sociology, and this approach might (or might not) be less
     effective for math-heavy fields. Anyways: It seems to be a vast topic, and
     there is a lot of resources out there, if you are interested further, including:
-    -   📖 **A book:** ["How to Take Smart Notes..."](https://openlibrary.org/works/OL18635700W/How%5Fto%5FTake%5FSmart%5FNotes) by Sönke Ahrens.
+    -   📖 **A book:**[^fn:7] ["How to Take Smart Notes..."](https://openlibrary.org/works/OL18635700W/How%5Fto%5FTake%5FSmart%5FNotes) by Sönke Ahrens.
         Despite it has the sort of title I dislike very much, I found the book
-        pretty useful and informative[^fn:7]. (It might be still a little
+        pretty useful and informative[^fn:8]. (It might be still a little
         longer than necessary, to my taste.)
     -   💬 **A community:** [r/Zettelkasten](https://www.reddit.com/r/Zettelkasten/comments/b566a4/what%5Fis%5Fa%5Fzettelkasten/) on Reddit (the linked note includes couple of
         good links on the subject; and there is a community [wiki](https://zk.zettel.page/), hosted
         separately)
-    -   🗎 **A paper:** the original Luhmann's paper _"Kommunikation mit Zettelkästen"_
-        (however, in German 🇩🇪);
 -   On the contrary, someone from my friends just work on a relatively small
     number of notes in `.tex` format (something like "internal papers" in his
     lab).
@@ -357,4 +358,5 @@ site was published. As simple as that. A couple of notes here:
 [^fn:4]: I use layers: `bibtex, pdf`, and `org-roam` + `org-roam-bibtex` along with `helm` and such (a mandatory link to my [dotfiles](https://github.com/alex-bochkarev/my-spacemacs-dotfiles)). If you are into Emacs world, you might find it useful to watch this EmacsConf2020 [talk](https://emacsconf.org/2020/talks/17/) by [Noorah Alhasan](https://noorahalhasan.com/), which discusses a very similar approach.
 [^fn:5]: which I do not like as it is too much cloud-based and not, um... hacker friendly, to my feelings. For example, I do not quite understand how to export my stuff quickly and without losses, should I happen to need this...
 [^fn:6]: Speaking about orgmode: you can check out this great Bernt Hansen's page to see what's possible. But despite I like this technology **a lot**, I must admit it is still a DIY type of thing, to my taste
-[^fn:7]: It left me with the same kind of feeling as the brilliant ["Deep work"](https://www.calnewport.com/books/deep-work/) by Cal Newport.
+[^fn:7]: There is an original paper by Luhmann, _"Kommunikation mit Zettelkästen"_ -- however, it is in German 🇩🇪, I haven't seen any translation.
+[^fn:8]: It left me with the same kind of feeling as the brilliant ["Deep work"](https://www.calnewport.com/books/deep-work/) by Cal Newport.

@@ -21,24 +21,27 @@ images:
 
 #+HTML: <div class="note">
 *Summary* <hr>
- - ref management is a part of PIM: helps to capture,
+ - Ref management is a part of [[https://en.wikipedia.org/wiki/Personal_information_management][PIM]]: helps to capture,
    search, manage, and use your collection of sources.
- - methods, habits, and content are more important than tools
- - though, there are good tools out there: personally, I use a system that is
-   based on [[https://www.zotero.org/][Zotero]] and some black magic involving [[https://www.spacemacs.org/][(Space)Emacs]] (the latter is
-   *not* really beginner-friendly)
- - there are several approaches to keep notes (and there are some good tools -- see [[#software]]);
- - no universal solutions: find out what works for you.
+ - I use a system based on [[https://www.zotero.org/][Zotero]] as reference manager. 
+ - Key alternatives are [[https://www.jabref.org/][JabRef]], [[https://www.mendeley.com][Mendeley]], [[https://refworks.proquest.com/researcher/][Refworks]], [[https://endnote.com/][EndNote]] (there is more).
+ - Another crucial part is integration with the editor. I use (pure) black magic
+   involving [[https://www.spacemacs.org/][(Space)Emacs]] (*not* really beginner-friendly; there
+   are alternatives).
+ - Keeping notes in a streamlined way is useful. There are several
+   approaches, and several classes of tools -- see [[#software]].
+ - No universal solutions: find out what works for you.
+ - Methods, habits, and content are more important than tools.
 
  Corrections, suggestions, and comments are very [[mailto:tech_seminar@bochkarev.io][welcome]].
 #+HTML: </div>
 
 * Introduction
-  Here I am discussing mostly the system supporting my basic workflow,
-  mentioning some of alternative options along the way. It may or may not work
-  for you, of course, but hopefully will provide some inputs to design your own
-  IT "ecosystem". Here is a very general (and therefore, useless by itself)
-  description of the relevant workflow:<br><br>
+  Here I am discussing the system supporting my workflow, mentioning some of
+  alternative options. It may or may not work for you, of course, but hopefully
+  will provide some inputs to design your own IT "ecosystem". Here is a very
+  general (and therefore, useless by itself) description of the relevant
+  workflow:<br><br>
   
 #+NAME: dia_process
 #+begin_src plantuml :file ./ts-literature/process.svg
@@ -319,15 +322,13 @@ the journal -- style description format they provide.
     Luhmann]], was doing Sociology, and this approach might (or might not) be less
     effective for math-heavy fields. Anyways: It seems to be a vast topic, and
     there is a lot of resources out there, if you are interested further, including:
-    + 📖 *A book:* [[https://openlibrary.org/works/OL18635700W/How_to_Take_Smart_Notes]["How to Take Smart Notes..."]] by Sönke Ahrens.
+    + 📖 *A book:*[fn:orig] [[https://openlibrary.org/works/OL18635700W/How_to_Take_Smart_Notes]["How to Take Smart Notes..."]] by Sönke Ahrens.
       Despite it has the sort of title I dislike very much, I found the book
       pretty useful and informative[fn:newport]. (It might be still a little
       longer than necessary, to my taste.)
     + 💬 *A community:* [[https://www.reddit.com/r/Zettelkasten/comments/b566a4/what_is_a_zettelkasten/][r/Zettelkasten]] on Reddit (the linked note includes couple of
       good links on the subject; and there is a community [[https://zk.zettel.page/][wiki]], hosted
       separately)
-    + 🗎 *A paper:* the original Luhmann's paper /"Kommunikation mit Zettelkästen"/
-      (however, in German 🇩🇪);
   - On the contrary, someone from my friends just work on a relatively small
     number of notes in =.tex= format (something like "internal papers" in his
     lab).
@@ -446,6 +447,9 @@ command line, =ggplot= code for figures, etc.).
   bibliography:/home/bochkarev/Dropbox/bibliography/references.bib
 
 * Footnotes
+
+[fn:orig] There is an original paper by Luhmann, /"Kommunikation mit
+      Zettelkästen"/ -- however, it is in German 🇩🇪, I haven't seen any translation.
 
 [fn:newport] It left me with the same kind of feeling as the brilliant [[https://www.calnewport.com/books/deep-work/]["Deep
 work"]] by Cal Newport.
