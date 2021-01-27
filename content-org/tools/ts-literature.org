@@ -14,10 +14,9 @@
 
 #+begin_src yaml :front_matter_extra t
 summary: "A collection of notes on literature: discovery, reading, keeping track of references, and using them in writing."
-params:
-  description: "Tech Seminar summary on working with literature: managing references, notes, etc."
-  images:
-    - /images/notes.png
+description: "Tech Seminar summary on working with literature: managing references, notes, etc."
+images:
+  - "/images/notes.png"
 #+end_src
 
 #+HTML: <div class="note">
