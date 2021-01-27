@@ -2,13 +2,19 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-24T10:15:36+01:00
+lastmod: 2021-01-27T21:46:54+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
 summary: A quick note on OR Tech Seminar topics and logistics.
+hidetoc: t
 aliases:
   - /tools/or-tech-seminar
+
+params:
+  description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
+  images:
+    - /images/TechSeminar_logo.png
 ---
 
 {{< figure src="/images/TechSeminar_logo.png" >}}
@@ -23,7 +29,7 @@ suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io).
 
 | Where  | When                          |
 |--------|-------------------------------|
-| Online | Weekly, Mondays, 10-00 AM EST |
+| Online | Weekly: Mondays, 10-00 AM EST |
 
 
 ## The format {#the-format}
@@ -31,23 +37,38 @@ suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io).
 We will be discussing various tools (in a very broad sense) we, as
 researchers, use -- to share experience, configs, and ideas. Each seminar will
 consist of a speaker presentation with a discussion along the way, at most
-one hour in total.
+one hour in total. <br/> <br/>
+
+<div class="note">
+
+
+### Upcoming seminar: <span class="timestamp-wrapper"><span class="timestamp">[2021-02-01 Mon 10:00]</span></span> {#upcoming-seminar}
+
+💻 **All things version-control:** a quick intro to Git.
+<hr/>
+
+**Suggestion:** come with git [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), and a [Github](https://github.com) account.<br>
+(check that `git --version` gives you something in the terminal)
+
+-   Version control, backups, when to use (always!)
+-   Git, github, and the team.
+-   Repositories (remote, local). Create, fork, `clone`, and other spells.
+-   Keeping track of your code/text: `add`, `commit`, `push/pull`.
+-   Workflow / branches -- `checkout, merge`, rebasing, conflicts.
+
+</div>
 
 
 ## Core discussion {#core-discussion}
 
-1.  <span class="timestamp-wrapper"><span class="timestamp">[2021-01-25 Mon 10:00]</span></span>: 📰 **Working with the literature:** tools and approaches.
-    -   Managing references: relevant software (**Zotero**, JabRef, Mendeley and friends).
-    -   Using the literature: latex/bibtex, editor integrations, etc. (very brief)
-    -   Discovering the literature: how to? (feeds, mailing lists, reading club, etc.)
+1.  📰 **Working with the literature:** tools and approaches. (2021-01-25)
+       <a class="sticker" href="/tools/ts-literature/">&nbsp;Summary&nbsp;</a>
+    -   Managing references (Zotero, JabRef, Mendeley and friends).
+    -   Using the literature: latex/bibtex, editors, etc. (very brief)
+    -   Discovering the literature (feeds, mailing lists, etc.)
     -   A note on notes.
-2.  💻 **All things version-control:** a quick intro to Git.
-    -   Version control, backups, when to use (always!)
-    -   Git, github, and the team.
-    -   Repositories (remote, local). Create, fork, clone, and other spells.
-    -   Keeping track of your code/text-1: stage, commit, push, pull.
-    -   Keeping track of your code/text-2: branches -- branch, merge, rebase, resolving conflicts.
-    -   General tips and further reading.
+2.  **💻 All things version-control:** a quick intro to Git. _(next seminar -- see
+    above)_
 3.  🌧 **(Cloud) The Command Line - 1:** Surviving on the cloud.
     -   Logging in to the cluster. Login shell vs. comp node. Bash-related basics
         (moving around, editing, installing things, etc.).

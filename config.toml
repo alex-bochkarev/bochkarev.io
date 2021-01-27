@@ -14,6 +14,8 @@ title = "A.B."
     github = "alex-bochkarev"
     keybase = "bochkarev"
     tg = "abochka"
+    description = "Alexey Bochkarev: personal website"
+    images = ["/home/AB.JPG"]
 
 # Menu
 [menu]

@@ -11,18 +11,35 @@
 
 #+hugo_tags: tech-seminar
 #+hugo_categories: tools
-#+hugo_draft: t
 
 #+begin_src yaml :front_matter_extra t
 summary: "A collection of notes on literature: discovery, reading, keeping track of references, and using them in writing."
+params:
+  description: "Tech Seminar summary on working with literature: managing references, notes, etc."
+  images:
+    - /images/notes.png
 #+end_src
 
+#+HTML: <div class="note">
+*Summary* <hr>
+ - ref management is a part of PIM: helps to capture,
+   search, manage, and use your collection of sources.
+ - methods, habits, and content are more important than tools
+ - though, there are good tools out there: personally, I use a system that is
+   based on [[https://www.zotero.org/][Zotero]] and some black magic involving [[https://www.spacemacs.org/][(Space)Emacs]] (the latter is
+   *not* really beginner-friendly)
+ - there are several approaches to keep notes (and there are some good tools -- see [[#software]]);
+ - no universal solutions: find out what works for you.
+
+ Corrections, suggestions, and comments are very [[mailto:tech_seminar@bochkarev.io][welcome]].
+#+HTML: </div>
+
 * Introduction
-  I would like to discuss the /problem/, i.e. requirements to an IT system
-  supporting my basic workflow, and then the /solution/ that worked for me. It
-  may or may not work for /you/ of course, but hopefully will provide some
-  inputs to design your own IT "ecosystem". Here is a very general (and
-  therefore, useless by itself) description of the relevant workflow:
+  Here I am discussing mostly the system supporting my basic workflow,
+  mentioning some of alternative options along the way. It may or may not work
+  for you, of course, but hopefully will provide some inputs to design your own
+  IT "ecosystem". Here is a very general (and therefore, useless by itself)
+  description of the relevant workflow:<br><br>
   
 #+NAME: dia_process
 #+begin_src plantuml :file ./ts-literature/process.svg
@@ -59,34 +76,34 @@ note --> doc : (5) Use
 #+RESULTS: dia_process
 [[file:./ts-literature/process.svg]]
 
-This is a large topic, but roughly speaking the system[fn:PIM] has two
-key components that manage:
-- references (like, bibliography data, such as =.bib= entries, plain text
-  authors-titles-year-etc, perhaps, along with PDF files);
-- notes (that reflect your thinking process related to this paper/piece of information).
+This is a large topic, but roughly speaking the system[fn:PIM] has three
+key components:
+- reference manager (works with bibliography data, such as =.bib= entries, along
+  with PDF files);
+- notes (that reflect your thinking process related to this paper/piece of
+  information),
+- editor integration(s) (that extracts the information from the other two as
+  you write your manuscript).
 
 It can be organized in *many* ways (including some good old paper-based versions
 that were [[https://pub.uni-bielefeld.de/download/2942475/2942530/jschmidt_2016_niklas%20luhmanns%20card%20index.pdf][reported]] to be... very productive, to say the least[fn:hum]; a little
 more on this below). I had the following specific *requirements* in mind:
 - The system must be *future-proof*. Research is (hopefully) a long-term
-  endeavor, so lock-in with proprietary technologies is not acceptable. I must
-  be able to move to an alternative solution, if I'd like to. Key data must be
-  stored in some formats that allow for recovery with very basic tools (at least
-  in theory): plain text is best, open standards and free software are my
-  friends. Oh yes, and I don't want to store my data in cloud all the time, I
-  love tools that work offline.
-- It must let me to do the following things:
-  + *capture* a paper from a browser easily (or any other /source/ -- maybe a
-    web page, a book, etc.), retrieving bibliographical info automatically when
-    possible (including metadata extraction from PDFs).
+  endeavor, so lock-in with proprietary technologies is not acceptable. Storing
+  data in plain text is best, open standards and free software are my friends.
+  Oh yes, and I don't want to store my data in cloud all the time, I love tools
+  that work offline.
+- It must do the following things:
+  + *capture* a paper from a browser easily, retrieving bibliographical info
+    automatically when possible (including metadata extraction from PDFs).
   + *manage* references efficiently (edit fields, etc.), categorize things, etc.
   + play well with *LaTeX* (mostly, looking for and inserting citations).
 - (something that I hope you will ignore:) a large benefit for me had anything
   that worked well within [[https://xkcd.com/378/][Emacs]].
 
   
-  The core component of such system is, of course, a /bibliography-/,
-  /citation-/, or /reference-manager/.
+  The core component of such system is, of course, a (/bibliography-/,
+  /citation-/, or) /reference-manager/.
   
 * On references and bibliography
   A [[https://en.wikipedia.org/wiki/Reference_management_software][reference-management]] software is a tool that lets you to (surprise!) manage
@@ -95,7 +112,7 @@ more on this below). I had the following specific *requirements* in mind:
   format (e.g., a =.bib= file, an [[https://sqlite.org][SQLite]] database, etc.), and then can format it
   as you'd like: using the chosen [[https://en.wikipedia.org/wiki/Citation#Styles][citation style]] and producing outputs in plain
   text, word processor document, etc. It also usually helps to generate
-  bibliographies automatically, so that it updates when you update the text.
+  bibliographies automatically, so that it updates as you edit the manuscript.
 
   There are several key programs/services out there, and an infinite variety of
   their comparative analyses:
@@ -114,15 +131,17 @@ more on this below). I had the following specific *requirements* in mind:
   the "lab-default" tools might make the choice very simple and efficient./
 
   My personal short list would overlap with the Clemson Library's [[https://libraries.clemson.edu/research/citation-management/][one]]
-  (at the time of writing this): [[https://www.zotero.org/][Zotero]], [[https://www.jabref.org/][JabRef]]; plus [[https://mendeley.com/][Mendeley]], [[https://refworks.proquest.com/researcher/][Refworks]]
-  (Clemson [[https://clemson.libguides.com/newrefworks][guide]]), [[https://endnote.com/][EndNote]] if I allow for commercial products (I have also read
-  some good things about [[https://www.papersapp.com/][Papers]] for Mac -- but never had a chance to look
-  myself). This list is not exhaustive (by far), so please refer to more
-  complete resources (including the ones mentioned above) if you'd need. Despite
-  the problem seems somewhat standard from the first sight, it seems that
-  different people demand different things, so there is no "universal" solution.
-  Instead of trying to discuss pros and cons, let me just try to sketch what
-  works for me.
+  (at the time of writing this):
+  - [[https://www.zotero.org/][Zotero]], [[https://www.jabref.org/][JabRef ]]- free options (first prio).
+  - plus [[https://mendeley.com/][Mendeley]], [[https://refworks.proquest.com/researcher/][Refworks]] (Clemson [[https://clemson.libguides.com/newrefworks][guide]]), [[https://endnote.com/][EndNote]] if I allow for commercial
+    products (I have also read some good things about [[https://www.papersapp.com/][Papers]] for Mac -- but
+    never had a chance to look myself).
+
+  This list is not exhaustive, so please refer to more complete resources
+  (including the ones mentioned above) if you'd need. Despite the problem seems
+  somewhat standard from the first sight, different people might want different
+  things, so there is no "universal" solution. Instead of trying to discuss pros
+  and cons, let me just try to sketch what works for me.
 
 * My Zotero-based system.
   Here is my system in a nutshell, from a technology perspective:  
@@ -183,9 +202,9 @@ So, basically, I use the following tools:
   + LibreOffice integration (think MS Word);
   + ZotFile to be able to manipulate PDFs easily, including sending them to the tablet.
 
-Now, the "manuscript" part can be implemented, again in several ways, and the
+Now, the "manuscript" part can be implemented, again, in several ways, and the
 purpose here is to supercharge your editor to get info from the =.bib= file. My
-[[https://www.spacemacs.org/][Emacs (Spacemacs)]] handles this for me:[fn:layers]
+[[https://www.spacemacs.org/][Emacs (Spacemacs)]] handles this for me[fn:layers].
 
 I have a convenient (fuzzy) search / auto-completion when I insert the keys:
 
@@ -208,9 +227,15 @@ If you find it interesting -- there are many demos and tutorials on Zotero on
 YouTube and other places (most probably, including a dedicated training in your
 university library).
 
+Finally, Emacs still feels very DIY-ish, to me. Good if you /like/ to tinker with
+it, but if I were to look for alternatives -- I would start with other popular
+"mega-editors", such as [[https://code.visualstudio.com/][VSCode]] ([[https://vscodium.com/][-ium]]) or [[https://atom.io/][Atom]]. There must be plugins for this
+(though, I have never tried these).
+
 * A word on LaTeX ecosystem.
   I was somehow confused with the LaTeX-related systems, and found a relevant
-  [[https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib][TeX.StackExchange]] question. In a nutshell:
+  [[https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib][TeX.StackExchange]] question. In a nutshell:<br><br>
+  
 
 #+NAME: latex_system
 #+begin_src plantuml :file ./ts-literature/latex.svg
@@ -254,6 +279,9 @@ topic is better suited for another day. Eventually, everything is determined by
 the journal -- style description format they provide.
 
 * A note on notes.
+  :PROPERTIES:
+  :CUSTOM_ID: software
+  :END:
   This is, actually, a separate topic. But if you feel the necessity to take
   notes on your research in general (like an extended lab journal), there are
   many options.
@@ -262,15 +290,15 @@ the journal -- style description format they provide.
   several relevant "keywords" out there that I would like to mention.
   - First, one might take a technological perspective and look for software that
     allows to manage notes. This is, of course, good old Evernote[fn:evernote],
-    a newer and open source[fn:MIT] [[https://joplinapp.org/][Joplin]]. (There are people among my friends
+    a newer, free and open source [[https://joplinapp.org/][Joplin]]. (There are people among my friends
     who keep their research notes there.)
-  - There is and a vast variety of [[https://en.wikipedia.org/wiki/List_of_wiki_software][wiki software]] (such as [[https://www.dokuwiki.org/dokuwiki][DokuWiki]] or [[https://www.mediawiki.org/wiki/MediaWiki][MediaWiki]],
+  - There is a vast variety of [[https://en.wikipedia.org/wiki/List_of_wiki_software][wiki software]] (such as [[https://www.dokuwiki.org/dokuwiki][DokuWiki]] or [[https://www.mediawiki.org/wiki/MediaWiki][MediaWiki]],
     just to name a couple. But the list is huge.) Some of them are specifically
     positioned as a [[https://en.wikipedia.org/wiki/Personal_wiki][Personal Wiki]] (e.g., such as [[https://tiddlywiki.com/][TiddlyWiki]] -- see a nice 2.5
     minutes [[https://tiddlywiki.com/#Introduction%20Video][intro video]]).
   - There are specific solutions for working with an interconnected grid of
-    "evergreen" notes (i.e., the ones you might edit every time when you visit
-    them.) I would like to mention:
+    "evergreen" notes, the ones you might edit every time when you visit
+    them. I would like to mention:
     + [[https://roamresearch.com/][Roam]]. It looks totally exciting, but web-based (which
       is a big no-go for me);
     + [[https://obsidian.md/][Obsidian]]. Comparable thing, uses local storage, as far as I can tell.
@@ -285,26 +313,35 @@ the journal -- style description format they provide.
     Essentially, this is a /method/ for keeping a grid of interlinked, small
     notes (and letting them evolve over time). The idea is that after some time
     you actually build such an "external brain" that conversations with it
-    becomes surprisingly productive, letting you to create new connections and
-    ideas. Again, this is a /method/, not a software tool. In fact, [[https://en.wikipedia.org/wiki/Niklas_Luhmann#Note-taking_system_(Zettelkasten)][one]] of the
+    become surprisingly productive (resulting in new connections and
+    ideas). Again, this is a /method/, not a software tool. In fact, [[https://en.wikipedia.org/wiki/Niklas_Luhmann#Note-taking_system_(Zettelkasten)][one]] of the
     most famous /Zettelkästen/ was implemented as a wooden box with drawers,
     filled with small (paper) notes. It is worth noting: its author, [[https://en.wikipedia.org/wiki/Niklas_Luhmann#Note-taking_system_(Zettelkasten)][Niklas
     Luhmann]], was doing Sociology, and this approach might (or might not) be less
     effective for math-heavy fields. Anyways: It seems to be a vast topic, and
     there is a lot of resources out there, if you are interested further, including:
-    + 🗎 *Paper:* the original Luhmann's paper cite:luhmann1981 /"Kommunikation mit
-      Zettelkästen"/ (in German 🇩🇪);
-    + 💬 *Community:* [[https://www.reddit.com/r/Zettelkasten/comments/b566a4/what_is_a_zettelkasten/][r/Zettelkasten]] on Reddit (the linked note includes couple of
-      good links on the subject; and there is a community [[https://zk.zettel.page/][wiki]], hosted
-      separately)
-    + 📖 *Book:* [[https://openlibrary.org/works/OL18635700W/How_to_Take_Smart_Notes]["How to Take Smart Notes..."]] by Sönke Ahrens.
+    + 📖 *A book:* [[https://openlibrary.org/works/OL18635700W/How_to_Take_Smart_Notes]["How to Take Smart Notes..."]] by Sönke Ahrens.
       Despite it has the sort of title I dislike very much, I found the book
       pretty useful and informative[fn:newport]. (It might be still a little
       longer than necessary, to my taste.)
+    + 💬 *A community:* [[https://www.reddit.com/r/Zettelkasten/comments/b566a4/what_is_a_zettelkasten/][r/Zettelkasten]] on Reddit (the linked note includes couple of
+      good links on the subject; and there is a community [[https://zk.zettel.page/][wiki]], hosted
+      separately)
+    + 🗎 *A paper:* the original Luhmann's paper /"Kommunikation mit Zettelkästen"/
+      (however, in German 🇩🇪);
   - On the contrary, someone from my friends just work on a relatively small
     number of notes in =.tex= format (something like "internal papers" in his
     lab).
 
+    
+    My system basically represents a graph of connected notes. It can even be
+    visualized like this:
+
+#+HTML:![Notes graph](/images/notes.png#full-shadow)
+
+Of course, I use it mostly from the text interface -- imagine easily editable,
+local Wikipedia (also seems very useful to store code snippets -- for the
+command line, =ggplot= code for figures, etc.).
     
   *Finally:* it seems to me that specific /tools/ are not as important as
     discipline, habits and procedures we set up for ourselves. Of course, a
@@ -312,11 +349,11 @@ the journal -- style description format they provide.
     one of private conversations recently, that /notes/ is your product when you
     are not working on a specific paper. And when you accumulate enough of them
     -- all this can "graduate" to a paper. (Which is surprisingly along the
-    lines Dr. Luhmann as saying, as far as I understand.)
+    lines Dr. Luhmann was saying, as far as I understand.)
 
 * Discovering the literature
   
-  I wanted to jot down a couple of words on (and discuss) /discovering/ the
+  I wanted to jot down a couple of words on /discovering/ the
   literature. Like, where do papers new can come from.
 
   Before we start: your library might provide a surprising amount of useful
@@ -324,8 +361,7 @@ the journal -- style description format they provide.
   (with specific sections on [[https://clemson.libguides.com/IE][Industrial Engineering]], [[https://clemson.libguides.com/Mathematics][Mathematics]], and [[https://clemson.libguides.com/ComputerScience][Computer
   Science]]). I would like to thank our Librarian Jennifer Groff for a very
   productive email conversation, which helped me a lot in preparing this
-  discussion and research in general. There might be more useful sources --
-  check out the website!
+  discussion. There might be more useful sources -- check out the website!
 
 ** 🔎 Proactive search
    Who doesn't know about free search? Right, right... But still:
@@ -339,25 +375,19 @@ the journal -- style description format they provide.
      resources/databases to search for papers: the most general ones are,
      perhaps, (Elsevier's) [[https://en.wikipedia.org/wiki/Scopus][Scopus]] and (Clarivate's) [[https://en.wikipedia.org/wiki/Web_of_Science][Web of Science]]. Also, there
      is [[https://en.wikipedia.org/wiki/MathSciNet][MathSciNet]], [[https://www.engineeringvillage.com/][EngineeringVillage]], etc. Of course, there is [[https://en.wikipedia.org/wiki/List_of_academic_databases_and_search_engines][more]] -- these
-     are just random examples. For me, this is something that would allow more
-     complicated searches than Google Scholar can handle (at least at the moment
-     of writing these notes). I never used these for long periods of time
-     directly -- it seemed like the simple option was good enough (but I'd love
-     to learn your experience, if it is different!).
+     are just random examples. I use these for more complicated searches, sometimes.
    - (surprise!) The University Library. For example, Clemson Libraries has
-     subscriptions to many databases, and allows to (1) search across these,
-     and (2) retrieve paywalled papers. So, I found this [[https://libraries.clemson.edu/]["everything" library
-     search]] pretty useful. Note that there are some other databases (check out
-     the "Library databases" button) that might be useful. It seems pointless to
-     provide lists (ask your librarian!), but to give a random sample from more
-     than *500* (!) databases:
+     subscriptions to many databases, and allows to (1) search across these, and
+     (2) retrieve paywalled papers. So, I found this [[https://libraries.clemson.edu/]["everything" library search]]
+     pretty useful. I think our CU library has access to more than *500*
+     databases; to give a random sample:
      + [[https://methods.sagepub.com/][SAGE Research Methods]]
-     + [[https://credoreference.com][CREDO reference]] (search across encyclopedias, dictionaries, etc.)
+     + [[https://credoreference.com][CREDO reference]] (search in encyclopedias, dictionaries, etc.)
      + [[https://about.proquest.com/libraries/academic/dissertations-theses/pqdtglobal.html][ProQuest Disserations and Theses Global]]
-   - as a separate note: if you are at CU: note that Clemson Libraries provide
-     trainings on what is out there and how to use it: e.g., see /"Introducing
-     Library Research Strategies and Navigating the Clemson Libraries"/ from
-     [[https://grad360.sites.clemson.edu/index.php][Grad360]] -- seems to be scheduled for [2021-01-29].
+   - as a separate note: if you are a CU student, note that Clemson Libraries
+     provide trainings on what is out there and how to use it: e.g., see
+     /"Introducing Library Research Strategies and Navigating the Clemson
+     Libraries"/ from [[https://grad360.sites.clemson.edu/index.php][Grad360]] -- seems to be scheduled for [2021-01-29].
      
    Now, that was /proactive/ search. There are also more or less obvious methods
    to receive papers, well, automatically. Apart from the obvious Twitter (or
@@ -375,15 +405,16 @@ the journal -- style description format they provide.
      really have an overview, so can't comment. Chances are, your default
      desktop email client (if you happen to use it), or a browser (Safari?) also
      can do that. Of course, there is a huge [[https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators][comparison table]] on Wiki. There are
-     web solutions (e.g., [[https://feedly.com/][Feedly]]), which I have no clue about.
-   + Now, for this to work it must be supported by the /website/. Yeah, so it
-     wouldn't be able to show you ads (for example). So, not everyone is
-     supporting this. There are some solutions that try to circumvent this and
-     try to build an RSS feed for you (see [[https://feed43.com/][Feed43]])
+     web solutions (e.g., [[https://feedly.com/][Feedly]]), which I have no clue about. The colleagues
+     pointed out that Zotero can read feeds as well (so you could have
+     everything in one place).
+   + Now, for this to work it must be supported by the /website/. There are some
+     solutions that try to circumvent this and try to build an RSS feed for you
+     (see [[https://feed43.com/][Feed43]])
    + Some journals provide RSS/Atom feeds: e.g., IJOC, EJOR, OPRE, etc.
    + Preprint servers might have feeds -- e.g., arXiv [[https://arxiv.org/help/rss][mentions]] subjects feeds,
      updated daily. (unfortunately, to the best of my knowledge [[http://www.optimization-online.org/][Optimization
-     Online]] does not do this.
+     Online]] does not do this).
    
 ** 📨 Mailing lists
    - Web of Science, Engineering Village, Google Scholar (and, perhaps, many
@@ -396,9 +427,9 @@ the journal -- style description format they provide.
      lists, etc. -- please let me know if you think I missed something worth
      mentioning separately).
 
-** 💬 Journal club and other seminars
-   - Usually there seem to be efforts to read and share relevant papers in the
-     community. I know at least one relatively large lab that systematically
+** 💬 Journal clubs / seminars
+   - Quite often there are efforts to read and share relevant papers in the
+     "local" community. I know at least one relatively large lab that systematically
      keeps track of many relevant journals and present "fresh" papers during a
      regular (internal) event.
    - There are also studies-focused reading clubs (aimed to learn how to write
@@ -406,10 +437,11 @@ the journal -- style description format they provide.
    - We might want to make one, but this is a topic for another day.
      
 * Concluding remarks and further reading
-  - We have Clemson Libraries [[https://clemson.libcal.com/calendar/training?cid=3593&t=d&d=0000-00-00&cal=3593&inc=0][trainings/events]], including [[https://clemson.libcal.com/event/7336551]["Zotero for Citation Management"]].
-  - Now as I think about it: JabRef-based system might be better as it would
-    have fewer moving parts, but as of now it seems not worth the hassle of
+  - At CU we have Clemson Libraries [[https://clemson.libcal.com/calendar/training?cid=3593&t=d&d=0000-00-00&cal=3593&inc=0][trainings/events]], including [[https://clemson.libcal.com/event/7336551]["Zotero for Citation Management"]].
+  - Now as I think about it: JabRef-based system might have an advantage of
+    having fewer moving parts, but as of now it seems not worth the hassle of
     setting everything up again...
+
 * References :ignore:
   bibliographystyle:unsrt
   bibliography:/home/bochkarev/Dropbox/bibliography/references.bib
@@ -422,8 +454,6 @@ work"]] by Cal Newport.
 [fn:org] Speaking about orgmode: you can check out this great Bernt Hansen's
       page to see what's possible. But despite I like this technology *a lot*, I
       must admit it is still a DIY type of thing, to my taste
-
-[fn:MIT] From what I understand, it is actually free -- MIT-licensed.
 
 [fn:evernote] which I do not like as it is too much cloud-based and not, um...
     hacker friendly, to my feelings. For example, I do not quite understand how
