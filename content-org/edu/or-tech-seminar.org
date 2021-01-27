@@ -21,7 +21,7 @@ aliases:
 params:
   description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
   images:
-    - /images/TechSeminar_logo.png
+    - "/images/TechSeminar_logo.png"
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,

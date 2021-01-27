@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-27T21:46:54+01:00
+lastmod: 2021-01-27T21:51:44+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -14,7 +14,7 @@ aliases:
 params:
   description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
   images:
-    - /images/TechSeminar_logo.png
+    - "/images/TechSeminar_logo.png"
 ---
 
 {{< figure src="/images/TechSeminar_logo.png" >}}
