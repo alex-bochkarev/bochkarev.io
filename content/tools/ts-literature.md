@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-28T15:40:29+01:00
+lastmod: 2021-01-28T16:31:54+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: false
@@ -76,6 +76,9 @@ _citation-_, or) _reference-manager_.
 
 ## On references and bibliography {#on-references-and-bibliography}
 
+
+### Reference managers {#reference-managers}
+
 A [reference-management](https://en.wikipedia.org/wiki/Reference%5Fmanagement%5Fsoftware) software is a tool that lets you to (surprise!) manage
 references, i.e., bibliographical data: author, title, publisher data, etc.
 That is, it captures and stores the bibliographical _data_ in some internal
@@ -95,9 +98,9 @@ their comparative analyses:
     Also: [MiT](https://libguides.mit.edu/cite-write) (specifically on [citation management](https://libguides.mit.edu/cite-write/citetools)), [Harvard](https://guides.library.harvard.edu/cite), [Stanford](https://library.stanford.edu/research/bibliography-management), [U. of
     Washington](https://guides.lib.uw.edu/research/citations/citation-tools),
 -   There are numerous Reddit discussions (such as: [JabRef vs Zotero vs org-ref](https://www.reddit.com/r/LaTeX/comments/iouswl/jabref%5Fvs%5Fzotero%5Fvs%5Forgref%5Fwhich%5Fone%5Fdo%5Fyou/))
--   Of course, there is a paper <sup id="75f526c79b18bb5e78cde1133fd1c1f6"><a href="#ivey2018" title="Ivey \&amp; Crum, Choosing the {{Right Citation Management Tool}}: {{Endnote}}, {{Mendeley}}, {{Refworks}}, or {{Zotero}}, {Journal of the Medical Library Association : JMLA}, v(3), 399--403 (2018).">ivey2018</a></sup> on the topic.&nbsp;[^fn:3]
+-   Of course, there is a paper <sup id="75f526c79b18bb5e78cde1133fd1c1f6"><a href="#ivey2018" title="Ivey \&amp; Crum, Choosing the {{Right Citation Management Tool}}: {{Endnote}}, {{Mendeley}}, {{Refworks}}, or {{Zotero}}, {Journal of the Medical Library Association : JMLA}, v(3), 399--403 (2018).">ivey2018</a></sup> on the topic[^fn:3].
 
-_Before we start: it might be important what your colleagues are using. Using
+_**Note:** it might be important what your colleagues are using. Using
 the "lab-default" tools might make the choice very simple and efficient._
 
 My personal short list would overlap with the Clemson Library's [one](https://libraries.clemson.edu/research/citation-management/)
@@ -115,7 +118,7 @@ things, so there is no "universal" solution. Instead of trying to discuss pros
 and cons, let me just try to sketch what works for me.
 
 
-## My Zotero-based system. {#my-zotero-based-system-dot}
+### My Zotero-based system. {#my-zotero-based-system-dot}
 
 Here is my system in a nutshell, from a technology perspective:
 
@@ -151,9 +154,10 @@ LibreOffice and Google Docs integration:
 citation in the necessary citation style, e.g., as a plain text -- to insert it
 anywhere.)
 
-If you find it interesting -- there are many demos and tutorials on Zotero on
-YouTube and other places (most probably, including a dedicated training in your
-university library).
+If you find it interesting, there are many demos and tutorials on Zotero on
+YouTube and other places. Most probably, including a dedicated training in your
+university library -- at CU we have Clemson Libraries [trainings/events](https://clemson.libcal.com/calendar/training?cid=3593&t=d&d=0000-00-00&cal=3593&inc=0),
+including ["Zotero for Citation Management"](https://clemson.libcal.com/event/7336551).
 
 Finally, Emacs still feels very DIY-ish, to me. Good if you _like_ to tinker with
 it, but if I were to look for alternatives -- I would start with other popular
@@ -161,7 +165,7 @@ it, but if I were to look for alternatives -- I would start with other popular
 (though, I have never tried these).
 
 
-## A word on LaTeX ecosystem. {#a-word-on-latex-ecosystem-dot}
+### A word on LaTeX ecosystem. {#a-word-on-latex-ecosystem-dot}
 
 I was somehow confused with the LaTeX-related systems, and found a relevant
 [TeX.StackExchange](https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib) question. In a nutshell:<br><br>
@@ -186,8 +190,7 @@ several relevant "keywords" out there that I would like to mention.
 
 -   First, one might take a technological perspective and look for software that
     allows to manage notes. This is, of course, good old Evernote[^fn:5],
-    a newer, free and open source [Joplin](https://joplinapp.org/). (There are people among my friends
-    who keep their research notes there.)
+    and newer, free and open source [Joplin](https://joplinapp.org/).
 -   There is a vast variety of [wiki software](https://en.wikipedia.org/wiki/List%5Fof%5Fwiki%5Fsoftware) (such as [DokuWiki](https://www.dokuwiki.org/dokuwiki) or [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki),
     just to name a couple. But the list is huge.) Some of them are specifically
     positioned as a [Personal Wiki](https://en.wikipedia.org/wiki/Personal%5Fwiki) (e.g., such as [TiddlyWiki](https://tiddlywiki.com/) -- see a nice 2.5
@@ -205,21 +208,19 @@ several relevant "keywords" out there that I would like to mention.
     -   [Org-roam](https://www.orgroam.com/). This is a part of [Emacs](https://www.gnu.org/software/emacs/) ecosystem over the all-mighty[^fn:6]
         [orgmode](https://orgmode.org/). Free and open source, local solution. This is what I use
         currently.
--   Then, there is a story about [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten). A slip-box with notes.
-    Essentially, this is a _method_ for keeping a grid of interlinked, small
-    notes (and letting them evolve over time). The idea is that after some time
-    you actually build such an "external brain" that conversations with it
-    become surprisingly productive (resulting in new connections and
-    ideas). Again, this is a _method_, not a software tool. In fact, [one](https://en.wikipedia.org/wiki/Niklas%5FLuhmann#Note-taking%5Fsystem%5F(Zettelkasten)) of the
-    most famous _Zettelkästen_ was implemented as a wooden box with drawers,
-    filled with small (paper) notes. It is worth noting: its author, [Niklas
-    Luhmann](https://en.wikipedia.org/wiki/Niklas%5FLuhmann#Note-taking%5Fsystem%5F(Zettelkasten)), was doing Sociology, and this approach might (or might not) be less
-    effective for math-heavy fields. Anyways: It seems to be a vast topic, and
-    there is a lot of resources out there, if you are interested further, including:
-    -   📖 **A book:**[^fn:7] ["How to Take Smart Notes..."](https://openlibrary.org/works/OL18635700W/How%5Fto%5FTake%5FSmart%5FNotes) by Sönke Ahrens.
+-   Then, there is a specific _method_ of taking such notes called [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten).
+    The word means a slip-box with notes. The idea is that after some time you
+    actually build such an "external brain" that conversations with it become
+    surprisingly productive (resulting in new connections and ideas). It can be
+    implemented with any reasonable tool. In fact, [one](https://en.wikipedia.org/wiki/Niklas%5FLuhmann#Note-taking%5Fsystem%5F(Zettelkasten)) of the most famous
+    _Zettelkästen_ was implemented as a wooden box with drawers, filled with
+    small (paper) notes. It is worth noting: its author, [Niklas Luhmann](https://en.wikipedia.org/wiki/Niklas%5FLuhmann#Note-taking%5Fsystem%5F(Zettelkasten)), was
+    doing Sociology, and this approach might (or might not) be less effective
+    for math-heavy fields. Anyways: It seems to be a vast topic, and there is a
+    lot of resources out there, if you are interested further, including[^fn:7]:
+    -   📖 **A book:**["How to Take Smart Notes..."](https://openlibrary.org/works/OL18635700W/How%5Fto%5FTake%5FSmart%5FNotes) by Sönke Ahrens.
         Despite it has the sort of title I dislike very much, I found the book
-        pretty useful and informative[^fn:8]. (It might be still a little
-        longer than necessary, to my taste.)
+        pretty useful and informative[^fn:8].
     -   💬 **A community:** [r/Zettelkasten](https://www.reddit.com/r/Zettelkasten/comments/b566a4/what%5Fis%5Fa%5Fzettelkasten/) on Reddit (the linked note includes couple of
         good links on the subject; and there is a community [wiki](https://zk.zettel.page/), hosted
         separately)
@@ -233,16 +234,16 @@ visualized like this:
 ![Notes graph](/images/notes.png#full-shadow)
 
 Of course, I use it mostly from the text interface -- imagine easily editable,
-local Wikipedia (also seems very useful to store code snippets -- for the
-command line, `ggplot` code for figures, etc.).
+local Wikipedia. Also seems very useful to store code snippets -- for saving
+useful command line recipes, boilerplate `ggplot` code for figures, etc.
 
-**Finally:** it seems to me that specific _tools_ are not as important as
-  discipline, habits and procedures we set up for ourselves. Of course, a
-  labjournal in one form or another is a must. I liked a point that came up in
-  one of private conversations recently, that _notes_ is your product when you
-  are not working on a specific paper. And when you accumulate enough of them
-  -- all this can "graduate" to a paper. (Which is surprisingly along the
-  lines Dr. Luhmann was saying, as far as I understand.)
+**As a concluding note:** it seems to me that specific _tools_ are not as important as
+    discipline, habits and procedures we set up for ourselves. Of course, a
+    lab notebook in one form or another is a must. I liked a point that came up in
+    one of private conversations recently, that _notes_ is your product when you
+    are not working on a specific paper. And when you accumulate enough of them
+    -- all this can "graduate" to a paper. Which is surprisingly along the
+    lines of what Dr. Luhmann was saying.
 
 
 ## Discovering the literature {#discovering-the-literature}
@@ -250,9 +251,9 @@ command line, `ggplot` code for figures, etc.).
 I wanted to jot down a couple of words on _discovering_ the
 literature. Like, where do papers new can come from.
 
-Before we start: your library might provide a surprising amount of useful
-resources! E.g., Clemson University Libraries offer ["Research & Course Guides"](https://libraries.clemson.edu/find/research-course-guides/)
-(with specific sections on [Industrial Engineering](https://clemson.libguides.com/IE), [Mathematics](https://clemson.libguides.com/Mathematics), and [Computer
+**Note:** your library might provide a surprising amount of useful resources!
+E.g., Clemson University Libraries offer ["Research & Course Guides"](https://libraries.clemson.edu/find/research-course-guides/) (with/
+specific sections on [Industrial Engineering](https://clemson.libguides.com/IE), [Mathematics](https://clemson.libguides.com/Mathematics), and [Computer
 Science](https://clemson.libguides.com/ComputerScience)). I would like to thank our Librarian Jennifer Groff for a very
 productive email conversation, which helped me a lot in preparing this
 discussion. There might be more useful sources -- check out the website!
@@ -288,17 +289,19 @@ Who doesn't know about free search? Right, right... But still:
 
 Now, that was _proactive_ search. There are also more or less obvious methods
 to receive papers, well, automatically. Apart from the obvious Twitter (or
-whatever other social networks are used in your subfield's community) these are:
+whatever other social networks are used in your subfield's community) these
+are feeds, mailing lists, and various seminars / events.
 
 
 ### 📰 Feeds: RSS, atom {#feeds-rss-atom}
 
-There is a web [standard](https://en.wikipedia.org/wiki/Atom%5F(Web%5Fstandard)) for "feeds", making websites machine readable. The
-idea is that instead of checking relevant websites frequently yourself, you
-delegate this task to the computer (we're engineers, after all, right?). A
-special program, feed _reader_, or a feed _aggregator_ checks out the websites that support such
-technology, and lets you know if a new paper / blog post / web page on the
-site was published. As simple as that. A couple of notes here:
+The idea is that instead of checking relevant websites frequently yourself,
+you delegate this task to the computer (we're engineers, after all, right?).
+There is a web [standard](https://en.wikipedia.org/wiki/Atom%5F(Web%5Fstandard)) for "feeds", making websites machine readable -- so
+that a special program, feed _reader_, or a feed _aggregator_ checks out the
+websites that support such technology, and lets you know if a new paper /
+blog post / web page on the site was published. As simple as that. A couple
+of notes here:
 
 -   Speaking about software, I would mention Mozilla [Thunderbird](https://www.thunderbird.net) or [Elfeed](https://github.com/skeeto/elfeed) (if
     you are into Emacs ecosystem) -- this is what I tried to use, but I don't
@@ -336,17 +339,12 @@ site was published. As simple as that. A couple of notes here:
     "local" community. I know at least one relatively large lab that systematically
     keeps track of many relevant journals and present "fresh" papers during a
     regular (internal) event.
--   There are also studies-focused reading clubs (aimed to learn how to write
-    good papers, rather than to keep track of cutting-edge research).
+-   There are also studies-focused reading clubs, aimed mostly not to keep
+    track of cutting-edge research, but to learn
+    -   how to do good science (essentially, pose and answer good research
+        questions, plan the research, etc.)
+    -   how to write good papers out of it.
 -   We might want to make one, but this is a topic for another day.
-
-
-## Concluding remarks and further reading {#concluding-remarks-and-further-reading}
-
--   At CU we have Clemson Libraries [trainings/events](https://clemson.libcal.com/calendar/training?cid=3593&t=d&d=0000-00-00&cal=3593&inc=0), including ["Zotero for Citation Management"](https://clemson.libcal.com/event/7336551).
--   Now as I think about it: JabRef-based system might have an advantage of
-    having fewer moving parts, but as of now it seems not worth the hassle of
-    setting everything up again...
 
 
 # Bibliography
@@ -358,5 +356,5 @@ site was published. As simple as that. A couple of notes here:
 [^fn:4]: I use layers: `bibtex, pdf`, and `org-roam` + `org-roam-bibtex` along with `helm` and such (a mandatory link to my [dotfiles](https://github.com/alex-bochkarev/my-spacemacs-dotfiles)). If you are into Emacs world, you might find it useful to watch this EmacsConf2020 [talk](https://emacsconf.org/2020/talks/17/) by [Noorah Alhasan](https://noorahalhasan.com/), which discusses a very similar approach.
 [^fn:5]: which I do not like as it is too much cloud-based and not, um... hacker friendly, to my feelings. For example, I do not quite understand how to export my stuff quickly and without losses, should I happen to need this...
 [^fn:6]: Speaking about orgmode: you can check out this great Bernt Hansen's page to see what's possible. But despite I like this technology **a lot**, I must admit it is still a DIY type of thing, to my taste
-[^fn:7]: There is an original paper by Luhmann, _"Kommunikation mit Zettelkästen"_ -- however, it is in German 🇩🇪, I haven't seen any translation.
+[^fn:7]: There is also an original paper by Luhmann, _"Kommunikation mit Zettelkästen"_ -- however, it is in German 🇩🇪, I haven't seen any translation.
 [^fn:8]: It left me with the same kind of feeling as the brilliant ["Deep work"](https://www.calnewport.com/books/deep-work/) by Cal Newport.
