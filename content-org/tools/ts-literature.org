@@ -30,6 +30,9 @@ images:
    are alternatives).
  - Keeping notes in a streamlined way is useful. There are several
    approaches, and several classes of tools -- see [[#software]]
+ - There are several ways to discover new literature, including proactive search
+   in search engines and specialized databases, as well as receiving updates
+   from web feeds, mailing lists, and seminars.
  - No universal solutions: find out what works for you.
  - Methods, habits, and content are more important than tools.
 

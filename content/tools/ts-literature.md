@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-28T16:31:54+01:00
+lastmod: 2021-01-28T16:36:12+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: false
@@ -25,6 +25,9 @@ images:
     are alternatives).
 -   Keeping notes in a streamlined way is useful. There are several
     approaches, and several classes of tools -- see [A note on notes.](#software)
+-   There are several ways to discover new literature, including proactive search
+    in search engines and specialized databases, as well as receiving updates
+    from web feeds, mailing lists, and seminars.
 -   No universal solutions: find out what works for you.
 -   Methods, habits, and content are more important than tools.
 
