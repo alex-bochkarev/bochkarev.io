@@ -11,7 +11,7 @@ tags: ["foo", "bar"]
 </div>
 
 PhD student: research in Industrial Engineering / OR, optimization (with Dr.
-[J.Cole Smith](https://eng-cs.syr.edu/directory/?peopleid=14005)).
+[J.Cole Smith](https://colesmit.expressions.syr.edu/)).
 
 **Research interests:** Combinatorial optimization, Binary decision diagrams, Network optimization and interdiction.
 

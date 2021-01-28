@@ -47,7 +47,7 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
 ** DONE Contacts page
    CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-13 Fri 09:38]
-** TODO Sidenotes and a shortcode for that.
+** TODO Sidenotes and a shortcode for that. :someday:
  [2020-11-13 Fri 09:38]
  https://danilafe.com/blog/sidenotes/
 ** TODO Metapost
@@ -85,6 +85,14 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
  [2020-11-10 Tue 22:49]
 
  Especially footer and header.
+** TODO Add dotplot picture
+** TODO Add SMTB-Algo picture
+** TODO Add all twitter-cards (all posts)
+** TODO Make a shortcode for svg-icon!
+ [2021-01-14 Thu 12:08]
+ 
+** TODO Add bio-snippets page
+   [2021-01-05 Tue 02:15]
 ** DONE Fix the fonts
    CLOSED: [2021-01-13 Wed 23:04]
    The symbol in the header does not show up on another system??..
@@ -94,6 +102,7 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
 *** front-matter parameters
     - icons
     - hidetoc
+    - image (twitter-card)
 ** DONE Main page with photo
    CLOSED: [2020-11-24 Tue 22:56]
  [2020-11-13 Fri 09:37]
@@ -131,13 +140,3 @@ PDF, Source, etc.
 wikipedia, github, local, external.
 ** DONE Make sticky menu look better (no overlay, maybe?)
    CLOSED: [2020-11-14 Sat 18:16]
- [2020-11-13 Fri 10:30]
-** DONE href CSS
-   CLOSED: [2020-11-13 Fri 23:06]
- [2020-11-13 Fri 09:36]
- main look and hover.
-** TODO Add bio-snippets page
- [2021-01-05 Tue 02:15]
-** TODO Make a shortcode for svg-icon!
- [2021-01-14 Thu 12:08]
- 

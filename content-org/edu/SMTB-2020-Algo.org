@@ -13,6 +13,7 @@
 
 #+begin_src yaml :front_matter_extra t
 summary: This is a talk presented to high-school students during [SMTB](https://molbioschool.org/en/)-2020. Quick numerical illustrations for runtime, correctness and such fun things.
+hidetoc: t
 
 links:
 - icon: "i-gh"

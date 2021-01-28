@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-28T14:44:37+01:00
+lastmod: 2021-01-28T15:40:29+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: false
@@ -95,7 +95,7 @@ their comparative analyses:
     Also: [MiT](https://libguides.mit.edu/cite-write) (specifically on [citation management](https://libguides.mit.edu/cite-write/citetools)), [Harvard](https://guides.library.harvard.edu/cite), [Stanford](https://library.stanford.edu/research/bibliography-management), [U. of
     Washington](https://guides.lib.uw.edu/research/citations/citation-tools),
 -   There are numerous Reddit discussions (such as: [JabRef vs Zotero vs org-ref](https://www.reddit.com/r/LaTeX/comments/iouswl/jabref%5Fvs%5Fzotero%5Fvs%5Forgref%5Fwhich%5Fone%5Fdo%5Fyou/))
--   Of course, there is a paper[^fn:3] on that: <sup id="75f526c79b18bb5e78cde1133fd1c1f6"><a href="#ivey2018" title="Ivey \&amp; Crum, Choosing the {{Right Citation Management Tool}}: {{Endnote}}, {{Mendeley}}, {{Refworks}}, or {{Zotero}}, {Journal of the Medical Library Association : JMLA}, v(3), 399--403 (2018).">ivey2018</a></sup>.
+-   Of course, there is a paper <sup id="75f526c79b18bb5e78cde1133fd1c1f6"><a href="#ivey2018" title="Ivey \&amp; Crum, Choosing the {{Right Citation Management Tool}}: {{Endnote}}, {{Mendeley}}, {{Refworks}}, or {{Zotero}}, {Journal of the Medical Library Association : JMLA}, v(3), 399--403 (2018).">ivey2018</a></sup> on the topic.&nbsp;[^fn:3]
 
 _Before we start: it might be important what your colleagues are using. Using
 the "lab-default" tools might make the choice very simple and efficient._

@@ -126,7 +126,7 @@ more on this below). I had the following specific *requirements* in mind:
     Also: [[https://libguides.mit.edu/cite-write][MiT]] (specifically on [[https://libguides.mit.edu/cite-write/citetools][citation management]]), [[https://guides.library.harvard.edu/cite][Harvard]], [[https://library.stanford.edu/research/bibliography-management][Stanford]], [[https://guides.lib.uw.edu/research/citations/citation-tools][U. of
     Washington]],
   - There are numerous Reddit discussions (such as: [[https://www.reddit.com/r/LaTeX/comments/iouswl/jabref_vs_zotero_vs_orgref_which_one_do_you/][JabRef vs Zotero vs org-ref]])
-  - Of course, there is a paper[fn:recursive] on that: cite:ivey2018. 
+  - Of course, there is a paper cite:ivey2018 on the topic. [fn:recursive]
     
 
   /Before we start: it might be important what your colleagues are using. Using
