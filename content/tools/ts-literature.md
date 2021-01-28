@@ -2,7 +2,7 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-27T23:35:56+01:00
+lastmod: 2021-01-28T14:44:37+01:00
 tags: ["tech-seminar"]
 categories: ["tools"]
 draft: false
@@ -24,7 +24,7 @@ images:
     involving [(Space)Emacs](https://www.spacemacs.org/) (**not** really beginner-friendly; there
     are alternatives).
 -   Keeping notes in a streamlined way is useful. There are several
-    approaches, and several classes of tools -- see [A note on notes.](#software).
+    approaches, and several classes of tools -- see [A note on notes.](#software)
 -   No universal solutions: find out what works for you.
 -   Methods, habits, and content are more important than tools.
 

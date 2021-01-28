@@ -29,7 +29,7 @@ images:
    involving [[https://www.spacemacs.org/][(Space)Emacs]] (*not* really beginner-friendly; there
    are alternatives).
  - Keeping notes in a streamlined way is useful. There are several
-   approaches, and several classes of tools -- see [[#software]].
+   approaches, and several classes of tools -- see [[#software]]
  - No universal solutions: find out what works for you.
  - Methods, habits, and content are more important than tools.
 
