@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-02-05T02:10:03+01:00
+lastmod: 2021-02-05T21:36:00+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -68,7 +68,8 @@ Notes on the cluster / working in the shell (topics for two seminars):
     -   Using the literature: latex/bibtex, editors, etc. (very brief)
     -   Discovering the literature (feeds, mailing lists, etc.)
     -   A note on notes.
-2.  **🔀 All things version-control:** a quick intro to Git. (2020-02-01; summary: coming soon!)
+2.  **🔀 Version-control:** a quick intro to Git. (2020-02-01)
+       <a class="sticker" href="/tools/ts-git/">&nbsp;Summary&nbsp;</a>
     -   Version control, backups, when to use (always!)
     -   Git, github, and the team.
     -   Repositories (remote, local). Create, fork, `clone`, and other spells.

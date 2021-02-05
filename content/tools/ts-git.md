@@ -2,16 +2,18 @@
 title: "🔀 Version control with git."
 author: ["Alexey Bochkarev"]
 date: 2021-01-30
-lastmod: 2021-02-05T19:53:38+01:00
+lastmod: 2021-02-05T21:36:52+01:00
 tags: ["tech-seminar", "talk"]
 categories: ["tools"]
-draft: true
+draft: false
 summary: A quick intro to version control with git.
 ---
 
 <div class="note">
 
-**Summary** <hr>
+**Summary** <hr> This is a note for someone far from software development, but
+interested in tracking changes in source code and other text-based files. The
+logic is built around a specific, trivial example.
 
 -   [backup](https://en.wikipedia.org/wiki/Backup): is protecting against data loss. So, _when_ your computer dies, you
     are not too far behind. Any sort of <span class="underline">regular</span> backup procedure helps.
@@ -29,9 +31,9 @@ summary: A quick intro to version control with git.
     code to test your ideas, while keeping a "clean" version easily available.
 -   This note contains a brief overview and discusses a simple example of
     _individual_ (not collaborative) use.
--   There are **many** resources online. E.g. ["ProGit"](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) is a good book.&nbsp;[^fn:2]
+-   There are **many** resources online. E.g. ["ProGit"](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) is a good book.
 -   Working from a command line helps a lot to understand what's going on, but:
--   There are many excellent tools that help productivity:
+-   There are many excellent tools that help productivity --
     -   stand-alone clients ([Github Desktop](https://desktop.github.com/), [GitKraken](https://www.gitkraken.com/), etc.);
     -   some very good editor integrations -- in [VSCode](https://code.visualstudio.com/), [Atom](https://atom.io/), [Sublime](https://www.sublimetext.com), Emacs (see
         [Magit](https://magit.vc/)), or almost any other serious editor or IDE.
@@ -46,19 +48,18 @@ Corrections, suggestions, and comments are very [welcome](mailto:tech%5Fseminar@
 
 ### Some context {#some-context}
 
-There are two somewhat adjacent problems: backups and version control. [Backup](https://en.wikipedia.org/wiki/Backup)
-basically means making "snapshots" for further recovery. It is an essential part
-of any IT infrastructure; it can be done with built-in tools (e.g., "time
-machine" for Apple laptops), [borgbackup](https://borgbackup.readthedocs.io/en/stable/) or `rsync` the `/home` directory on
-Linux, or anything else along these lines. I think the key is to have regular **procedure**.
+There are two adjacent problems: backups and version control.
 
-Now, [version control systems](https://en.wikipedia.org/wiki/Version%5Fcontrol) are used to keep track of changes in your files.
+-   [Backup](https://en.wikipedia.org/wiki/Backup) basically means making "snapshots" for further recovery. I think the
+    key is to have regular **procedure**, which any suitable tools: built-in software
+    (e.g., "time machine" for Apple), [borgbackup](https://borgbackup.readthedocs.io/en/stable/), or just `rsync`, etc.
+-   [version control systems](https://en.wikipedia.org/wiki/Version%5Fcontrol) are used to keep track of changes in your files.
     [Git](https://en.wikipedia.org/wiki/Git) is one of the most popular ones. Alternatives include [subversion (SVN)](https://en.wikipedia.org/wiki/Apache%5FSubversion),
     [mercurial](https://en.wikipedia.org/wiki/Mercurial), and [more](https://en.wikipedia.org/wiki/Comparison%5Fof%5Fversion-control%5Fsoftware). Further we will focus on version control and,
     specifically, git.
 
-(_collaboration_ on code and other plain-text files is another topic, which
-    happens to be addressed by git particularly well -- but this is out of the
+(_Collaboration_ on code and other plain-text files is another topic, which
+    happens to be addressed particularly well by git -- but this is out of the
     scope of this note.)
 
 
@@ -76,11 +77,15 @@ which gave me:
 git version 2.27.0
 ```
 
+<details> <summary> [ What if not? ]</summary>
+
 If it did not work, start [here](https://git-scm.com/download). It works out of the box on my GNU/Linux
 machine, but if I were to use other systems, I would look into [GitForWindows](https://gitforwindows.org/)
 (see also a larger [tutorial](https://courses.cs.washington.edu/courses/cse154/20au/resources/assets/vscode-git-tutorial/windows/index.html)), or hoped that MacOS will suggest me to install
 it automatically (or, e.g., try to `brew install git`, if not -- see [brew](https://brew.sh/)
 for more details).
+
+</details>
 
 As pointed out in the [docs](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup), you would need to set your name and email (to be
 associated with your changes in the code).
@@ -98,52 +103,37 @@ editors have plugins that support git well and simplify many operations. For
 discussion here, I will show commands as issued from the command line, but I find
 editor integration more convenient to use for most tasks.
 
-**3)** It is convenient to see what is happening in our repo on **GitHub**, so I
+**3)** It is convenient to see what is happening in our repo on [GitHub](https://pages.github.com/), so I
    used an account there for the example below. I tend to use Github pretty
-   extensively to keep a copy of my code online[^fn:3].
+   extensively to keep a copy of my code online[^fn:2].
 
 
 ### On Git vs. Github {#on-git-vs-dot-github}
 
--   git is a _"protocol"_, a (distributed) version control system.
--   _distributed:_ so, you keep a local copy and work with it.
--   many providers offer hosting compatible with git protocol.
-    Examples are:
-    -   [github](https://github.com/)
-    -   [gitlab](https://about.gitlab.com/)
-    -   [bitbucket](https://bitbucket.org)
-    -   there are more exotic options -- e.g., see [keybase.io](https://keybase.io/blog/encrypted-git-for-everyone)?
-    -   you, if you'd like (e.g., see [gitea](https://gitea.io/en-us/));
+Git is a version control system -- think a _"protocol"_. You work with a local
+app (`git`) that tracks changes in your local folder. Many providers offer
+_hosting_ compatible with git. Examples include [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), [BitBucket](https://bitbucket.org) and
+others. Self-hosted options are available (e.g., see [gitea](https://gitea.io/en-us/) or GitLab).
 
-<!--listend-->
-
--   another (important!) story: the social aspect
-    (Github is the de-facto standard).
-    -   Show your code.
-    -   Collaborate.
+Usually, third-party providers implement "social" tools as well:
+to facilitate collaborations, comments, issue tracking, etc. And also just allow
+to demonstrate what kind of code you write. I think GitHub is _de facto_
+standard at the moment.
 
 
 ### The big picture {#the-big-picture}
 
--   your project lives in a _repo_ (a home, y'know);
--   it is in fact just a folder with a special `.git` subfolder,
-    where the magic happens.
--   there is "working area", "staging area", and
--   a very simple workflow would look as follows:
+A project lives in a repository (_"repo"_). In fact, it is just a folder with a
+  special `.git` subfolder, where the magic happens. There is something called
+  "working area", "staging area", and repositories:
 
 {{< figure src="/ox-hugo/workflow.svg" >}}
-
--   We will start with a command-line interface -- because it is
-    instructive. It might help to use something else later.
-    (preferably, within your editor).
--   People say, you might want to get back to the command line
-    from time to time.
 
 
 ## Key concepts with a running example {#key-concepts-with-a-running-example}
 
 
-### Basics {#basics}
+### Basics: tracking changes {#basics-tracking-changes}
 
 Assume we would like to develop some code in Python (this will be our running
 example). So, we create a folder and immediately initialize a repo:
@@ -152,12 +142,14 @@ example). So, we create a folder and immediately initialize a repo:
 git init
 ```
 
+Output:
+
 ```text
 Initialized empty Git repository in /home/bochkarev/sandbox/demo-repo/.git/
 ```
 
-What happened, is it created a special directory, `.git`, that will contain
-the information concerning the version history. Now, let us add some code and
+It has created a special directory, `.git`, that will contain
+the information concerning the history. Now, let us add some code and
 save it as `new_doc.py`:
 
 ```python
@@ -168,11 +160,14 @@ for i in range(5):
 ```
 
 Assume we have implemented some basic functionality, and would like to save a
-snapshot of this state of the repo. Note that git "knows" that we have some changes:
+snapshot of this state in the repo. Note that git "knows" that we have some
+changes now:
 
 ```bash
 git status
 ```
+
+Output:
 
 ```text
 On branch master
@@ -192,12 +187,15 @@ So, as git suggests, we first add the changes to the "staging area":
 git add .
 ```
 
-So that now `git status` shows that we have "changes to be committed" (saved to
-the versions history):
+Here the period `.` means "all files in the current directory" (we could have
+used a specific filename instead). Now `git status` shows that we have "changes
+to be committed" (saved to the versions history):
 
 ```bash
 git status
 ```
+
+Output:
 
 ```text
 On branch master
@@ -214,6 +212,8 @@ We actually create a record in the versions history with:
 ```bash
 git commit -m"first commit"
 ```
+
+Output:
 
 ```text
 [master (root-commit) de41445] first commit
@@ -237,6 +237,8 @@ Note that git is aware of specific changes. We can highlight them by saying:
 git diff
 ```
 
+Output:
+
 ```text
 diff --git a/new_doc.py b/new_doc.py
 index fe46b97..105a3b3 100644
@@ -257,7 +259,7 @@ plus. Of course, it is not necessary to stare at cryptic symbols in the shell:
 e.g., VSCode will highlight these changes nicely, if you switch to "Version
 Control" tab and choose the changed file (`new_doc.py`):
 
-{{< figure src="/ox-hugo/2021-02-05_13-11-46_screenshot.png" >}}
+![Changes highlighted](/images/ts-git/2021-02-05_13-11-46_screenshot.png#full-shadow)
 
 If we are happy with the changes, again, we add them to the "staging" area and
 "commit" to the versions history with commands:
@@ -266,6 +268,8 @@ If we are happy with the changes, again, we add them to the "staging" area and
 git add .
 git commit -m"inner loop"
 ```
+
+Output:
 
 ```text
 [master acd00af] inner loop
@@ -277,6 +281,8 @@ Now, to see the commits history, we can issue:
 ```bash
 git log
 ```
+
+Output:
 
 ```text
 commit acd00afdf4c0c0a3fa6f5229752f1807d4398688
@@ -299,6 +305,8 @@ in a compact form:
 git log --pretty=oneline --abbrev-commit
 ```
 
+Output:
+
 ```text
 acd00af inner loop
 de41445 first commit
@@ -314,16 +322,15 @@ file, `old_version.py`, with the contents of `new_doc.py` as of the moment of
 the first commit). I will not use this file, so I will just remove it for now,
 with `rm ./old_version.py`.
 
-However, experimenting and working with code is more often done with something
-called _branching_. Make sure you are on the main branch before proceeding
-(e.g., `git checkout master`).
+Experimenting and working with code is more often done with something
+called _branching_.
 
 
-### Branches {#branches}
+### Branching {#branching}
 
 So, one possible workflow is to have a "clean", main branch (say, "ready to
 show to your supervisor"), and experiment in separate versions, merging back
-those that worked out. Let's see how it might work on our example.
+those that worked out.
 
 Assume we want to try to switch to nice unicode variable names (greek
 letters). First, we create a new _branch_ for this feature:
@@ -341,11 +348,11 @@ git status
 And the bottom left corner of my VSCodium editor also hints of the current
 branch, like this:
 
-{{< figure src="/ox-hugo/2021-02-05_16-38-40_screenshot.png" >}}
+![Branch name indicator](/images/ts-git/2021-02-05_16-38-40_screenshot.png#full-shadow)
 
 Our previous state of the tracked files (one file in this case) was left in a
-`master` branch, and we jumped into a separate code "spin-off". Now, we can edit
-files. Let me just rename the variables, for the sake of example. So, `new_doc.py` now reads:
+`master` branch, and we jumped into a separate code "spin-off". Let me
+rename a variable, so `new_doc.py` now would look like:
 
 ```python
 print("Hello world")
@@ -359,7 +366,7 @@ for ɑ in range(5):
 After we save the file, VSCode (or `git diff`) will highlight for us, what has
 changed:
 
-{{< figure src="/ox-hugo/2021-02-05_16-49-00_screenshot.png" >}}
+![Changes highlighted](/images/ts-git/2021-02-05_16-49-00_screenshot.png#full-shadow)
 
 Again, we commit this change:
 
@@ -368,20 +375,24 @@ git add .
 git commit -m"renamed variables"
 ```
 
+Output:
+
 ```text
 [unicode_vars 985d560] renamed variables
  1 file changed, 2 insertions(+), 2 deletions(-)
 ```
 
-Then we might remember that there is a more compact syntax for printing strings
-in Python (suddenly! Or maybe because we've got an email about this). So we go
-back to the main branch to edit the file:
+Assume we want to make some unrelated change now. (Suddenly! Or maybe because
+we've got an email about this) E.g., remember that there is a more compact
+syntax for printing strings in Python. So we go back to the main branch to edit
+the file:
 
 ```bash
 git checkout master
 ```
 
-We are back to the state we left made a spin-off, so we change the file to read:
+We are immediately back to the state we left when we made a spin-off, so we
+change the file to become:
 
 ```python
 print("Hello world")
@@ -400,6 +411,8 @@ git add .
 git commit -m"improved code readability (printing strings)"
 ```
 
+Output:
+
 ```text
 diff --git a/new_doc.py b/new_doc.py
 index 105a3b3..f288fa7 100644
@@ -416,15 +429,18 @@ index 105a3b3..f288fa7 100644
  1 file changed, 2 insertions(+), 1 deletion(-)
 ```
 
-Okay, we go back to work on our feature with `git checkout unicode_vars`. Assume
-we test the feature with `python ./new_doc.py`, make sure it works, so we want
-to integrate it back into the "main" branch of our code. To do this, we go back
-to the `master` branch and try to merge it with the feature branch (`unicode_vars`):
+Okay, now we go back to work on our feature with `git checkout unicode_vars`.
+Assume we test the feature with `python ./new_doc.py`, make sure it works, so we
+want to integrate it back into the "main" branch of our code. To do this, we go
+back to the `master` branch and try to merge it with the feature branch
+(`unicode_vars`):
 
 ```bash
 git checkout master
 git merge unicode_vars
 ```
+
+Output:
 
 ```text
 Auto-merging new_doc.py
@@ -432,9 +448,9 @@ CONFLICT (content): Merge conflict in new_doc.py
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-Actually, we have just created a _conflict_. We just edited the same line in
-both branches, and there is no way to resolve it automatically. This is a normal
-situation, and source file now looks as follows:
+We have created a _conflict_: edited the same line in both branches, and there
+is no way to resolve it automatically. This is a normal situation, and the
+source file now looks as follows:
 
 {{< highlight python "hl_lines=3" >}}
 print("Hello world")
@@ -452,12 +468,12 @@ for ɑ in range(5):
 
 This is pretty self-explanatory, but notice what has just happened. A change in
 the highlighted line was straightforward to make, so git did it for us
-automatically. Since `print` instruction was edited in both branches, we will
-need to edit it manually (with any editor) to our tastes. Note that VSCodium
+automatically. Since `print` instruction was edited in both branches, we'd
+need to edit it manually (with any editor) to our taste. Note that VSCodium
 allows convenience of "Accept Change"-like buttons (which we wouldn't use in
 this case, though):
 
-{{< figure src="/ox-hugo/2021-02-05_17-10-50_screenshot.png" >}}
+![Changes highlighted](/images/ts-git/2021-02-05_17-10-50_screenshot.png#full-shadow)
 
 After the edits, the resulting file is:
 
@@ -470,12 +486,15 @@ for ɑ in range(5):
 
 ```
 
-Following the instructions, we commit the changes initiated by `merge` as usual:
+Following the instructions, we add and commit the changes initiated by `merge`
+as usual:
 
 ```bash
 git add .
 git commit -m"merged 'unicode variables' feature"
 ```
+
+Output:
 
 ```text
 [master 1c7dd06] merged 'unicode variables' feature
@@ -486,7 +505,7 @@ implement a feature, introduced some changes into the "main" code along the way,
 and merged everything back successfully. Many tools, including VSCode, can show
 nice figures to illustrate what is going on:
 
-{{< figure src="/ox-hugo/2021-02-05_17-21-45_screenshot.png" >}}
+![Changes highlighted](/images/ts-git/2021-02-05_17-21-45_screenshot.png#full-shadow)
 
 Each point here is a commit (a "snapshot" of the state for tracked files). We
 created a separate branch, then our branches diverged due to the two conflicting
@@ -494,30 +513,32 @@ commits, and then we merged everything back at the very top commit, `1c7dd06a`.
 
 An alternative solution would be to try to _"replay"_ the changes from
 `unicode_vars` branch on top of the changes in `master`, as if it were based
-on /already updated `master` / -- see git [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) for details.
+on _already updated `master`_ -- see git [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) for details.
 
-As a quick note, you can check what branches are there with:
+You can check what branches are there with:
 
 ```bash
 git branch
 ```
+
+Output:
 
 ```text
 * master
   unicode_vars
 ```
 
-(And to show just branches not merged into the main branch: `git branch
---no-merged master`.) Branches that are no longer needed can be deleted with
+To show just branches not merged into the main branch: `git branch
+--no-merged master`. Branches that are no longer needed can be deleted with
 `git branch -d <branch-name>`.
 
 There are some materials on branching strategies and git workflows (e.g., on
 ["git-flow"](https://nvie.com/posts/a-successful-git-branching-model/) and [GitHub flow](https://guides.github.com/introduction/flow/), with the latter being focused on simple
-collaboration) -- bit this discussion looked somewhat too complicated for my
+collaboration) -- but this discussion looked somewhat too complicated for my
 own needs at the moment.
 
 
-### Remote repo {#remote-repo}
+### Dealing with a remote repo {#dealing-with-a-remote-repo}
 
 Even if you work alone on your code, you might still want to use a concept of
 remote repos. For example, if you are running separate experiments on the
@@ -541,7 +562,7 @@ _branch(es)_. You could `pull` changes to your local repo from the remote,
 -   `git push -u origin master` will push your local changes from `master` branch
     to `origin` (on a Github server).
 -   `git pull` will try to pull changes from the remote (assigned by the previous
-    `push -u` command) and `merge` it into the current branch.[^fn:4]
+    `push -u` command) and `merge` it into the current branch.[^fn:3]
 
 A repository on the Github can be market as "public", so that anyone would be
 able to see the code (see [a note on visibility](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility) from Github). For example,
@@ -564,7 +585,7 @@ different edits and would like to keep them in different commits. For
 example, in VSCode you can pick ("stage") specific changes in the main editor
 window by pressing this "plus" sign:
 
-{{< figure src="/ox-hugo/indiv_changes.png" >}}
+![Changes highlighted](/images/ts-git/indiv_changes.png#full-shadow)
 
  If you happened to `git add` something wrong, you can always `git reset`. It
 will not **not** alter any files, but remove everything from the
@@ -605,6 +626,8 @@ git rev-parse --abbrev-ref HEAD # current branch
 git rev-parse HEAD # current commit
 ```
 
+Output:
+
 ```text
 master
 1c7dd06adb46c63e2706babd2500c040e934d80e
@@ -643,7 +666,34 @@ good solution to this problem, but:
     relevant to OR / DataScience.
 
 
-### A note on collaboration with Github {#a-note-on-collaboration-with-github}
+### Jupyter notebooks {#jupyter-notebooks}
+
+  I do not use `.ipynb` actively at the moment, so I can't give any good
+recommendations. First, I do not know any good solution to version-control
+[Jupyter](https://jupyter.org/) notebooks. Git is still useful, since `.ipynb` are basically text files,
+just does not allow to see differences conveniently. ([A note](https://blog.reviewnb.com/jupyter-version-control/) on this.)
+
+ Note that Github is not always best even with _showing_ (rendering) the
+notebooks. It might help to use a separate solution to link your notebooks
+hosted on Gihtub -- e.g., see <https://nbviewer.jupyter.org/>. Google Colab also
+[offers](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb) loading public notebooks from Github (as I write this). If you
+specifically need _executing_ notebooks online, you might be better off looking
+into [Google Colab](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb) or [binder](https://mybinder.org/).
+
+
+### Submodules {#submodules}
+
+If you ever find yourself in need of a "repo-in-a-repo" (e.g., when you use a
+library that you'd like to version-control separately) -- see [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+
+### Github Pages {#github-pages}
+
+Github offers a simple website hosting integrated with git -- for projects
+and/or personal webpages. See [GithubPages](https://pages.github.com/) for up to date details.
+
+
+### Collaboration and Github {#collaboration-and-github}
 
 This is basically outside of this note's scope, but of course, possible
 collaborations and social interactions are strong points of Github.
@@ -654,47 +704,21 @@ collaborations and social interactions are strong points of Github.
 -   and so on. Again, there is a large, separate topic.
 
 
-### On versioning [Jupyter](https://jupyter.org/) notebooks {#on-versioning-jupyter-notebooks}
-
-Again, I do not know any good solution. Version-controlling `.ipynb` -s is not
-  that cool, but still useful. (there are some [notes](https://blog.reviewnb.com/jupyter-version-control/) out there -- but I do not
-  use `.ipynb` actively). Note that Github is not always best even with
-  _visualizing_ the notebooks. But it might help to use a separate solution to
-  link your notebooks hosted on Gihtub -- e.g., see
-  <https://nbviewer.jupyter.org/>. Google Colab also [offers](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb) loading public
-  notebooks from Github (as I write this).
-
-
-### On Github Pages {#on-github-pages}
-
-Github offers a simple website hosting integrated with git -- for projects
-and/or personal webpages. See [GithubPages](https://pages.github.com/) for up to date details.
-
-
-### Submodules. {#submodules-dot}
-
-If you ever find yourself in need of a "repo-in-a-repo" (e.g., when you use a
-library that you'd like to version-control separately) -- see [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
-
-
-### On other questions {#on-other-questions}
-
-Git is **very** flexible by design (because the problem it deals with might get
-pretty complicated). But since it is widely used, answers to many more or less
-typical questions can be easily found online.
-
-
 ## Further reading {#further-reading}
 
--   [ProGit](https://git-scm.com/book/en/v2/Git-Basics-Tagging) book. (CC-BY-NC-SA 3.0)
--   [Github Guides](https://guides.github.com/introduction/flow/) look useful.
--   There are many other resources to choose from. To give some random examples:
-    -   interactive tutorials and other notes: <https://try.github.io/>
+-   [ProGit](https://git-scm.com/book/en/v2/Git-Basics-Tagging) book.
+-   [Github Guides](https://guides.github.com/introduction/flow/).
+-   Many other resources to choose from. Some random examples:
+    -   some interactive tutorials: <https://try.github.io/>
     -   A [visual](https://marklodato.github.io/visual-git-guide/index-en.html?no-svg) git reference.
     -   A git [primer](https://danielmiessler.com/study/git/).
-    -   [r/git](https://www.reddit.com/r/git/) community on Reddit (their "sidebar" might be especially useful!)
+    -   [r/git](https://www.reddit.com/r/git/) community on Reddit (see the "sidebar"!)
+
+<!--listend-->
+
+-   An extensive built-in help. E.g., see `git help everyday`, `git help
+      gittutorial`, `git help git`, and others.
 
 [^fn:1]: Note that you do not need a Github account to work with git. I have several repos completely offline -- just to track versions locally. You do not loose anything this way, except collaboration features and an off-site backup.
-[^fn:2]: There is also an extensive built-in help. E.g., see `git help everyday`, `git help gittutorial`, `git help git`, and others. Of course, there are all sorts of introductions, books, manuals, and cheatsheets out there.
-[^fn:3]: Note that you can make a repo "private", so no one by default will have access, besides you. (see the [docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility))
-[^fn:4]: Note that you can edit files directly on Github, via a web interface. It will just create commits on the respective branch of the _remote_ repo.
+[^fn:2]: Note that you can make a repo "private", so no one by default will have access, besides you. (see the [docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility))
+[^fn:3]: Note that you can edit files directly on Github, via a web interface. It will just create commits on the respective branch of the _remote_ repo.

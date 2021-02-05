@@ -143,4 +143,10 @@ PDF, Source, etc.
 wikipedia, github, local, external.
 ** DONE Make sticky menu look better (no overlay, maybe?)
    CLOSED: [2020-11-14 Sat 18:16]
-   
+** TODO Fix =li= elements
+ [2021-02-05 Fri 20:44]
+
+ (so I don't need double newlines after a sub-list)
+** TODO Fix org-babel blocks =RESULTS= CSS 
+ [2021-02-05 Fri 21:03]
+Add some styling
