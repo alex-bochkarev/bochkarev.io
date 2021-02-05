@@ -2,8 +2,8 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-01-28T16:36:12+01:00
-tags: ["tech-seminar"]
+lastmod: 2021-02-05T23:08:51+01:00
+tags: ["tech-seminar", "talk"]
 categories: ["tools"]
 draft: false
 summary: "A collection of notes on literature: discovery, reading, keeping track of references, and using them in writing."

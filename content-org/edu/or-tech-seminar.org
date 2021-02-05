@@ -69,7 +69,7 @@ suggestions are very [[mailto:tech_seminar@bochkarev.io][welcome]].
    + Using the literature: latex/bibtex, editors, etc. (very brief)
    + Discovering the literature (feeds, mailing lists, etc.)
    + A note on notes.
-2. *🔀 Version-control:* a quick intro to Git. (2020-02-01) @@html:
+2. *🔀 Version-control:* a quick intro to Git. (2021-02-01) @@html:
    <a class="sticker" href="/tools/ts-git/">&nbsp;Summary&nbsp;</a>@@ 
    + Version control, backups, when to use (always!)
    + Git, github, and the team.

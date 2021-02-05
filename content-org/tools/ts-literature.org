@@ -9,9 +9,10 @@
 
 #+date: 2021-01-15
 
-#+hugo_tags: tech-seminar
+#+hugo_tags: tech-seminar talk
 #+hugo_categories: tools
 
+#+PROPERTY: header-args :eval never-export
 #+begin_src yaml :front_matter_extra t
 summary: "A collection of notes on literature: discovery, reading, keeping track of references, and using them in writing."
 description: "Tech Seminar summary on working with literature: managing references, notes, etc."
