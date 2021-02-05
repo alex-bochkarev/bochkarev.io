@@ -1,0 +1,406 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+
+# hugo_section is a folder inside 'content'
+#+hugo_section: tools
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: 🔀 Version control with git.
+
+#+date: 2021-01-30
+
+#+hugo_tags: tech-seminar talk
+#+hugo_categories: tools
+#+hugo_draft: t
+#+begin_src yaml :front_matter_extra t
+summary: A quick intro to version control with git.
+#+end_src
+
+# available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
+# i-wiki, i-outside, i-date, hamburger, i-pdf, i-heart, i-ipynb
+
+
+#+HTML: <div class="note">
+*Summary* <hr>
+- [[https://en.wikipedia.org/wiki/Backup][backup]]: is protecting against data loss. So, /when/ your computer dies, you
+  are not too far behind. Any sort of _regular_ backup procedure helps.
+- *(our focus)* [[https://en.wikipedia.org/wiki/Version%5Fcontrol][version control]]: is keeping track of changes in your files. So that you know
+  what did you do, when, why, and can get back if needed. There are several
+  tools, [[https://git-scm.com/][git]] is /very/ popular.
+- Think of it as a "protocol", and a (local) app that runs it. [[https://github.com][GitHub]] is 
+  the most popular website offering hosting of git repositories.
+  (There are alternatives.)
+- Git is "distributed": you work in a local copy. So, it is fast, and can work
+  offline[fn:offline].
+- It is especially good to track any sort of plain-text files (source code,
+  latex documents, markdown, etc.).
+- It allows (and encourages) /branching/, when you keep several "lineages" of your
+  code to test your ideas, while keeping a "clean" version easily available.
+- This note contains a brief overview and discusses a simple example of
+  /individual/ (not collaborative) use.
+- There are *many* resources online. E.g. [[https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]["ProGit"]] is a good book. [fn:man]
+- Working from a command line helps a lot to understand what's going on, but:
+- There are many excellent tools that help productivity:
+  + stand-alone clients ([[https://desktop.github.com/][Github Desktop]], [[https://www.gitkraken.com/][GitKraken]], etc.);
+  + some very good editor integrations -- in [[https://code.visualstudio.com/][VSCode]], [[https://atom.io/][Atom]], [[https://www.sublimetext.com][Sublime]], Emacs (see
+    [[https://magit.vc/][Magit]]), or almost any other serious editor or IDE.
+  
+
+  Corrections, suggestions, and comments are very [[mailto:tech_seminar@bochkarev.io][welcome]].
+#+HTML: </div>
+
+* Introduction
+** Some context
+There are two somewhat adjacent problems: backups and version control. [[https://en.wikipedia.org/wiki/Backup][Backup]]
+basically means making "snapshots" for further recovery. It is an essential part
+of any IT infrastructure; it can be done with built-in tools (e.g., "time
+machine" for Apple laptops), [[https://borgbackup.readthedocs.io/en/stable/][borgbackup]] or =rsync= the =/home= directory on
+Linux, or anything else along these lines. I think the key is to have regular *procedure*.
+
+
+Now, [[https://en.wikipedia.org/wiki/Version_control][version control systems]] are used to keep track of changes in your files.
+    [[https://en.wikipedia.org/wiki/Git][Git]] is one of the most popular ones. Alternatives include [[https://en.wikipedia.org/wiki/Apache_Subversion][subversion (SVN)]],
+    [[https://en.wikipedia.org/wiki/Mercurial][mercurial]], and [[https://en.wikipedia.org/wiki/Comparison_of_version-control_software][more]]. Further we will focus on version control and,
+    specifically, git.
+
+  (/collaboration/ on code and other plain-text files is another topic, which
+    happens to be addressed by git particularly well -- but this is out of the
+    scope of this note.)
+
+    - Issues
+    - Fork, PR, wiki.
+ 
+** Tools for today
+    *1)* You would need to have *git* installed. Check from the command line:
+    #+NAME: gitver
+    #+HTML_ATTR: notalink
+    #+begin_src bash :exports both
+git --version
+    #+end_src
+
+    which gave me:
+    #+RESULTS: gitver
+    : git version 2.27.0
+
+    If it did not work, start [[https://git-scm.com/download][here]]. It works out of the box on my GNU/Linux
+    machine, but if I were to use other systems, I would look into [[https://gitforwindows.org/][GitForWindows]]
+    (see also a larger [[https://courses.cs.washington.edu/courses/cse154/20au/resources/assets/vscode-git-tutorial/windows/index.html][tutorial]]), or hoped that MacOS will suggest me to install
+    it automatically (or, e.g., try to =brew install git=, if not -- see [[https://brew.sh/][brew]]
+    for more details).
+    
+As pointed out in the [[https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup][docs]], you would need to set your name and email (to be
+associated with your changes in the code).
+
+   #+begin_src bash
+$ git config --global user.name "Your Name"
+$ git config --global user.email YourName@example.com
+$ git config --global init.defaultBranch main # set the name of the default branch
+   #+end_src
+
+    *2)* We will need a text editor, of course. Any one will work. I am using
+    [[https://www.spacemacs.org/][(Space)Emacs]] with [[https://magit.vc/][Magit]] on a daily basis, but it was more convenient to make
+    a demo on [[https://code.visualstudio.com/][VSCode]] ([[https://vscodium.com/][-ium]]) with a standard extension called /GitGraph/. Good
+    editors have plugins that support git well and simplify many operations. For
+    discussion here, I will show commands as issued from the command line, but I find
+    editor integration more convenient to use for most tasks.
+    
+    *3)* It is convenient to see what is happening in our repo on *GitHub*, so I
+       used an account there for the example below. I tend to use Github pretty
+       extensively to keep a copy of my code online[fn:private].
+ 
+** On Git vs. Github
+	- git is a /"protocol"/, a (distributed) version control system.
+  - /distributed:/ so, you keep a local copy and work with it.
+	- many providers offer hosting compatible with git protocol.
+    Examples are:
+		+ [[https://github.com/][github]]
+		+ [[https://about.gitlab.com/][gitlab]]
+		+ [[https://bitbucket.org][bitbucket]]
+		+ there are more exotic options -- e.g., see [[https://keybase.io/blog/encrypted-git-for-everyone][keybase.io]]?
+		+ you, if you'd like (e.g., see [[https://gitea.io/en-us/][gitea]]);
+
+      
+	- another (important!) story: the social aspect
+    (Github is the de-facto standard).
+		+ Show your code.
+		+ Collaborate.
+ 
+** The big picture
+- your project lives in a /repo/ (a home, y'know);
+- it is in fact just a folder with a special =.git= subfolder,
+  where the magic happens.
+- there is "working area", "staging area", and 
+- a very simple workflow would look as follows:
+
+#+NAME: dia_workflow
+#+begin_src plantuml :file ./ts-git/workflow.svg
+@startuml
+:**Edit**
+Add (or change) some code;
+note right
+        Changes on your <i>local</i> system
+end note
+floating note left
+        ,**Working area**
+        ----
+        where the work happens.
+end note
+:**Add to "stage"**
+Mark changes for "commit";
+note right
+        Prepares a change into the versions history.
+end note       
+floating note left
+        ,**Staging area**
+        ----
+        where the "commit" is cooked -- a "history atom".
+end note
+
+:**Commit**
+Commit to the repo;
+note right
+        Adds an "atomic change" to your version history (<i>local</i> operation)
+end note
+floating note left
+        ,**Local repo**
+        ----
+        where the history is kept;
+end note
+
+:**Push**
+Push to the server;
+note right
+        Pushes changes to the <i>remote</i> repository
+end note
+floating note left
+        ,**Remote repo**
+        ----
+        where the history is kept ("off-site")
+end note
+@enduml
+#+end_src
+
+#+RESULTS: dia_workflow
+[[file:./ts-git/workflow.svg]]
+
+- We will start with a command-line interface -- because it is
+  instructive. It might help to use something else later.
+  (preferably, within your editor).
+- People say, you might want to get back to the command line
+  from time to time.
+
+* Key concepts with a running example
+** Basics
+   Assume we would like to develop some code in Python (this will be our running
+   example). So, we create a folder and immediately initialize a repo:
+   #+begin_src bash :exports both
+git init
+   #+end_src
+
+   What happened, is it created a special directory, =.git=, that will contain
+   the information concerning the version history. Now, let us add some code and
+   save it as =new_doc.py=:
+   #+begin_src python
+print("Hello world")
+
+for i in range(5):
+	print("i=" + str(i))
+   #+end_src
+
+   Assume we have implemented some basic functionality, and would like to save a
+   snapshot of this state of the repo. Note that git "knows" that we have some changes:
+   #+begin_src bash
+git status
+   #+end_src
+   
+   So, we first add the changes to the "staging area":
+   #+begin_src bash
+git add .
+   #+end_src
+and then create a record in the versions history with:
+#+begin_src bash
+git commit -m"first commit"
+#+end_src
+
+Let's say, we continue the development, and add more code, so that =new_doc.py= now reads:
+
+#+begin_src python
+print("Hello world")
+
+for i in range(5):
+	for j in range(5):
+		print("i=" + str(i)+", j=" + str(j))
+#+end_src
+
+We can add this change as well, in a similar way, issuing command =git add .=
+(or =git add new_doc.py=, if we wanted to add this particular file only). Note that git
+is aware of specific changes. We can highlight them by saying:
+#+begin_src bash
+git diff
+#+end_src
+
+(Indeed, we replaced the =print= line with a =print= in an inner loop.) 
+
+We can finish the process, again, with the command:
+
+#+begin_src bash
+git commit -m"inner loop"
+#+end_src
+
+
+    #+begin_src bash
+git reset
+    #+end_src
+ will reset the staged area -- as the appearing help says, it does *not* delete
+ or alter any files, it just removes everything from the "stage area" (you can
+ then add everything, or part of it, back -- as usual, with =git add=).
+
+** Fast-forward the example (key commands)
+- a repo (local folder);
+- a remote (repo); =clone=.
+- =add=, =commit=, =push=;
+- =branch=, =checkout=, =merge=;
+- =pull=
+- =branch -d <branchName>=
+  and =git push origin --delete branchName=.
+- resolving conflicts.
+  - create repo: =git init=
+  - create file
+  - check =git status=
+  - add changes: =git add=
+  - =git commit=
+  - edit files (vscode).
+  - see diff (=git diff=). commit
+  - add to github
+  - add readme
+  - push changes
+  - create branch
+  - list these =git branch=
+  - develop a feature.
+  - merge back
+  - introduce merge conflict
+  - resolve it
+  - introduce a conflict at Github.
+  - resolve it locally.
+  - git [[https://git-scm.com/book/en/v2/Git-Basics-Tagging][tags]]: =git tag -m"..." v1.0=
+    and =git push --tags=.
+  - =git clone= example: local
+    and remote
+** Remote repo
+** Branches
+   So, the usual workflow is to have:
+   + main branch
+   + feature branches.
+   + there is [[https://nvie.com/posts/a-successful-git-branching-model/][more]] info (with pictures).
+    All of them: =git branch=
+    Not merged into master: =git branch --no-merged master=
+    #+begin_src bash
+$ git rev-parse --abbrev-ref HEAD # current branch
+$ git rev-parse HEAD # current commit
+    #+end_src
+
+    e.g.
+    #+begin_src bash
+tgs -m "I'm on branch $(git rev-parse --abbrev-ref HEAD), commit $(git rev-parse HEAD)"
+    #+end_src
+
+    The history:
+#+begin_src plantuml :file ./ts-git/versions-history.svg
+folder c1 [
+<b>my_file.py</b> \t | \t commit 1
+---
+code here
+---
+<b>Comment:</b> comment.
+]
+
+folder c2 [
+ver two
+---
+]
+
+c1 --> c2
+#+end_src
+
+#+RESULTS:
+[[file:./ts-git/versions-history.svg]]
+
+** Resolving conflicts
+* Some tips, tricks, and notes
+** Tags
+** Exploring the past
+   - github -- points + blame
+   - timeline in VSCode
+   - cmd line
+     First, get the list of commits:
+   #+begin_src bash
+$ git log --pretty=oneline --abbrev-commit
+   #+end_src
+   Then, knowing the commit:
+ #+begin_src bash
+$ git show REVISION:path/to/file > path_to_backup.copy
+ #+end_src
+ (it is =abbrev-commit= option to =git-log= that makes SHA-s short and
+ manageable. Note that you don't need to fill in all the 40 symbols anyways --
+ first several of them would suffice. Like, at least four, if it is unambiguous
+ -- see the [[https://git-scm.com/book/be/v2/Git-Tools-Revision-Selection][docs]]).
+ - where did this figure come from?
+** Ignoring files
+** Large files
+    - there is a limit per file (I guess, 100Mb).
+    - you don't need everything in the repo: =.gitignore=.
+    - there is something called [[https://git-lfs.github.com/][git LFS]]. (large file storage.)
+      see also [[https://docs.github.com/en/github/managing-large-files/working-with-large-files][GitHub docs]] on large files.
+ 
+* Further reading
+
+- A repository ("repo"; think "project") lives in a folder on your hard drive.
+- The magic happens because there is a hidden folder called =.git=, where
+  =git= (an application) keeps the data about versions, when you ask it to.
+- A repo may or may not have a "remote" counterpart (a "folder" on your, or
+  someone else's computer).
+- Any file can be "tracked" by git (or ignored -- see also about a special
+  =.gitignore= file).
+- Here are some key operations related to editing files locally:
+  + create a repo (=git init=);
+  + edit the code/latex/whatever text (in any text editor);
+  + mark some, or all your changes as a candidates for a new "node" in versions
+    history (=git add <filename>=, or =git add .= for everything, or mark
+    specific changes /within/ a file, if your editor supports it).
+  + create this new "node" in versions history (=git commit -m"<your one-line description>"=).
+  
+    
+- You can /branch/ history. Usually, you create a "feature" branch to test
+  things. Then either forget it (going back to the "main" branch), or =merge= it
+  to the master, to have everything in your "official" version of the code. See
+  =git checkout -b= (to a /new/ branch), =git checkout= (existing branch), =git
+  merge= (branches), =git branch --delete=
+
+
+* Further reading and notes.
+- interactive tutorials and other useful stuff: https://try.github.io/
+- [[https://git-scm.com/book/en/v2/Git-Basics-Tagging][ProGit]] book. (CC-BY-NC-SA 3.0)
+- A [[https://marklodato.github.io/visual-git-guide/index-en.html?no-svg][visual]] git reference.
+- git [[https://danielmiessler.com/study/git/][primer]].
+- other sources (these were from some reddit question, I guess.)
+- you might want to check out [[https://www.reddit.com/r/git/][r/git]].
+- version-controlling =.ipynb= -s is not that cool, but still useful.
+  (there are some [[https://blog.reviewnb.com/jupyter-version-control/][notes]] out there -- but I do not use =.ipynb= actively)
+- visualizing =.ipynb= from github: see https://nbviewer.jupyter.org/
+- a quick note on GithubPages.
+- there is something called "submodules" (repo-in-a-repo).
+- the tool is *very* flexible, but I guess all problems
+  have solutions discussed somewhere online...
+
+* Footnotes
+
+[fn:private] Note that you can make a repo "private", so no one by default will
+have access, besides you. (see the [[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility][docs]])
+
+[fn:man] There is also an extensive built-in help. E.g., see =git help
+everyday=, =git help gittutorial=, =git help git=, and others. Of course, there
+are all sorts of introductions, books, manuals, and cheatsheets out there.
+
+[fn:offline] Note that you do not need a Github account to work with git. I have
+several repos completely offline -- just to track versions locally. You do not
+loose anything this way, except collaboration features and an off-site backup.

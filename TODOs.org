@@ -25,6 +25,8 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
 ** TODO Think: maybe pack into a tangled =.org= file?
 - at least the =CSS= file...
 - but also page structure seems interesting?.. would it be worth the hassle, though?
+** TODO remove =short= tag
+(was used in Jekyll to affect the summary view. Not needed anymore)
 
 ** DONE Automate footer/header social icons
    CLOSED: [2021-01-03 Sun 23:34]
@@ -93,6 +95,7 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
  
 ** TODO Add bio-snippets page
    [2021-01-05 Tue 02:15]
+** TODO Add 1- or 0.5-line space after the footer
 ** DONE Fix the fonts
    CLOSED: [2021-01-13 Wed 23:04]
    The symbol in the header does not show up on another system??..
@@ -140,3 +143,4 @@ PDF, Source, etc.
 wikipedia, github, local, external.
 ** DONE Make sticky menu look better (no overlay, maybe?)
    CLOSED: [2020-11-14 Sat 18:16]
+   

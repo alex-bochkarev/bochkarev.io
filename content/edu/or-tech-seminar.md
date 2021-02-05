@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-01-27T21:55:03+01:00
+lastmod: 2021-02-05T02:10:03+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -41,19 +41,21 @@ one hour in total. <br/> <br/>
 <div class="note">
 
 
-### Upcoming seminar: <span class="timestamp-wrapper"><span class="timestamp">[2021-02-01 Mon 10:00]</span></span> {#upcoming-seminar}
+### Upcoming seminar: <span class="timestamp-wrapper"><span class="timestamp">[2021-02-08 Mon 10:00]</span></span> {#upcoming-seminar}
 
-💻 **All things version-control:** a quick intro to Git.
+🌧 **(Cloud) Intro to the Command Line. (1/2)**
 <hr/>
+Notes on the cluster / working in the shell (topics for two seminars):
 
-**Suggestion:** come with git [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), and a [Github](https://github.com) account.<br>
-(check that `git --version` gives you something in the terminal)
-
--   Version control, backups, when to use (always!)
--   Git, github, and the team.
--   Repositories (remote, local). Create, fork, `clone`, and other spells.
--   Keeping track of your code/text: `add`, `commit`, `push/pull`.
--   Workflow / branches -- `checkout, merge`, rebasing, conflicts.
+-   logging in / comp nodes vs. login shell, a note on file systems.
+-   Moving things between remote and local machines (`scp`, `rsync`, `github`, etc.).
+-   Shell-related basics (moving around, editing, installing things, etc.).
+-   Running things: commands, aliases, pipes, `stdout/stderr`, scripts,
+    access rights (`chmod`). Very intro bash scripting.
+-   Some utils (`tar`, `head`, `tail`, `split`, `shuf`, etc.)
+-   Running jobs on the cluster: PBS basics; modules.
+-   Running things in parallel (a quick [GNU parallel](https://www.gnu.org/software/parallel/) demo, etc.).
+-   Possibly, [Makefiles](https://en.wikipedia.org/wiki/Makefile).
 
 </div>
 
@@ -66,19 +68,14 @@ one hour in total. <br/> <br/>
     -   Using the literature: latex/bibtex, editors, etc. (very brief)
     -   Discovering the literature (feeds, mailing lists, etc.)
     -   A note on notes.
-2.  **💻 All things version-control:** a quick intro to Git. _(next seminar -- see
-    above)_
-3.  🌧 **(Cloud) The Command Line - 1:** Surviving on the cloud.
-    -   Logging in to the cluster. Login shell vs. comp node. Bash-related basics
-        (moving around, editing, installing things, etc.).
-    -   Running things: commands, aliases, pipes, `stdout/stderr`, scripts,
-        access rights (`chmod`). Very intro bash scripting.
-    -   Some utils (`tar`, `head`, `tail`, `split`, `shuf`, etc.)
+2.  **🔀 All things version-control:** a quick intro to Git. (2020-02-01; summary: coming soon!)
+    -   Version control, backups, when to use (always!)
+    -   Git, github, and the team.
+    -   Repositories (remote, local). Create, fork, `clone`, and other spells.
+    -   Keeping track of your code/text: `add`, `commit`, `push/pull`.
+    -   Workflow / branches -- `checkout, merge`, rebasing, conflicts.
+3.  🌧 **(Cloud) The Command Line - 1:** Surviving on the cloud. _(Next seminar)_
 4.  🌩 **(Cloud) The Command Line - 2:** making it work for you.
-    -   Moving things between remote and local machines (`scp`, `rsync`, `github`, etc.).
-    -   Running jobs on the cluster: PBS basics; modules, file systems.
-    -   Running things in parallel (a quick [GNU parallel](https://www.gnu.org/software/parallel/) demo, etc.).
-    -   Possibly, [Makefiles](https://en.wikipedia.org/wiki/Makefile).
 
 
 ## Additional topics (work in progress) {#additional-topics--work-in-progress}
