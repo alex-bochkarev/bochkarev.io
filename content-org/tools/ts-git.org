@@ -9,6 +9,8 @@
 
 #+date: 2021-01-30
 
+#+PROPERTY: header-args :eval never-export :dir ~/sandbox/demo-repo
+
 #+hugo_tags: tech-seminar talk
 #+hugo_categories: tools
 #+hugo_draft: t
@@ -57,19 +59,15 @@ of any IT infrastructure; it can be done with built-in tools (e.g., "time
 machine" for Apple laptops), [[https://borgbackup.readthedocs.io/en/stable/][borgbackup]] or =rsync= the =/home= directory on
 Linux, or anything else along these lines. I think the key is to have regular *procedure*.
 
-
 Now, [[https://en.wikipedia.org/wiki/Version_control][version control systems]] are used to keep track of changes in your files.
     [[https://en.wikipedia.org/wiki/Git][Git]] is one of the most popular ones. Alternatives include [[https://en.wikipedia.org/wiki/Apache_Subversion][subversion (SVN)]],
     [[https://en.wikipedia.org/wiki/Mercurial][mercurial]], and [[https://en.wikipedia.org/wiki/Comparison_of_version-control_software][more]]. Further we will focus on version control and,
     specifically, git.
 
-  (/collaboration/ on code and other plain-text files is another topic, which
+(/collaboration/ on code and other plain-text files is another topic, which
     happens to be addressed by git particularly well -- but this is out of the
     scope of this note.)
 
-    - Issues
-    - Fork, PR, wiki.
- 
 ** Tools for today
     *1)* You would need to have *git* installed. Check from the command line:
     #+NAME: gitver
@@ -197,6 +195,9 @@ end note
 git init
    #+end_src
 
+   #+RESULTS:
+   : Initialized empty Git repository in /home/bochkarev/sandbox/demo-repo/.git/
+
    What happened, is it created a special directory, =.git=, that will contain
    the information concerning the version history. Now, let us add some code and
    save it as =new_doc.py=:
@@ -209,18 +210,50 @@ for i in range(5):
 
    Assume we have implemented some basic functionality, and would like to save a
    snapshot of this state of the repo. Note that git "knows" that we have some changes:
-   #+begin_src bash
+   #+begin_src bash :results output replace :exports both
 git status
    #+end_src
-   
-   So, we first add the changes to the "staging area":
+
+   #+RESULTS:
+   : On branch master
+   : 
+   : No commits yet
+   : 
+   : Untracked files:
+   :   (use "git add <file>..." to include in what will be committed)
+   : 	new_doc.py
+   : 
+   : nothing added to commit but untracked files present (use "git add" to track)
+
+   So, as git suggests, we first add the changes to the "staging area":
    #+begin_src bash
 git add .
    #+end_src
-and then create a record in the versions history with:
-#+begin_src bash
+So that now =git status= shows that we have "changes to be committed" (saved to
+the versions history):
+
+#+begin_src bash :results output replace :exports output
+git status
+#+end_src
+
+#+RESULTS:
+: On branch master
+: 
+: No commits yet
+: 
+: Changes to be committed:
+:   (use "git rm --cached <file>..." to unstage)
+: 	new file:   new_doc.py
+: 
+We actually create a record in the versions history with:
+#+begin_src bash :results output replace :exports both
 git commit -m"first commit"
 #+end_src
+
+#+RESULTS:
+: [master (root-commit) de41445] first commit
+:  1 file changed, 4 insertions(+)
+:  create mode 100644 new_doc.py
 
 Let's say, we continue the development, and add more code, so that =new_doc.py= now reads:
 
@@ -232,167 +265,440 @@ for i in range(5):
 		print("i=" + str(i)+", j=" + str(j))
 #+end_src
 
-We can add this change as well, in a similar way, issuing command =git add .=
-(or =git add new_doc.py=, if we wanted to add this particular file only). Note that git
-is aware of specific changes. We can highlight them by saying:
-#+begin_src bash
+ Note that git is aware of specific changes. We can highlight them by saying:
+#+begin_src bash :results output replace :exports both
 git diff
 #+end_src
 
-(Indeed, we replaced the =print= line with a =print= in an inner loop.) 
+#+RESULTS:
+#+begin_example
+diff --git a/new_doc.py b/new_doc.py
+index fe46b97..105a3b3 100644
+--- a/new_doc.py
++++ b/new_doc.py
+@@ -1,4 +1,5 @@
+ print("Hello world")
+ 
+ for i in range(5):
+-	print("i=" + str(i))
++    for j in range(5):
++        print("i=" + str(i)+", j=" + str(j))
+#+end_example
 
-We can finish the process, again, with the command:
+Indeed, we replaced the =print= line with a =print= in an inner loop: removed
+lines are indicated with a minus sign in the beginning, added lines marked with
+plus. Of course, it is not necessary to stare at cryptic symbols in the shell:
+e.g., VSCode will highlight these changes nicely, if you switch to "Version
+Control" tab and choose the changed file (=new_doc.py=):
 
-#+begin_src bash
+
+# TODO: repace with: #+HTML:![Notes graph](/images/notes.png#full-shadow)
+
+#+DOWNLOADED: screenshot @ 2021-02-05 13:11:46
+[[file:Key_concepts_with_a_running_example/2021-02-05_13-11-46_screenshot.png]]
+
+
+If we are happy with the changes, again, we add them to the "staging" area and
+"commit" to the versions history with commands:
+
+#+begin_src bash :exports both :results output replace
+git add .
 git commit -m"inner loop"
 #+end_src
 
+#+RESULTS:
+: [master acd00af] inner loop
+:  1 file changed, 2 insertions(+), 1 deletion(-)
 
-    #+begin_src bash
-git reset
-    #+end_src
- will reset the staged area -- as the appearing help says, it does *not* delete
- or alter any files, it just removes everything from the "stage area" (you can
- then add everything, or part of it, back -- as usual, with =git add=).
-
-** Fast-forward the example (key commands)
-- a repo (local folder);
-- a remote (repo); =clone=.
-- =add=, =commit=, =push=;
-- =branch=, =checkout=, =merge=;
-- =pull=
-- =branch -d <branchName>=
-  and =git push origin --delete branchName=.
-- resolving conflicts.
-  - create repo: =git init=
-  - create file
-  - check =git status=
-  - add changes: =git add=
-  - =git commit=
-  - edit files (vscode).
-  - see diff (=git diff=). commit
-  - add to github
-  - add readme
-  - push changes
-  - create branch
-  - list these =git branch=
-  - develop a feature.
-  - merge back
-  - introduce merge conflict
-  - resolve it
-  - introduce a conflict at Github.
-  - resolve it locally.
-  - git [[https://git-scm.com/book/en/v2/Git-Basics-Tagging][tags]]: =git tag -m"..." v1.0=
-    and =git push --tags=.
-  - =git clone= example: local
-    and remote
-** Remote repo
-** Branches
-   So, the usual workflow is to have:
-   + main branch
-   + feature branches.
-   + there is [[https://nvie.com/posts/a-successful-git-branching-model/][more]] info (with pictures).
-    All of them: =git branch=
-    Not merged into master: =git branch --no-merged master=
-    #+begin_src bash
-$ git rev-parse --abbrev-ref HEAD # current branch
-$ git rev-parse HEAD # current commit
-    #+end_src
-
-    e.g.
-    #+begin_src bash
-tgs -m "I'm on branch $(git rev-parse --abbrev-ref HEAD), commit $(git rev-parse HEAD)"
-    #+end_src
-
-    The history:
-#+begin_src plantuml :file ./ts-git/versions-history.svg
-folder c1 [
-<b>my_file.py</b> \t | \t commit 1
----
-code here
----
-<b>Comment:</b> comment.
-]
-
-folder c2 [
-ver two
----
-]
-
-c1 --> c2
+Now, to see the commits history, we can issue:
+#+begin_src bash :exports both :results output replace
+git log
 #+end_src
 
 #+RESULTS:
-[[file:./ts-git/versions-history.svg]]
+#+begin_example
+commit acd00afdf4c0c0a3fa6f5229752f1807d4398688
+Author: Alexey Bochkarev <a@bochkarev.io>
+Date:   Fri Feb 5 13:15:56 2021 +0100
 
-** Resolving conflicts
-* Some tips, tricks, and notes
-** Tags
-** Exploring the past
-   - github -- points + blame
-   - timeline in VSCode
-   - cmd line
-     First, get the list of commits:
-   #+begin_src bash
-$ git log --pretty=oneline --abbrev-commit
+    inner loop
+
+commit de41445c3b150488871ef8526b519488eda5ed26
+Author: Alexey Bochkarev <a@bochkarev.io>
+Date:   Fri Feb 5 13:05:17 2021 +0100
+
+    first commit
+#+end_example
+Or, if we have a lot of these and want a quick overview, we might want them
+in a compact form:
+
+#+begin_src bash :results output replace :exports both
+git log --pretty=oneline --abbrev-commit
+#+end_src
+
+#+RESULTS:
+: acd00af inner loop
+: de41445 first commit
+
+Now, getting back to the commit =first commit= is as simple as =git checkout
+de41445=. The repo will come back to the state at that moment, so we can look
+around. For example, we could save something and get back with =git checkout
+master=. Usually what I might want, however, is to fetch a specific file from a
+specific commit into the current moment. I could do this with =git show
+de41445:new_doc.py > old_version.py=. (After this command I will have another
+file, =old_version.py=, with the contents of =new_doc.py= as of the moment of
+the first commit). I will not use this file, so I will just remove it for now,
+with =rm ./old_version.py=.
+
+However, experimenting and working with code is more often done with something
+called /branching/. Make sure you are on the main branch before proceeding
+(e.g., =git checkout master=).
+
+** Branches
+   So, one possible workflow is to have a "clean", main branch (say, "ready to
+   show to your supervisor"), and experiment in separate versions, merging back
+   those that worked out. Let's see how it might work on our example.
+
+   Assume we want to try to switch to nice unicode variable names (greek
+   letters). First, we create a new /branch/ for this feature:
+
+   #+begin_src bash :results output replace :export both
+git checkout -b unicode_vars
    #+end_src
-   Then, knowing the commit:
- #+begin_src bash
-$ git show REVISION:path/to/file > path_to_backup.copy
- #+end_src
- (it is =abbrev-commit= option to =git-log= that makes SHA-s short and
- manageable. Note that you don't need to fill in all the 40 symbols anyways --
- first several of them would suffice. Like, at least four, if it is unambiguous
- -- see the [[https://git-scm.com/book/be/v2/Git-Tools-Revision-Selection][docs]]).
- - where did this figure come from?
-** Ignoring files
-** Large files
-    - there is a limit per file (I guess, 100Mb).
-    - you don't need everything in the repo: =.gitignore=.
-    - there is something called [[https://git-lfs.github.com/][git LFS]]. (large file storage.)
-      see also [[https://docs.github.com/en/github/managing-large-files/working-with-large-files][GitHub docs]] on large files.
+
+Now, =git status= gives:
+#+begin_src bash :results output replace :export results
+git status
+#+end_src
+
+#+RESULTS:
+: On branch unicode_vars
+: nothing to commit, working tree clean
+
+And the bottom left corner of my VSCodium editor also hints of the current
+branch, like this:
+
+#+DOWNLOADED: screenshot @ 2021-02-05 16:38:40
+[[file:Key_concepts_with_a_running_example/2021-02-05_16-38-40_screenshot.png]]
+
+Our previous state of the tracked files (one file in this case) was left in a
+=master= branch, and we jumped into a separate code "spin-off". Now, we can edit
+files. Let me just rename the variables, for the sake of example. So, =new_doc.py= now reads:
+
+#+begin_src python
+print("Hello world")
+
+for ɑ in range(5):
+    for j in range(5):
+        print("ɑ=" + str(ɑ)+", j=" + str(j))
+
+#+end_src
+
+After we save the file, VSCode (or =git diff=) will highlight for us, what has
+changed:
+
+#+DOWNLOADED: screenshot @ 2021-02-05 16:49:00
+[[file:Key_concepts_with_a_running_example/2021-02-05_16-49-00_screenshot.png]]
+
+Again, we commit this change:
+#+begin_src bash :results output replace :exports both
+git add .
+git commit -m"renamed variables"
+#+end_src
+
+#+RESULTS:
+: [unicode_vars 985d560] renamed variables
+:  1 file changed, 2 insertions(+), 2 deletions(-)
+
+Then we might remember that there is a more compact syntax for printing strings
+in Python (suddenly! Or maybe because we've got an email about this). So we go
+back to the main branch to edit the file:
+#+begin_src bash :results output replace :exports both
+git checkout master
+#+end_src
+
+We are back to the state we left made a spin-off, so we change the file to read:
+#+begin_src python
+print("Hello world")
+
+for i in range(5):
+    for j in range(5):
+        print(f"i={i}, j={j}")
+
+#+end_src
+That's way more readable, so we "save" it into the master branch:
+#+begin_src bash :results output replace :exports both
+git diff # let's see the changes
+git add .
+git commit -m"improved code readability (printing strings)"
+#+end_src
+
+#+RESULTS:
+#+begin_example
+diff --git a/new_doc.py b/new_doc.py
+index 105a3b3..f288fa7 100644
+--- a/new_doc.py
++++ b/new_doc.py
+@@ -2,4 +2,5 @@ print("Hello world")
  
-* Further reading
+ for i in range(5):
+     for j in range(5):
+-        print("i=" + str(i)+", j=" + str(j))
++        print(f"i={i}, j={j}")
++
+[master a6c0cc2] improved code readability (printing strings)
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+#+end_example
 
-- A repository ("repo"; think "project") lives in a folder on your hard drive.
-- The magic happens because there is a hidden folder called =.git=, where
-  =git= (an application) keeps the data about versions, when you ask it to.
-- A repo may or may not have a "remote" counterpart (a "folder" on your, or
-  someone else's computer).
-- Any file can be "tracked" by git (or ignored -- see also about a special
-  =.gitignore= file).
-- Here are some key operations related to editing files locally:
-  + create a repo (=git init=);
-  + edit the code/latex/whatever text (in any text editor);
-  + mark some, or all your changes as a candidates for a new "node" in versions
-    history (=git add <filename>=, or =git add .= for everything, or mark
-    specific changes /within/ a file, if your editor supports it).
-  + create this new "node" in versions history (=git commit -m"<your one-line description>"=).
+Okay, we go back to work on our feature with =git checkout unicode_vars=. Assume
+we test the feature with =python ./new_doc.py=, make sure it works, so we want
+to integrate it back into the "main" branch of our code. To do this, we go back
+to the =master= branch and try to merge it with the feature branch (=unicode_vars=):
+#+begin_src bash :results output replace :exports both
+git checkout master
+git merge unicode_vars
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Auto-merging new_doc.py
+CONFLICT (content): Merge conflict in new_doc.py
+Automatic merge failed; fix conflicts and then commit the result.
+#+end_example
+
+Actually, we have just created a /conflict/. We just edited the same line in
+both branches, and there is no way to resolve it automatically. This is a normal
+situation, and source file now looks as follows:
+#+begin_src python :hl_lines 3
+print("Hello world")
+
+for ɑ in range(5):
+    for j in range(5):
+<<<<<<< HEAD
+        print(f"i={i}, j={j}")
+
+=======
+        print("ɑ=" + str(ɑ)+", j=" + str(j))
+>>>>>>> unicode_vars
+
+#+end_src
+
+This is pretty self-explanatory, but notice what has just happened. A change in
+the highlighted line was straightforward to make, so git did it for us
+automatically. Since =print= instruction was edited in both branches, we will
+need to edit it manually (with any editor) to our tastes. Note that VSCodium
+allows convenience of "Accept Change"-like buttons (which we wouldn't use in
+this case, though):
+
+#+DOWNLOADED: screenshot @ 2021-02-05 17:10:50
+[[file:Key_concepts_with_a_running_example/2021-02-05_17-10-50_screenshot.png]]
+
+After the edits, the resulting file is:
+#+begin_src python
+print("Hello world")
+
+for ɑ in range(5):
+    for j in range(5):
+        print("ɑ={ɑ}, j={j}")
+
+#+end_src
+
+Following the instructions, we commit the changes initiated by =merge= as usual:
+#+begin_src bash :results output replace :exports both
+git add .
+git commit -m"merged 'unicode variables' feature"
+#+end_src
+
+#+RESULTS:
+: [master 1c7dd06] merged 'unicode variables' feature
+
+So, again, what we have just done: we created a spin-off branch, tried to
+implement a feature, introduced some changes into the "main" code along the way,
+and merged everything back successfully. Many tools, including VSCode, can show
+nice figures to illustrate what is going on:
+
+
+#+DOWNLOADED: screenshot @ 2021-02-05 17:21:45
+[[file:Key_concepts_with_a_running_example/2021-02-05_17-21-45_screenshot.png]]
+
+Each point here is a commit (a "snapshot" of the state for tracked files). We
+created a separate branch, then our branches diverged due to the two conflicting
+commits, and then we merged everything back at the very top commit, =1c7dd06a=.
+
+An alternative solution would be to try to /"replay"/ the changes from
+=unicode_vars= branch on top of the changes in =master=, as if it were based
+on /already updated =master= / -- see git [[https://git-scm.com/book/en/v2/Git-Branching-Rebasing][rebase]] for details.
+
+As a quick note, you can check what branches are there with:
+
+#+begin_src bash :results output replace :exports both
+git branch
+#+end_src
+
+#+RESULTS:
+: * master
+:   unicode_vars
+
+(And to show just branches not merged into the main branch: =git branch
+--no-merged master=.) Branches that are no longer needed can be deleted with
+=git branch -d <branch-name>=.
+
+There are some materials on branching strategies and git workflows (e.g., on
+[[https://nvie.com/posts/a-successful-git-branching-model/]["git-flow"]] and [[https://guides.github.com/introduction/flow/][GitHub flow]], with the latter being focused on simple
+collaboration) -- bit this discussion looked somewhat too complicated for my
+own needs at the moment.
+
+** Remote repo
+   Even if you work alone on your code, you might still want to use a concept of
+   remote repos. For example, if you are running separate experiments on the
+   cluster and would like to (1) keep them under version control, and (2) run
+   them in parallel. But let us consider another (perhaps, more general) common
+   use case, when you would like to sync your local repo with a remote version
+   on Github -- e.g., to keep things backed up online, or to share code.
+
+   Creating a remote GitHub repo is simple. Assume we have a /local/ repository
+   first (the one we discussed above would work). We go ahead and [[https://docs.github.com/en/github/getting-started-with-github/create-a-repo][create a
+   Github repo]] (not initializing it with anything). Essentially, Github will
+   give you both the address and commands to use to connect your local repo with
+   its remote counterpart. Afterwards, a /remote/ will act mostly as another
+   /branch(es)/. You could =pull= changes to your local repo from the remote,
+   =push= your local changes back to the remote, and so on. For example:
+- =git remote add origin <Github-address>= will make git aware of the specific
+  remote repo, and will call this remote repo =origin=.
+- alternatively, for an existing /remote/ repo, which you would like to have in
+  your local folder, you issue =git clone <repo-address>=.
+- =git push -u origin master= will push your local changes from =master= branch
+  to =origin= (on a Github server).
+- =git pull= will try to pull changes from the remote (assigned by the previous
+  =push -u= command) and =merge= it into the current branch.[fn:editGH]
+
   
-    
-- You can /branch/ history. Usually, you create a "feature" branch to test
-  things. Then either forget it (going back to the "main" branch), or =merge= it
-  to the master, to have everything in your "official" version of the code. See
-  =git checkout -b= (to a /new/ branch), =git checkout= (existing branch), =git
-  merge= (branches), =git branch --delete=
+  A repository on the Github can be market as "public", so that anyone would be
+  able to see the code (see [[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility][a note on visibility]] from Github). For example,
+  source code for this website is available at
+  https://github.com/alex-bochkarev/bochkarev.io. You can create =README= file,
+  so it will be shown by default when someone opens your repository (and it is a
+  good practice to create one, describing what is this repo about, how to
+  contribute, etc. -- at least very briefly. See [[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes][About READMEs]]). Perhaps, the
+  most widespread format is =.md= in [[https://guides.github.com/features/mastering-markdown/][(Github's) Markdown]], but there is [[https://github.com/github/markup/blob/master/README.md#markups][more]].
+  
+* Some tips, tricks, and notes
+** Adding changes
+   Interestingly, you can not only add /changed files/ to a commit, but pick
+   specific changes /within/ a file -- if you happened to make two logically
+   different edits and would like to keep them in different commits. For
+   example, in VSCode you can pick ("stage") specific changes in the main editor
+   window by pressing this "plus" sign:
 
+  [[./ts-git/indiv_changes.png]] 
+  
+  If you happened to =git add= something wrong, you can always =git reset=. It
+ will not *not* alter any files, but remove everything from the
+ "stage area", so you can start staging again.
 
-* Further reading and notes.
-- interactive tutorials and other useful stuff: https://try.github.io/
+** Tags
+  Sometimes I want to mark certain commit with a meaningful comment -- to be
+  able to get back to this version quickly, if needed. See git [[https://git-scm.com/book/en/v2/Git-Basics-Tagging][tags]]: =git tag
+  -m"Submitted to the journal" v1.0= followed by =git push --tags= will create a
+  tag =v1.0= with a comment =Submitted to the journal= and push it to a remote.
+  Now, you can, e.g.:
+  - quickly get back to this version with =git checkout v1.0=.
+  - click "Tags" button on Github, choose =v1.0= and download a =.zip= file with
+    this version.
+** Exploring the past
+   Sometimes it is handy to browse through past versions of the code. Apart from
+   the =git log= and =git checkout= mentioned above, the Github interface might
+   help. Note that you can click on any commit there and browse the repo (in a
+   web browser) as it was back then.
+
+   An overview for changes in a specific file with contributors can be called
+   with "History" or "Blame" buttons (see also [[https://git-scm.com/docs/git-blame][git-blame]] docs). Note that Github
+   web interface shows =master= / =main= branch by default, but you can choose
+   any branch/tag/commit to explore. It helps sometimes to answer questions like
+   "where have this figure come from? Which version of my code?..".
+   
+Sometimes it is also handy to have the current commit and branch (automatically
+-- e.g., to include into a log file). The following commands might help:
+
+    #+begin_src bash :results output replace :exports both
+git rev-parse --abbrev-ref HEAD # current branch
+git rev-parse HEAD # current commit
+    #+end_src
+
+    #+RESULTS:
+    : master
+    : 1c7dd06adb46c63e2706babd2500c040e934d80e
+
+** Ignoring files
+   Sometimes you want to issue a simple =git add .= command, but do not want
+   some files to be tracked at all. Maybe some backup files, the ones related to
+   personal configurations that have nothing to do with the "public" repo, large
+   problem instances, intermediary results, auxiliary things (=__pycache__= for
+   python projects, etc.). To do this, just add a special =.gitignore= file with
+   file names (can include wildcards). See also [[https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring][ProGit]], [[https://docs.github.com/en/github/using-git/ignoring-files][GitHub docs]], and
+   some [[https://github.com/github/gitignore][examples]].
+   
+** Large files
+   As a special case, there is a problem of large files. GitHub imposes a [[https://docs.github.com/en/github/managing-large-files/what-is-my-disk-quota][strict
+   limit]] on file sizes of 100 Mb per file (as of writing this). I do not know a
+   good solution to this problem, but:
+   1. *The key point:* It is questionable if 100 Mb+ files and/or binary files
+      really /need/ text-based version control. See =.gitignore= above.
+   2. There is something called [[https://git-lfs.github.com/][git LFS]] (Large file storage.) I tried to use it
+      once: seemed convenient, but I had a feeling that I am out of control
+      regarding my current quotas, etc. So I decided for myself to avoid it
+      whenever possible.
+   3. See also [[https://docs.github.com/en/github/managing-large-files/working-with-large-files][GitHub docs]] on large files.
+   4. It seems like there is an attempt to solve this problem specifically for
+      ML projects called [[https://dvc.org/][Data Version Control (DVC)]]. See also Dolt and their
+      [[https://www.dolthub.com/blog/2020-03-06-so-you-want-git-for-data/][blogpost on "GitHub for data"]]. These caught my eye, but I have no
+      first-hand experience.
+   5. Please, [[/contact/][let]] me know if you are aware of any good solution, especially
+      relevant to OR / DataScience.
+      
+** A note on collaboration with Github
+    This is basically outside of this note's scope, but of course, possible
+    collaborations and social interactions are strong points of Github.
+    - You can [[https://docs.github.com/en/github/getting-started-with-github/fork-a-repo]["fork"]] a repository easily (to work locally and, perhaps, propose
+      contributions back); a simple [[https://guides.github.com/activities/hello-world/][Hello World]] tutorial might help.
+    - There is an [[https://guides.github.com/features/issues/][issue-tracking]] mechanism and per-project [[https://docs.github.com/en/github/building-a-strong-community/about-wikis][Wiki]].
+    - and so on. Again, there is a large, separate topic.
+ 
+** On versioning [[https://jupyter.org/][Jupyter]] notebooks
+Again, I do not know any good solution. Version-controlling =.ipynb= -s is not
+  that cool, but still useful. (there are some [[https://blog.reviewnb.com/jupyter-version-control/][notes]] out there -- but I do not
+  use =.ipynb= actively). Note that Github is not always best even with
+  /visualizing/ the notebooks. But it might help to use a separate solution to
+  link your notebooks hosted on Gihtub -- e.g., see
+  https://nbviewer.jupyter.org/. Google Colab also [[https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb][offers]] loading public
+  notebooks from Github (as I write this).
+  
+** On Github Pages
+   Github offers a simple website hosting integrated with git -- for projects
+   and/or personal webpages. See [[https://pages.github.com/][GithubPages]] for up to date details.
+   
+** Submodules.
+   If you ever find yourself in need of a "repo-in-a-repo" (e.g., when you use a
+   library that you'd like to version-control separately) -- see [[https://git-scm.com/book/en/v2/Git-Tools-Submodules][submodules]].
+   
+** On other questions
+  Git is *very* flexible by design (because the problem it deals with might get
+  pretty complicated). But since it is widely used, answers to many more or less
+  typical questions can be easily found online.
+  
+* Further reading
 - [[https://git-scm.com/book/en/v2/Git-Basics-Tagging][ProGit]] book. (CC-BY-NC-SA 3.0)
-- A [[https://marklodato.github.io/visual-git-guide/index-en.html?no-svg][visual]] git reference.
-- git [[https://danielmiessler.com/study/git/][primer]].
-- other sources (these were from some reddit question, I guess.)
-- you might want to check out [[https://www.reddit.com/r/git/][r/git]].
-- version-controlling =.ipynb= -s is not that cool, but still useful.
-  (there are some [[https://blog.reviewnb.com/jupyter-version-control/][notes]] out there -- but I do not use =.ipynb= actively)
-- visualizing =.ipynb= from github: see https://nbviewer.jupyter.org/
-- a quick note on GithubPages.
-- there is something called "submodules" (repo-in-a-repo).
-- the tool is *very* flexible, but I guess all problems
-  have solutions discussed somewhere online...
+- [[https://guides.github.com/introduction/flow/][Github Guides]] look useful.
+- There are many other resources to choose from. To give some random examples:
+  + interactive tutorials and other notes: https://try.github.io/
+  + A [[https://marklodato.github.io/visual-git-guide/index-en.html?no-svg][visual]] git reference.
+  + A git [[https://danielmiessler.com/study/git/][primer]].
+  + [[https://www.reddit.com/r/git/][r/git]] community on Reddit (their "sidebar" might be especially useful!)
 
 * Footnotes
+
+[fn:editGH] Note that you can edit files directly on Github, via a web
+interface. It will just create commits on the respective branch of the /remote/ repo.
 
 [fn:private] Note that you can make a repo "private", so no one by default will
 have access, besides you. (see the [[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility][docs]])

@@ -1,7 +1,7 @@
 ---
 title: Dotplot sample generation utility
 categories: ["edu"]
-tags: ["bioinformatics", "short"]
+tags: ["bioinformatics"]
 date: 2019-05-20
 summary: A tiny [dot-plot](https://en.wikipedia.org/wiki/Dot_plot_(bioinformatics)) generation utility in R
 links:
