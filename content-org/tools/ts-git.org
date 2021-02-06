@@ -16,7 +16,7 @@
 #+begin_src yaml :front_matter_extra t
 summary: A quick intro to version control with git.
 
-description: "A quick intro on git, based on a simple example."
+description: "A quick intro note on git (with a simple example)."
 images:
   - "/images/git_conflict.png"
 #+end_src
@@ -176,7 +176,7 @@ end note
 #+end_src
 
 #+RESULTS: dia_workflow
-[[file:./ts-git/workflow.svg]]
+[[/images/ts-git/workflow.svg#notalink][file:/images/ts-git/workflow.svg#notalink]]
 
 * Key concepts with a running example
 ** Basics: tracking changes

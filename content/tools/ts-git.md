@@ -2,13 +2,13 @@
 title: "🔀 Version control with git."
 author: ["Alexey Bochkarev"]
 date: 2021-01-30
-lastmod: 2021-02-06T15:11:14+01:00
+lastmod: 2021-02-06T15:32:56+01:00
 tags: ["tech-seminar", "talk"]
 categories: ["tools"]
 draft: false
 summary: A quick intro to version control with git.
 
-description: "A quick intro on git, based on a simple example."
+description: "A quick intro note on git (with a simple example)."
 images:
   - "/images/git_conflict.png"
 ---
@@ -131,7 +131,7 @@ A project lives in a repository (_"repo"_). In fact, it is just a folder with a
   special `.git` subfolder, where the magic happens. There is something called
   "working area", "staging area", and repositories:
 
-{{< figure src="/ox-hugo/workflow.svg" >}}
+{{< figure src="/images/ts-git/workflow.svg#notalink" link="/images/ts-git/workflow.svg#notalink" >}}
 
 
 ## Key concepts with a running example {#key-concepts-with-a-running-example}
