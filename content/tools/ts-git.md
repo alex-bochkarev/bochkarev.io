@@ -2,11 +2,15 @@
 title: "🔀 Version control with git."
 author: ["Alexey Bochkarev"]
 date: 2021-01-30
-lastmod: 2021-02-05T21:36:52+01:00
+lastmod: 2021-02-06T15:11:14+01:00
 tags: ["tech-seminar", "talk"]
 categories: ["tools"]
 draft: false
 summary: A quick intro to version control with git.
+
+description: "A quick intro on git, based on a simple example."
+images:
+  - "/images/git_conflict.png"
 ---
 
 <div class="note">
