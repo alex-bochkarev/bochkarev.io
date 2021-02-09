@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-02-05T23:16:02+01:00
+lastmod: 2021-02-09T17:02:43+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -41,9 +41,9 @@ one hour in total. <br/> <br/>
 <div class="note">
 
 
-### Upcoming seminar: <span class="timestamp-wrapper"><span class="timestamp">[2021-02-08 Mon 10:00]</span></span> {#upcoming-seminar}
+### Upcoming seminar: <span class="timestamp-wrapper"><span class="timestamp">[2021-02-15 Mon 10:00]</span></span> {#upcoming-seminar}
 
-🌧 **(Cloud) Intro to the Command Line. (1/2)**
+🌧 **(Cloud) Intro to the Command Line. (2/2):** working with the cluster.
 <hr/>
 Notes on the cluster / working in the shell (topics for two seminars):
 
@@ -75,8 +75,8 @@ Notes on the cluster / working in the shell (topics for two seminars):
     -   Repositories (remote, local). Create, fork, `clone`, and other spells.
     -   Keeping track of your code/text: `add`, `commit`, `push/pull`.
     -   Workflow / branches -- `checkout, merge`, rebasing, conflicts.
-3.  🌧 **(Cloud) The Command Line - 1:** Surviving on the cloud. _(Next seminar)_
-4.  🌩 **(Cloud) The Command Line - 2:** making it work for you.
+3.  🌧 **(Cloud) The Command Line - 1:** Surviving on the cloud.
+4.  🌩 **(Cloud) The Command Line - 2:** making it work for you. _(Next seminar)_
 
 
 ## Additional topics (work in progress) {#additional-topics--work-in-progress}

@@ -25,6 +25,8 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
 ** TODO Think: maybe pack into a tangled =.org= file?
 - at least the =CSS= file...
 - but also page structure seems interesting?.. would it be worth the hassle, though?
+** TODO Incorporate QR code into contacts?
+   Add vCard?
 ** TODO remove =short= tag
 (was used in Jekyll to affect the summary view. Not needed anymore)
 
@@ -46,6 +48,7 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
 ** TODO Create GPG page 
  [2020-11-13 Fri 09:38]
 - the necessary keys are there already.
+- see links to notes at https://oscarnajera.com/cv/
 ** DONE Contacts page
    CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-13 Fri 09:38]
@@ -150,3 +153,6 @@ wikipedia, github, local, external.
 ** TODO Fix org-babel blocks =RESULTS= CSS 
  [2021-02-05 Fri 21:03]
 Add some styling
+** TODO Add a blinking cursor :)
+ [2021-02-06 Sat 23:50]
+ [[file:~/projects/bochkarev.io/content-org/tools/ts-cmd.org::*Day I: looking around (Linux)][Day I: looking around (Linux)]]

@@ -2,7 +2,7 @@
 title: "🔀 Version control with git."
 author: ["Alexey Bochkarev"]
 date: 2021-01-30
-lastmod: 2021-02-06T15:32:56+01:00
+lastmod: 2021-02-06T17:05:45+01:00
 tags: ["tech-seminar", "talk"]
 categories: ["tools"]
 draft: false
@@ -568,8 +568,8 @@ _branch(es)_. You could `pull` changes to your local repo from the remote,
 -   `git pull` will try to pull changes from the remote (assigned by the previous
     `push -u` command) and `merge` it into the current branch.[^fn:3]
 
-A repository on the Github can be market as "public", so that anyone would be
-able to see the code (see [a note on visibility](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility) from Github). For example,
+A repository on the Github can be marked as "public", so that anyone would be
+able to see the code (see [a note on visibility](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility)). For example,
 source code for this website is available at
 <https://github.com/alex-bochkarev/bochkarev.io>. You can create `README` file,
 so it will be shown by default when someone opens your repository (and it is a

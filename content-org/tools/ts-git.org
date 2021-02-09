@@ -560,8 +560,8 @@ own needs at the moment.
   =push -u= command) and =merge= it into the current branch.[fn:editGH]
 
   
-  A repository on the Github can be market as "public", so that anyone would be
-  able to see the code (see [[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility][a note on visibility]] from Github). For example,
+  A repository on the Github can be marked as "public", so that anyone would be
+  able to see the code (see [[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility][a note on visibility]]). For example,
   source code for this website is available at
   https://github.com/alex-bochkarev/bochkarev.io. You can create =README= file,
   so it will be shown by default when someone opens your repository (and it is a

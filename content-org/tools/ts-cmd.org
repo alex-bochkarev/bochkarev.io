@@ -1,0 +1,169 @@
+#+TITLE: ☁ Intro to the Command Line
+#+SUBTITLE: aka Surviving on the Cloud
+
+*Idea:* there is a rich toolbox (parts are highly googlable).
+
+* Common intro.
+  This is a teaser, not a tutorial (perhaps, the whole seminar series is). So
+  the workflow is: bump into a problem -> check your notes / recall the term ->
+  google -> solve the problem.
+
+* Day I: looking around (Linux)
+** Intro /what/ and /when/ of command line.
+   Automation, convenient control.
+** Promise
+   - show some key concepts, (nothing /that/ special)
+   - so that you know which keywords to google, just in case.
+** *Please, ask questions!*
+** Basic basics.
+  - cmd line basics: =ls, ls -a, cd, mkdir, cp, mv=, maybe =tree=.
+  - =man=, =which=
+  - editing: =vim=, =nano=
+  - things that happen between programs: a word on pipes, =|=, =>=, =>>=.
+  - =stdout, stderr=
+  - fzf. =cdg= thing. My beloved =rofi= + bookmarks.
+  - history.
+  - aliases, =.bashrc=
+  - opening things, =o=, =autojump=.
+** An example: building a pipeline for an experiment.
+  - =generate_instances.py=
+    #+begin_src python
+#!/bin/env python
+
+import argparse as ap
+
+parser = ap.ArgumentParser(description="Instances generator (c) A. Bochkarev, 2020",
+       formatter_class=ap.ArgumentDefaultsHelpFormatter)
+
+parser.add_argument("-n", action="store", dest="N", help="N")
+args = parser.parse_args()
+
+assert int(args.N) > 0
+
+for i in range(1, int(args.N)+1):
+    with open(f"inst/inst_{i:03d}", "w") as inst:
+        inst.write("<Instance description here>")
+    #+end_src
+  - scripting -- shebang extended: =#!/usr/bin/env perl=
+  - access rights, executable files =chmod u+x=.
+  - =process_inst.py=
+    #+begin_src python
+#!/bin/env python
+
+import argparse as ap
+import numpy as np
+
+parser = ap.ArgumentParser(description="Processes the instances (c) A. Bochkarev, 2020",
+       formatter_class=ap.ArgumentDefaultsHelpFormatter)
+
+parser.add_argument("-i", "--in", action="store", dest="input", help="input")
+
+args = parser.parse_args()
+assert args.input is not None
+
+print(f"{args.input},{np.random.randint(100)}")
+    #+end_src
+  - run them in (gnu) =parallel=
+      #+begin_src bash
+  ls inst/inst_* | shuf | parallel -j4 ./process_inst.py -i
+      #+end_src
+      It does have some superpowers: see =parallel echo ::: A B C ::: D E F=
+  - =cat=, =more/less=, =head/tail=
+  - =process_all.sh=
+    #+begin_src bash
+#!/bin/bash
+
+# clean stuff
+rm -f inst/*
+rm -f ./output.png
+
+# generate new instances
+./generate_inst.py
+
+echo "Generated $(ls inst/* | wc -l) instances. Processing..."
+
+echo "instance, result" > results.csv
+for inst in $(ls inst/ | shuf); do
+    ./process_inst.py -i $inst >> results.csv
+    printf "."
+done
+
+echo "Output file contains $(cat ./results.csv | wc -l) lines."
+
+Rscript ./create_fig.R
+
+echo "compressing the instances..."
+cd inst
+tar czvf "./intances-$(date +%Y%m%d).tar.gz" inst_* --remove-files && echo "Done"
+cd ..
+
+    #+end_src
+  - =wc -l=, =shuf=, =uniq=, =tar=
+  - making a figure
+    #+begin_src R
+library(ggplot2)
+
+res = read.csv("./results.csv", stringsAsFactors = FALSE)
+
+p= ggplot(res)+
+  geom_histogram(aes(x=result))
+
+ggsave("./output.png", p)
+
+    #+end_src
+  - =split -dnl/5 <file> <prefix>=
+  - A style guide on bash: [[https://github.com/numenta/numenta-apps/wiki/Bash-Style-Guide][overview]].
+  - mention: =sed=, =awk=.
+    Like:
+    #+begin_src bash
+  cat ./instances.list | sed 's/inst\/inst_/my_great_inst/g'
+    #+end_src
+  - Makefiles
+    #+begin_src makefile
+  .PHONY: clean instances figures
+
+  N=100
+  INST_FILES=$(addprefix ./inst/inst_, $(shell seq -f %03g 1 $N))
+  OUT_FILES=$(addprefix ./inst/out_, $(shell seq -f %03g 1 $N))
+
+  instances: $(INST_FILES)
+  figures: output.png
+
+  clean:
+    echo "Cleaning files..." ; \
+    rm -f inst/* ; \
+    rm -f ./output.png
+
+  $(INST_FILES) &: generate_inst.py
+    @echo "Generating instances..." ; \
+    ./generate_inst.py -n $N ; \
+    echo "Generated $$(ls ./inst/inst_* | wc -l) instances."
+
+  inst/out_%: inst/inst_%
+    @./process_inst.py -i "instance_no_$*" >> inst/out_$* && \
+    printf "."
+
+  results.csv: $(OUT_FILES)
+    @echo "instance, result" > results.csv && \
+    cat $(OUT_FILES) >> results.csv && \
+    echo "Results file created: $$(cat ./results.csv | wc -l) lines"
+
+  output.png: create_fig.R results.csv
+    Rscript ./create_fig.R
+
+  archive:
+    echo "compressing the instances..."
+    tar czvf "./instances-$$(date +%Y%m%d).tar.gz"  --remove-files inst/* && echo "Done"
+    #+end_src
+
+* Day II: cluster-specific things
+  - connecting to it:
+    + =jackin= alias;
+    + mounting things;
+  - a note on file systems.
+  - running things: PBS / =qsub= stuff; =qsub -I=; Jupyter Hub.
+    Maybe a PBS template.
+  - aliases, etc.: =chainrun=, =showme= (pictures), 
+  - =fzf= glory: fpeek, fdel,
+  - summoning demons: =module=, or building from source.
+  - moving things between remote and local machines. (=scp=, =rsync=, github).
