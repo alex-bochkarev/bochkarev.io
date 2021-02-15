@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-02-09T17:02:43+01:00
+lastmod: 2021-02-15T23:43:02+01:00
 tags: ["tech-seminar"]
 categories: ["tools", "edu"]
 draft: false
@@ -14,21 +14,22 @@ aliases:
 description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
 images:
   - "/images/TechSeminar_logo.png"
+  
+links:
+- icon: "i-play"
+  name: "Video"
+  url: "https://clemson.box.com/s/p75mzqb9sfw5u2my61axi15qqzu8y4nc"
 ---
 
 {{< figure src="/images/TechSeminar_logo.png" >}}
 
 This is an overview page for "OR Tech Seminar" organized with support from
-[Clemson INFORMS Student Chapter](https://cecas.clemson.edu/informs/). Date and time[^fn:1] for specific events will be posted here
-once agreed upon. All materials will be also linked from the seminar descriptions
-below. Everything is subject to change. Comments and
-suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io).
+[Clemson INFORMS Student Chapter](https://cecas.clemson.edu/informs/). The core discussion (Mondays, 10-00 AM EST) is
+finished, unless we decide there are more topics we would like to talk about.
 
-<br/>
-
-| Where  | When                          |
-|--------|-------------------------------|
-| Online | Weekly: Mondays, 10-00 AM EST |
+Some more notes will be posted here soon. (Clemson login is required to access
+the [recordings](https://clemson.box.com/s/p75mzqb9sfw5u2my61axi15qqzu8y4nc).) Comments and suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io) -- both on past and
+possible future seminars.
 
 
 ## The format {#the-format}
@@ -37,27 +38,6 @@ We will be discussing various tools (in a very broad sense) we, as
 researchers, use -- to share experience, configs, and ideas. Each seminar will
 consist of a speaker presentation with a discussion along the way, at most
 one hour in total. <br/> <br/>
-
-<div class="note">
-
-
-### Upcoming seminar: <span class="timestamp-wrapper"><span class="timestamp">[2021-02-15 Mon 10:00]</span></span> {#upcoming-seminar}
-
-🌧 **(Cloud) Intro to the Command Line. (2/2):** working with the cluster.
-<hr/>
-Notes on the cluster / working in the shell (topics for two seminars):
-
--   logging in / comp nodes vs. login shell, a note on file systems.
--   Moving things between remote and local machines (`scp`, `rsync`, `github`, etc.).
--   Shell-related basics (moving around, editing, installing things, etc.).
--   Running things: commands, aliases, pipes, `stdout/stderr`, scripts,
-    access rights (`chmod`). Very intro bash scripting.
--   Some utils (`tar`, `head`, `tail`, `split`, `shuf`, etc.)
--   Running jobs on the cluster: PBS basics; modules.
--   Running things in parallel (a quick [GNU parallel](https://www.gnu.org/software/parallel/) demo, etc.).
--   Possibly, [Makefiles](https://en.wikipedia.org/wiki/Makefile).
-
-</div>
 
 
 ## Core discussion {#core-discussion}
@@ -75,8 +55,17 @@ Notes on the cluster / working in the shell (topics for two seminars):
     -   Repositories (remote, local). Create, fork, `clone`, and other spells.
     -   Keeping track of your code/text: `add`, `commit`, `push/pull`.
     -   Workflow / branches -- `checkout, merge`, rebasing, conflicts.
-3.  🌧 **(Cloud) The Command Line - 1:** Surviving on the cloud.
-4.  🌩 **(Cloud) The Command Line - 2:** making it work for you. _(Next seminar)_
+3.  🌧 **(Cloud) The Command Line.** (Two seminars: 2021-02-08 and 2021-02-15)
+    Notes on the cluster / working in the shell:
+    -   logging in / comp nodes vs. login shell, a note on file systems.
+    -   Moving things between remote and local machines (`scp`, `rsync`, `github`, etc.).
+    -   Shell-related basics (moving around, editing, installing things, etc.).
+    -   Running things: commands, aliases, pipes, `stdout/stderr`, scripts,
+        access rights (`chmod`). Very intro bash scripting.
+    -   Some utils (`tar`, `head`, `tail`, `split`, `shuf`, etc.)
+    -   Running jobs on the cluster: PBS basics; modules.
+    -   Running things in parallel (a quick [GNU parallel](https://www.gnu.org/software/parallel/) demo, etc.).
+    -   Possibly, [Makefiles](https://en.wikipedia.org/wiki/Makefile).
 
 
 ## Additional topics (work in progress) {#additional-topics--work-in-progress}
@@ -97,5 +86,3 @@ Notes on the cluster / working in the shell (topics for two seminars):
         etc.
     -   "Profiling" python code ("what's so slow?")
     -   ... and in Julia: very brief notes on parallel computations and precompiling.
-
-[^fn:1]: Clemson local time.

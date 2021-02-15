@@ -1,0 +1,94 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+
+# hugo_section is a folder inside 'content'
+#+hugo_section: tools
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: 🌩 Intro to the Command Line (2/2): the cluster.
+
+#+date: 2021-02-15
+#+hugo_draft: t
+#+hugo_tags: tech-seminar talk
+#+hugo_categories: tools
+
+#+begin_src yaml :front_matter_extra t
+summary: Tips on working with the computation infrastructure.
+#+end_src
+
+# available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
+# i-wiki, i-outside, i-date, hamburger, i-pdf, i-heart, i-ipynb
+
+* Recap from the previous seminar:
+  - pipelines with shell (=process_all.sh=);
+  - quick note: pipeline with a =Makefile=
+
+* Intro
+  - login vs. node shell. =qsub -I=.
+  - getting started docs: https://www.palmetto.clemson.edu/palmetto/basic/started/
+  - [[https://www.palmetto.clemson.edu/jhub/hub/home][JupyterHub]] ([[https://www.palmetto.clemson.edu/palmetto/basic/jupyter/][docs]]).
+  - installing software: https://github.com/clemsonciti/palmetto-examples/tree/master/Installation
+  - (add =tgs=)
+  - note: sample programs at https://github.com/clemsonciti/palmetto-examples
+
+* Accessing the infrastructure (sshfs)
+  - mounting the file system.
+  - via =ssh= (+script). Note that you could login to a specific /node/, if
+    needed:
+    #+begin_src bash
+qsub -I -l select=1:ncpus=1:host=node1564+1:host=node1564
+    #+end_src
+  - =rsync= (there's also =scp=)
+    #+begin_src bash
+  pass -c Clemson/student && rsync -vP abochka@xfer01-ext.palmetto.clemson.edu:/home/abochka/ab-clustertools/stc ./
+    #+end_src
+  - of course, there is Github.
+  - =fzf= and =cdg= script.
+  - "globus" thing
+* Running things and managing jobs.
+  - =qsub -I=;
+  - =qsub=: PBS scripts
+  - summoning demons: =module add=. 
+  - PBS templates
+    #+begin_src bash
+!/bin/env bash
+
+cat <<EOF > $1
+#PBS -N <jobname>
+#PBS -l select=1:ncpus=1:mem=8gb,walltime=05:00:00
+#PBS -j oe
+#PBS -o ./run.log
+#PBS -M abochka@clemson.edu
+#PBS -m abe
+
+# boilerplate things
+STARTMSG="START: msg"
+ENDMSG="END: msg"
+
+module add anaconda3/5.1.0-gcc/8.3.1
+source activate ab-local
+module add r/4.0.2-gcc/8.3.1
+
+cd $(pwd)
+
+echo \$STARTMSG 
+# run-command
+echo \$ENDMSG
+
+# deactivate the env
+source deactivate ab-local
+EOF
+nano $1
+    #+end_src
+  - =chainrun.sh=
+  - trap (save your data)
+    #+begin_src bash
+trap "cp ${TMPDIR}/* ~/<whatever>/;exit" TERM # save the TMP folder if killed
+    #+end_src
+  - =fdel=, =fpeek=
+
+* Concluding comments / discussion
+- inconsistent runtimes on Palmetto?..
+  (black magic happens :))
+- don't order too much resources (might wait too long).
+
