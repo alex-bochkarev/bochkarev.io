@@ -2,7 +2,9 @@
 title: Contact
 hidetoc: true
 ---
-- **email (preferred):** a (one letter) followed by "at" symbol and domain name "bochkarev dot io" ([🔑](/abochkarev-pubkey.asc)); or a university-related [abochka@g.clemson.edu](mailto:abochka@g.clemson.edu) ([🔑](/abochka-pubkey.asc));
+- **email (preferred)** 
+  + private: a (one letter) followed by "at" symbol and domain "bochkarev dot io" [[🔑](/abochkarev-pubkey.asc)];
+  + CU-related: [abochka@g.clemson.edu](mailto:abochka@g.clemson.edu) [[🔑](/abochka-pubkey.asc)];
 - **office:** Freeman Hall, 278.
 - **twitter:** [@a_bochka](https://twitter.com/a_bochka)
 - **for urgent matters:** please consider [Signal](https://signal.org/), or:
@@ -17,7 +19,7 @@ If you decide to use encryption, please consider:
 - For a simpler (but potentially less secure) tool: contact me via
   [keybase](https://keybase.io/bochkarev) or just
   [encrypt](https://keybase.io/encrypt) your message for me (set `Recipient` to
-  `bochkarev`) and then send the encrypted version in any convenient way.
+  `bochkarev`) and then send the encrypted version in any convenient way. You won't need to login.
 
 <!-- ## Notes on software -->
 <!-- <a name="xmpp"><b>XMPP:</b></a> That's pretty old and "unpopular" technology these days (well, apart from being integral part of some hugely popular commercial IMs). You'll need a client, such as [Gajim](https://gajim.org/) for Linux/Windows, or [Adium](https://adium.im/) for Mac (more [details](https://xmpp.org/software/clients.html)). I am very open to alternative suggestions, but this thing supports inline LaTeX and end-to-end encryption with _my_ key. To make the `xmpp://` link clickable in Firefox, see [this](https://wiki.xmpp.org/web/XMPP_URIs). -->

@@ -10,12 +10,12 @@ tags: ["foo", "bar"]
   <img src="/home/AB.JPG" alt="my photo" class="img-av">
 </div>
 
-PhD student: research in Industrial Engineering / OR, optimization (with Dr.
+PhD candidate: research in Industrial Engineering / OR, optimization (with Dr.
 [J.Cole Smith](https://colesmit.expressions.syr.edu/)).
 
 **Research interests:** Combinatorial optimization, Binary decision diagrams, Network optimization and interdiction.
 
-**Education**: PhD OR/IE (exp. 2023), MSc Appl. Maths & Physics (2010), MA Economics (2010).
+**Education**: PhD OR/IE (exp. 2021), MSc Appl. Maths & Physics (2010), MA Economics (2010).
 
 **Before the academia:** strategic consulting and electric energy industry, with
 focus on strategy and efficiency in grids, mostly electricity transmission

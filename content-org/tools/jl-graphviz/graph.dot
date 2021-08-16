@@ -1,0 +1,14 @@
+digraph {
+    1[style=filled, fillcolor=green, label=<<B>Name:</B> name<SUB>1</SUB><BR/><B>Info:</B> info<SUB>1</SUB><BR/><B>Node number:</B> 1>]
+    2[ label=<<B>Name:</B> name<SUB>2</SUB><BR/><B>Info:</B> info<SUB>2</SUB><BR/><B>Node number:</B> 2>]
+    3[ label=<<B>Name:</B> name<SUB>3</SUB><BR/><B>Info:</B> info<SUB>3</SUB><BR/><B>Node number:</B> 3>]
+    4[style=filled, fillcolor=red, label=<<B>Name:</B> name<SUB>4</SUB><BR/><B>Info:</B> info<SUB>4</SUB><BR/><B>Node number:</B> 4>]
+    5[ label=<<B>Name:</B> name<SUB>5</SUB><BR/><B>Info:</B> info<SUB>5</SUB><BR/><B>Node number:</B> 5>]
+    1 -> 2 [label="added cost 1"];
+    1 -> 3 [label="added cost 9"];
+    1 -> 4 [label="added cost 1"];
+    1 -> 5 [label="added cost 6"];
+    2 -> 3 [label="added cost 7"];
+    2 -> 4 [label="added cost 5"];
+    3 -> 4 [label="added cost 5"];
+}

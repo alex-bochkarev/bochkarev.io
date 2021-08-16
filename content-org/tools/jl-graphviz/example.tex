@@ -1,0 +1,22 @@
+% This is a simple example to test
+% if the LuaLaTeX is capable of compiling
+% the code produced by Julia
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphdrawing,quotes}
+\usegdlibrary{force}
+
+\begin{document}
+\begin{tikzpicture}
+  \graph [spring layout, node distance=20mm, nodes={draw, circle, fill=blue, text=white},
+  edge quotes={fill=yellow, inner sep=2pt}]
+  {
+    a -> b;
+    b ->["c is $\beta^2$"] c;
+    c ->["c is $alpha^2$"] a;
+    d[fill=red, text=white];
+    1 [as={$a^2$}, fill=green, text=black];
+    1 -> b;
+  };
+\end{tikzpicture}
+\end{document}
