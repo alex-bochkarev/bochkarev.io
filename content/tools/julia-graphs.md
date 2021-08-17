@@ -2,7 +2,7 @@
 title: "On visualizing network graphs and Julia"
 author: ["Alexey Bochkarev"]
 date: 2021-08-15
-lastmod: 2021-08-15T20:48:42-04:00
+lastmod: 2021-08-16T21:42:58-04:00
 tags: ["julia"]
 categories: ["tools"]
 draft: false
@@ -23,6 +23,8 @@ links:
 <div class="note">
 
 **Summary:** Sometimes using specialized tools proves to be very convenient. To quickly visualize network graphs, I tried to use [Graphviz](https://graphviz.org/) program (invoking a stand-alone app from within Julia). It worked pretty well, both in terms of "UI" and the figures' quality. Here I provide the minimal code I used and a couple complications, such as plugging in TeX with its PGF/TikZ instead of Graphviz (see also buttons below the title for source code files).
+
+Of course, the idea is not new --- see, e.g., [PGFPlots.jl](https://nbviewer.jupyter.org/github/JuliaTeX/PGFPlots.jl/blob/master/doc/PGFPlots.ipynb) for a full-blown interface to PGFPlots --- but hopefully demonstrates the point.
 
 **Discussion:** I'd appreciate any comments / suggestions! Pls reach out via [email](/contact).
 
