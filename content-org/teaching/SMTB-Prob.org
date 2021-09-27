@@ -1,0 +1,90 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+#+hugo_section: teaching
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: A Practical Introduction to Probability Theory (minicourse)
+
+#+date: 2021-09-25
+#+author: admin
+
+#+hugo_tags: SMTB talk course
+#+hugo_categories: teaching
+
+#+begin_src yaml :front_matter_extra t
+summary: This is a quick numerical intro to probability theory in the form of a mini-course, four one-hour sessions. Designed for [SMTB](https://molbioschool.org/en/) and Puschino Winter School in 2021. Discussing mathematical models for random things from the perspective of numerical examples in Python.
+
+links:
+- icon: "i-gh"
+  name: "Syllabus (ENG)"
+  url: "https://github.com/alex-bochkarev/Probs-SMTB-2021"
+- icon: "i-gh"
+  name: "Syllabus (RUS)"
+  url: "https://github.com/alex-bochkarev/zpsh-21-probs"
+aliases:
+  - /edu/smtb-prob/
+#+end_src
+
+#+HTML: <div class="note">
+
+Course materials for [[https://molbioschool.org/en][School of Molecular and Theoretical Biology]] and Puschino Winter School 2021.
+
+*Key idea:* build a very brief introduction to probability theory by modeling random events in Python, trying to analyze them empirically, and introduce theoretical concepts when they become necessary as we proceed.
+
+This note describes the general logic and background of the course, teaching
+materials are available via the links above. Comments / questions / suggestions are very welcome!
+#+HTML: </div>
+
+** Revisions
+   - =Version 1:= Russian, for Puschino Winter School (2021)
+   - =Version 2:= English and Russian, for SMTB (2021)
+
+** Background
+  The idea of using numerical experiments to illustrate the concepts of
+probability is certainly not new (see, e.g., a great introduction [[https://seeing-theory.brown.edu/index.html#firstPage]["Seeing
+Theory"]] by the team from Brown University). However, I wanted to /model/ the
+events explicitly in Python, in a more "Industrial Engineering" way, if you
+will. I still had to resort to many pretty standard "blackboard" discussions,
+but I am satisfied with the amount of Python code I was able to introduce into
+the discusson 😄.
+
+Another cornerstone of the course was that it was focused on /theory/. So, the key objective was not to teach how to solve simple problems, but to give some intuition on the key concepts from probability theory, how and "why" they work like this.
+
+** Prerequisites and learning objectives
+   The course was designed for students comfortable with the basic school math,
+   and curious to learn more. Ability to /write/ code in Python seemed not
+   strictly necessary, but of course they were assumed not to be afraid of the
+   programming per se.
+
+   The objective was to mention, and give some intuition stemming from the numerical illustrations on the concepts of: random events/experiments, probability (from a frequentist perspective) and probability space, dependent and independent events, conditional probability, (discrete) random variables, excpectation and variance.
+   
+   As a separate point, I wanted to introduce a concept of Probability Space: of course, without diving into /all/ the details of sigma-algebras and such, but at least explaining /why we need it/ at all.
+
+   While it is obviously impossible to establish a solid command of the material during such short time (and without "proper" home assignments), I hope that the students walked away with intuitive understanding of some of the key concepts, interested and pretty well prepared to learn more in a standard university course.
+   
+** Course organization
+   The course was organized into three key topics and an additional, last one:
+   - A model for random events.
+   - Independence, tests, and Co.
+   - Discrete random variables.
+   - Continuous random variables (*)
+
+   (*) We did succeed discussing some new concepts, but the exposition would objectively benefit from at least another hour.
+
+   See the full [[https://github.com/alex-bochkarev/Probs-SMTB-2021][course outline]] for details.
+
+** Technical details
+   The course was delivered online. We worked with the
+   code for a noticeable share of the time, so I presented the material
+   directly from [[https://jupyter.org/][Jupyter notebook]] with [[https://rise.readthedocs.io/en/stable/][RISE]] plugin (which produced [[https://revealjs.com/][Reveal.js]]
+   slides on the fly). Running code interactively and changing parameters allowed to make
+   some nice illustrations on the concept of probability as a "long-term
+   frequency", "two/three-sigmas", and such.
+
+   I used the built-in "chalkbord" within Jupyter most of the time: sometimes it
+   was really handy to write on top of the slides, such as during the discussion
+   of the "histogram" concept. For some worked examples I switched to another
+   program, [[https://github.com/xournalpp/xournalpp][Xournal++]]: a cross-platform, FOSS (GPLv2), and just very convenient
+   one. Allowed for a lot of flexibility in drawing using a simple graphical
+   tablet (page backgrounds, sizes, colors, etc.) and saved the resulting pages
+   as PDFs.

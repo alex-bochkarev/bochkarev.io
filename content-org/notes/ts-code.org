@@ -1,7 +1,7 @@
 #+hugo_base_dir: ~/projects/bochkarev.io
 
 # hugo_section is a folder inside 'content'
-#+hugo_section: tools
+#+hugo_section: notes
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
@@ -11,7 +11,7 @@
 #+author: admin
 
 #+hugo_tags: tech-seminar
-#+hugo_categories: tools
+#+hugo_categories: notes
 #+hugo_draft: t
 
 #+begin_src yaml :front_matter_extra t

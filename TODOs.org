@@ -11,6 +11,14 @@
 - https://stackoverflow.com/questions/4538447/how-to-create-two-columns-on-a-web-page
 - 
 * Current project TODOs
+** TODO fix the gap between the footer and the content (on some pages)
+ [2021-09-18 Sat 22:54]
+** TODO Maybe revise and publish my "mega-config" repo?..
+ [2021-09-18 Sat 22:36]
+** TODO add CV
+ [2021-09-18 Sat 22:36]
+** TODO Add info on prog / tech into "Tools"
+ [2021-09-18 Sat 22:36]
 ** DONE Make menus responsive
    CLOSED: [2021-01-13 Wed 23:03]
  [2020-11-10 Tue 22:41]

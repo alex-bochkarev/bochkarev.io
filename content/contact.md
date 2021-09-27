@@ -3,7 +3,7 @@ title: Contact
 hidetoc: true
 ---
 - **email (preferred)** 
-  + private: a (one letter) followed by "at" symbol and domain "bochkarev dot io" [[🔑](/abochkarev-pubkey.asc)];
+  + private: a (one letter) "at" bochkarev dot io [[🔑](/abochkarev-pubkey.asc)];
   + CU-related: [abochka@g.clemson.edu](mailto:abochka@g.clemson.edu) [[🔑](/abochka-pubkey.asc)];
 - **office:** Freeman Hall, 278.
 - **twitter:** [@a_bochka](https://twitter.com/a_bochka)
@@ -11,7 +11,7 @@ hidetoc: true
   + [@abochka](https://t.me/abochka) on
     [Telegram](https://telegram.org/faq#q-how-is-telegram-different-from-whatsapp)
   + [a at bochkarev.io](xmpp:a@bochkarev.io) on XMPP/"Jabber".
-- **other social media:** I mostly use [LinkedIn](https://www.linkedin.com/in/aabochkaryov) to keep my general public CV. (Not active on Facebook or VK.)
+- **other social media:** I used [LinkedIn](https://www.linkedin.com/in/aabochkaryov) to keep my general public [CV](/bochkarev_cv.pdf). (Not active elsewhere.)
 
 ## Secure comm / Encryption
 If you decide to use encryption, please consider:

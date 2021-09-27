@@ -2,14 +2,17 @@
 title: "📰 Working with the literature: tools and approaches"
 author: ["Alexey Bochkarev"]
 date: 2021-01-15
-lastmod: 2021-02-05T23:08:51+01:00
+lastmod: 2021-09-27T00:05:01-04:00
 tags: ["tech-seminar", "talk"]
-categories: ["tools"]
+categories: ["notes"]
 draft: false
 summary: "A collection of notes on literature: discovery, reading, keeping track of references, and using them in writing."
 description: "Tech Seminar summary on working with literature: managing references, notes, etc."
 images:
   - "/images/notes.png"
+
+aliases:
+  - /tools/ts-literature/
 ---
 
 <div class="note">
@@ -351,13 +354,13 @@ of notes here:
 
 
 # Bibliography
-<a id="ivey2018"></a>[ivey2018] Ivey & Crum, Choosing the Right Citation Management Tool: Endnote, Mendeley, Refworks, or Zotero, <i>Journal of the Medical Library Association : JMLA</i>, <b>106(3)</b>, 399-403 (2018). [↩](#75f526c79b18bb5e78cde1133fd1c1f6)
+<a id="ivey2018"></a>[ivey2018] Ivey & Crum, Choosing the Right Citation Management Tool: Endnote, Mendeley, Refworks, or Zotero, <i>Journal of the Medical Library Association : JMLA</i>, <b>106(3)</b>, 399-403 (2018). <a href="http://dx.doi.org/10.5195/jmla.2018.468">doi</a>. [↩](#75f526c79b18bb5e78cde1133fd1c1f6)
 
 [^fn:1]: Which is by the way a part of something that is usually called Personal Information Management ([PIM](https://en.wikipedia.org/wiki/Personal%5Finformation%5Fmanagement)) or Personal Knowledge Management ([PKM](https://en.wikipedia.org/wiki/Personal%5Fknowledge%5Fmanagement)) systems. These two do not seem well-defined concepts, in my opinion, but do have something to do with very important topics, especially for a researcher.
 [^fn:2]: This is in Sociology -- but I believe the benefits should translate well to STEM, at least to some extent.
 [^fn:3]: Needless to say, this citation was inserted here using Zotero in under 1 minute (and I have a downloaded PDF as a by-product).
 [^fn:4]: I use layers: `bibtex, pdf`, and `org-roam` + `org-roam-bibtex` along with `helm` and such (a mandatory link to my [dotfiles](https://github.com/alex-bochkarev/my-spacemacs-dotfiles)). If you are into Emacs world, you might find it useful to watch this EmacsConf2020 [talk](https://emacsconf.org/2020/talks/17/) by [Noorah Alhasan](https://noorahalhasan.com/), which discusses a very similar approach.
 [^fn:5]: which I do not like as it is too much cloud-based and not, um... hacker friendly, to my feelings. For example, I do not quite understand how to export my stuff quickly and without losses, should I happen to need this...
-[^fn:6]: Speaking about orgmode: you can check out this great Bernt Hansen's page to see what's possible. But despite I like this technology **a lot**, I must admit it is still a DIY type of thing, to my taste
+[^fn:6]: Speaking about orgmode: you can check out this great [Bernt Hansen's page](http://doc.norang.ca/org-mode.html) to see what's possible. But despite I like this technology **a lot**, I must admit it is still a DIY type of thing, to my taste
 [^fn:7]: There is also an original paper by Luhmann, _"Kommunikation mit Zettelkästen"_ -- however, it is in German 🇩🇪, I haven't seen any translation.
 [^fn:8]: It left me with the same kind of feeling as the brilliant ["Deep work"](https://www.calnewport.com/books/deep-work/) by Cal Newport.

@@ -1,7 +1,7 @@
 #+hugo_base_dir: ~/projects/bochkarev.io
 
 # hugo_section is a folder inside 'content'
-#+hugo_section: edu
+#+hugo_section: teaching
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
@@ -10,13 +10,11 @@
 #+date: 2021-01-14
 
 #+hugo_tags: tech-seminar
-#+hugo_categories: "tools" "edu"
+#+hugo_categories: "teaching"
 
 #+begin_src yaml :front_matter_extra t
 summary: A quick note on OR Tech Seminar topics and logistics.
 hidetoc: t
-aliases:
-  - /tools/or-tech-seminar
 
 description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
 images:
@@ -26,6 +24,10 @@ links:
 - icon: "i-play"
   name: "Video"
   url: "https://clemson.box.com/s/p75mzqb9sfw5u2my61axi15qqzu8y4nc"
+
+aliases:
+  - /edu/or-tech-seminar/
+  - /tools/or-tech-seminar/
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
@@ -50,13 +52,13 @@ possible future seminars.
   
 * Core discussion
 1. 📰 *Working with the literature:* tools and approaches. (2021-01-25) @@html:
-   <a class="sticker" href="/tools/ts-literature/">&nbsp;Summary&nbsp;</a>@@
+   <a class="sticker" href="/notes/ts-literature/">&nbsp;Summary&nbsp;</a>@@
    + Managing references (Zotero, JabRef, Mendeley and friends).
    + Using the literature: latex/bibtex, editors, etc. (very brief)
    + Discovering the literature (feeds, mailing lists, etc.)
    + A note on notes.
 2. *🔀 Version-control:* a quick intro to Git. (2021-02-01) @@html:
-   <a class="sticker" href="/tools/ts-git/">&nbsp;Summary&nbsp;</a>@@ 
+   <a class="sticker" href="/notes/ts-git/">&nbsp;Summary&nbsp;</a>@@ 
    + Version control, backups, when to use (always!)
    + Git, github, and the team.
    + Repositories (remote, local). Create, fork, =clone=, and other spells.

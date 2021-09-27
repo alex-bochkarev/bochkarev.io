@@ -1,7 +1,7 @@
 #+hugo_base_dir: ~/projects/bochkarev.io
 
 # hugo_section is a folder inside 'content'
-#+hugo_section: tools
+#+hugo_section: notes
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
@@ -10,10 +10,13 @@
 #+date: 2021-02-15
 #+hugo_draft: t
 #+hugo_tags: tech-seminar talk
-#+hugo_categories: tools
+#+hugo_categories: notes
 
 #+begin_src yaml :front_matter_extra t
 summary: Tips on working with the computation infrastructure.
+
+aliases:
+  - /tools/ts-cluster/
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,

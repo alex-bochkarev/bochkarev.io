@@ -24,17 +24,17 @@ title = "A.B."
       name = "Me"
       url = "/"
       weight = 1
-    # [[menu.main]]
-    #   name = "Research"
-    #   url = "/research/"
-    #   weight = 2
     [[menu.main]]
-      name = "Tools"
-      url = "/tools/"
+      name = "Research"
+      url = "/research/"
+      weight = 2
+    [[menu.main]]
+      name = "Teaching"
+      url = "/teaching/"
       weight = 3
     [[menu.main]]
-      name = "Edu"
-      url = "/edu/"
+      name = "Misc notes"
+      url = "/notes/"
       weight = 4
     [[menu.main]]
       name = "Contact"
@@ -42,6 +42,10 @@ title = "A.B."
       weight = 5
 
     # Icons top-right-corner menu
+    [[menu.side]]
+      name="i-CV"
+      url="/bochkarev_cv.pdf"
+      weight=1
     [[menu.side]]
       name="i-envelope"
       url="mailto:web@bochkarev.io"

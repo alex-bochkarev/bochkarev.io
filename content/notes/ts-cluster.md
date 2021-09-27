@@ -2,11 +2,14 @@
 title: "🌩 Intro to the Command Line (2/2): the cluster."
 author: ["Alexey Bochkarev"]
 date: 2021-02-15
-lastmod: 2021-02-15T16:48:12+01:00
+lastmod: 2021-09-26T23:58:26-04:00
 tags: ["tech-seminar", "talk"]
-categories: ["tools"]
+categories: ["notes"]
 draft: true
 summary: Tips on working with the computation infrastructure.
+
+aliases:
+  - /tools/ts-cluster/
 ---
 
 ## Recap from the previous seminar: {#recap-from-the-previous-seminar}

@@ -2,9 +2,9 @@
 title: "On visualizing network graphs and Julia"
 author: ["Alexey Bochkarev"]
 date: 2021-08-15
-lastmod: 2021-09-26T23:56:09-04:00
+lastmod: 2021-09-26T23:56:36-04:00
 tags: ["julia"]
-categories: ["tools"]
+categories: ["notes"]
 draft: false
 summary: "How to invoke Graphviz or TikZ from Julia to produce nice network plots."
 description: "How to invoke Graphviz or TikZ from Julia to produce nice graph plots."

@@ -1,7 +1,7 @@
 #+hugo_base_dir: ~/projects/bochkarev.io
 
 # hugo_section is a folder inside 'content'
-#+hugo_section: tools
+#+hugo_section: notes
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
@@ -10,7 +10,8 @@
 #+date: 2021-08-15
 
 #+hugo_tags: julia
-#+hugo_categories: tools
+#+hugo_categories: notes
+
 
 #+begin_src yaml :front_matter_extra t
 summary: "How to invoke Graphviz or TikZ from Julia to produce nice network plots."
@@ -25,6 +26,9 @@ links:
 - icon: "i-download"
   name: ".tar.gz"
   url: "/assets/julia-graphs/gv_jl_example.tar.gz"
+
+aliases:
+  - /tools/julia-graphs/
         #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,

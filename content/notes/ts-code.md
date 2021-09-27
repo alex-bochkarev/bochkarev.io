@@ -2,9 +2,9 @@
 title: "Selected topics on programming"
 author: ["admin"]
 date: 2021-01-14
-lastmod: 2021-01-14T22:49:54+01:00
+lastmod: 2021-09-27T00:02:44-04:00
 tags: ["tech-seminar"]
-categories: ["tools"]
+categories: ["notes"]
 draft: true
 summary: Resources compilation and seminar materials on programming.
 ---

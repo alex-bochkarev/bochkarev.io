@@ -1,7 +1,7 @@
 #+hugo_base_dir: ~/projects/bochkarev.io
 
 # hugo_section is a folder inside 'content'
-#+hugo_section: tools
+#+hugo_section: notes
 #+hugo_auto_set_lastmod: t
 #+hugo_front_matter_format: yaml
 
@@ -10,7 +10,7 @@
 #+date: 2021-01-15
 
 #+hugo_tags: tech-seminar talk
-#+hugo_categories: tools
+#+hugo_categories: notes
 
 #+PROPERTY: header-args :eval never-export
 #+begin_src yaml :front_matter_extra t
@@ -18,6 +18,9 @@ summary: "A collection of notes on literature: discovery, reading, keeping track
 description: "Tech Seminar summary on working with literature: managing references, notes, etc."
 images:
   - "/images/notes.png"
+
+aliases:
+  - /tools/ts-literature/
 #+end_src
 
 #+HTML: <div class="note">
@@ -457,8 +460,8 @@ useful command line recipes, boilerplate =ggplot= code for figures, etc.
 [fn:newport] It left me with the same kind of feeling as the brilliant [[https://www.calnewport.com/books/deep-work/]["Deep
 work"]] by Cal Newport.
 
-[fn:org] Speaking about orgmode: you can check out this great Bernt Hansen's
-      page to see what's possible. But despite I like this technology *a lot*, I
+[fn:org] Speaking about orgmode: you can check out this great [[http://doc.norang.ca/org-mode.html][Bernt Hansen's
+      page]] to see what's possible. But despite I like this technology *a lot*, I
       must admit it is still a DIY type of thing, to my taste
 
 [fn:evernote] which I do not like as it is too much cloud-based and not, um...

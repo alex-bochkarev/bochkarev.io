@@ -10,24 +10,25 @@ tags: ["foo", "bar"]
   <img src="/home/AB.JPG" alt="my photo" class="img-av">
 </div>
 
-PhD candidate: research in Industrial Engineering / OR, optimization (with Dr.
-[J.Cole Smith](https://colesmit.expressions.syr.edu/)).
+I am a PhD candidate at Clemson University, focusing on research in Industrial
+Engineering / Operations Research. Specifically, I work on mathematical
+optimization with Dr.&nbsp;[J.&nbsp;Cole Smith](https://colesmit.expressions.syr.edu/).
 
-**Research interests:** Combinatorial optimization, Binary decision diagrams, Network optimization and interdiction.
+**Research interests:** mathematical programming, combinatorial optimization, networks, interdiction, decision diagrams, dynamic programming, reinforcement learning.
+
+I am broadly interested in combinatorial optimization and networks. My [current
+projects](/research/) take different perspectives on capturing and leveraging
+structure in optimization problems involving graphs. I am trying to achieve this
+using binary decision diagrams and, more recently, game playing and
+reinforcement learning methods.
 
 **Education**: PhD OR/IE (exp. 2021), MSc Appl. Maths & Physics (2010), MA Economics (2010).
 
-**Before the academia:** strategic consulting and electric energy industry, with
-focus on strategy and efficiency in grids, mostly electricity transmission
-(several years of experience in Russia -- see
-[details](https://www.linkedin.com/in/aabochkaryov/)). <hr/>
+**Before the academia:** management consulting and electric energy, 
+focus on infrastructure projects, strategy and efficiency in transmission grids
+(several years of experience in Russia). 
 
-**This website** keeps my personal notes on various topics along with my
-up-to-date [contact](/contact/) details. All opinions mine. Not an advice, no
-guarantees of any kind (see full [disclaimer](/disclaimer)).
-
-<!-- Please, choose a topic in the header menu, or look into [Archive](/archive/) to -->
-<!-- see all notes (titles) on one page. -->
+Please refer to my [CV](/bochkarev_cv.pdf) and the [programming stack](/notes/stack/) I use for more details.
 
 <br/>
 <div style="text-align: right; font-size: 0.5em;"> <a href="https://github.com/alex-bochkarev/bio-snippets" class="nav-link">♥</a></div>

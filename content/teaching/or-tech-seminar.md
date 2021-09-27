@@ -2,14 +2,12 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-02-15T23:43:02+01:00
+lastmod: 2021-09-27T00:10:01-04:00
 tags: ["tech-seminar"]
-categories: ["tools", "edu"]
+categories: ["teaching"]
 draft: false
 summary: A quick note on OR Tech Seminar topics and logistics.
 hidetoc: t
-aliases:
-  - /tools/or-tech-seminar
 
 description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
 images:
@@ -19,6 +17,10 @@ links:
 - icon: "i-play"
   name: "Video"
   url: "https://clemson.box.com/s/p75mzqb9sfw5u2my61axi15qqzu8y4nc"
+
+aliases:
+  - /edu/or-tech-seminar/
+  - /tools/or-tech-seminar/
 ---
 
 {{< figure src="/images/TechSeminar_logo.png" >}}
@@ -43,13 +45,13 @@ one hour in total. <br/> <br/>
 ## Core discussion {#core-discussion}
 
 1.  📰 **Working with the literature:** tools and approaches. (2021-01-25)
-       <a class="sticker" href="/tools/ts-literature/">&nbsp;Summary&nbsp;</a>
+       <a class="sticker" href="/notes/ts-literature/">&nbsp;Summary&nbsp;</a>
     -   Managing references (Zotero, JabRef, Mendeley and friends).
     -   Using the literature: latex/bibtex, editors, etc. (very brief)
     -   Discovering the literature (feeds, mailing lists, etc.)
     -   A note on notes.
 2.  **🔀 Version-control:** a quick intro to Git. (2021-02-01)
-       <a class="sticker" href="/tools/ts-git/">&nbsp;Summary&nbsp;</a>
+       <a class="sticker" href="/notes/ts-git/">&nbsp;Summary&nbsp;</a>
     -   Version control, backups, when to use (always!)
     -   Git, github, and the team.
     -   Repositories (remote, local). Create, fork, `clone`, and other spells.
