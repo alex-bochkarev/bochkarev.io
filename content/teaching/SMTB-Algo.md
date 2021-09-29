@@ -2,7 +2,7 @@
 title: "A Glimpse into Algorithms (minicourse)"
 author: ["admin"]
 date: 2020-07-29
-lastmod: 2021-09-27T01:21:28-04:00
+lastmod: 2021-09-28T22:32:05-04:00
 tags: ["SMTB", "talk", "course"]
 categories: ["teaching"]
 draft: false
@@ -18,6 +18,8 @@ links:
 
 aliases:
   - /edu/smtb-algo/
+
+hide_from_list: true
 ---
 
 <div class="note">

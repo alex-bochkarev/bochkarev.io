@@ -1,0 +1,60 @@
+#+hugo_base_dir: ~/projects/bochkarev.io
+#+hugo_section: teaching
+#+hugo_auto_set_lastmod: t
+#+hugo_front_matter_format: yaml
+
+#+title: A Practical Introduction to Probability Theory (minicourse)
+
+#+date: 2021-09-25
+#+author: admin
+
+#+hugo_tags: SMTB talk course
+#+hugo_categories: teaching
+
+#+begin_src yaml :front_matter_extra t
+summary: This is a quick numerical intro to probability theory in the form of a mini-course, four one-hour sessions. Designed for [SMTB](https://molbioschool.org/en/) and Puschino Winter School in 2021. Discussing mathematical models for random things from the perspective of numerical examples in Python.
+
+links:
+- icon: "i-gh"
+  name: "Syllabus (ENG)"
+  url: "https://github.com/alex-bochkarev/Probs-SMTB-2021"
+- icon: "i-gh"
+  name: "Syllabus (RUS)"
+  url: "https://github.com/alex-bochkarev/zpsh-21-probs"
+aliases:
+  - /edu/smtb-prob/
+#+end_src
+
+#+HTML: <div class="note">
+
+Course materials for [[https://molbioschool.org/en][School of Molecular and Theoretical Biology]] and Puschino Winter School 2021.
+
+*Key idea:* ...
+
+This note describes the general logic and background of the course, teaching
+materials are available via the link above. Comments / questions / suggestions are very welcome!
+#+HTML: </div>
+
+** Revisions
+   - ZPSh
+   - SMTB
+** Background
+   ...
+
+** Prerequisites and learning objectives
+   ...
+  
+** Course organization
+   ...
+
+   See the full [[https://github.com/alex-bochkarev/Probs-SMTB-2021][course outline]] for details.
+
+** Technical details
+   The course was delivered online. The central idea required working with the
+   code most of the time, so I presented the material directly from [[https://jupyter.org/][Jupyter
+   notebook]] with [[https://rise.readthedocs.io/en/stable/][RISE]] plugin (which produced [[https://revealjs.com/][Reveal.js]] slides). This allowed me
+   to run code interactively, change parameters, comment/uncomment lines, and
+   observe what is going on.
+
+   The built-in "chalkboard" was crucial, since many discussions benefited a lot
+   from such presentation.

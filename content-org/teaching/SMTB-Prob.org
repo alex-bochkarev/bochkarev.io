@@ -21,8 +21,11 @@ links:
 - icon: "i-gh"
   name: "Syllabus (RUS)"
   url: "https://github.com/alex-bochkarev/zpsh-21-probs"
+
 aliases:
   - /edu/smtb-prob/
+
+hide_from_list: true
 #+end_src
 
 #+HTML: <div class="note">

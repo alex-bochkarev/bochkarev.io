@@ -2,7 +2,7 @@
 title: An Euler diagram for convexity generalizations
 categories: [edu]
 tags: [deterministic, quals]
-summary: On convexity generalization concepts (quasiconvexity and such) -- a one-pager with examples.
+summary: A one-page, visual summary of various concepts generalizing "convexity" (i.e., quasiconvexity and such) with simple 2D examples.
 date: 2019-05-22
 lastmod: 2021-01-14
 links:

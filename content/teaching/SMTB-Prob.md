@@ -2,7 +2,7 @@
 title: "A Practical Introduction to Probability Theory (minicourse)"
 author: ["admin"]
 date: 2021-09-25
-lastmod: 2021-09-27T01:56:42-04:00
+lastmod: 2021-09-28T22:32:42-04:00
 tags: ["SMTB", "talk", "course"]
 categories: ["teaching"]
 draft: false
@@ -15,8 +15,11 @@ links:
 - icon: "i-gh"
   name: "Syllabus (RUS)"
   url: "https://github.com/alex-bochkarev/zpsh-21-probs"
+
 aliases:
   - /edu/smtb-prob/
+
+hide_from_list: true
 ---
 
 <div class="note">

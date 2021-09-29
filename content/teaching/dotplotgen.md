@@ -1,9 +1,9 @@
 ---
 title: Dotplot sample generation utility
-categories: ["edu"]
+categories: ["teaching"]
 tags: ["bioinformatics"]
 date: 2019-05-20
-summary: A tiny [dot-plot](https://en.wikipedia.org/wiki/Dot_plot_(bioinformatics)) generation utility in R
+summary: A utility to facilitate the discussion of the [dot-plot](https://en.wikipedia.org/wiki/Dot_plot_(bioinformatics)) concept. Written in R with ggplot.
 links:
   - icon: i-gh
     name: "Source"

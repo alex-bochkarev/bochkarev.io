@@ -24,8 +24,6 @@ links:
 
 aliases:
   - /edu/smtb-algo/
-
-hide_from_list: true
 #+end_src
 
 #+HTML: <div class="note">
@@ -42,8 +40,8 @@ materials are available via the links above. Comments / questions / suggestions 
 #+HTML: </div>
 
 ** Revisions
-- =Version 1, Workshop (2020):= ca. 2 hours session, online. Russian (presentation) / English (materials),
-- =Version 2, Minicourse (2021):= four sessions, one hour each, online. Russian and English (materials in English only).
+- Workshop (2020): ca. 2 hours session, online. Russian (presentation) / English (materials),
+- Minicourse (2021): four sessions, one hour each, online. Russian and English (materials in English only).
 
 ** Background
    This is an attempt to think about the matter from the

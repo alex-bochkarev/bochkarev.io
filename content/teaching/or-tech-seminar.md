@@ -2,7 +2,7 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-09-27T00:10:01-04:00
+lastmod: 2021-09-28T22:33:00-04:00
 tags: ["tech-seminar"]
 categories: ["teaching"]
 draft: false
@@ -21,6 +21,8 @@ links:
 aliases:
   - /edu/or-tech-seminar/
   - /tools/or-tech-seminar/
+
+hide_from_list: true
 ---
 
 {{< figure src="/images/TechSeminar_logo.png" >}}

@@ -28,6 +28,8 @@ links:
 aliases:
   - /edu/or-tech-seminar/
   - /tools/or-tech-seminar/
+
+hide_from_list: true
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
