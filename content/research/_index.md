@@ -51,7 +51,7 @@ with different numerical data) and sensitivity information.
 
 🖊️ **Working paper:** Bochkarev, Alexey, and J. Cole Smith. “On Aligning Non-Order-Associated Binary Decision Diagrams.” Revision submitted to *INFORMS Journal on Computing*.
 
-💬 **Presentation:** at INFORMS Annual Meeting 2020.
+💬 **Presentation:** at INFORMS Annual Meeting 2020. [(slides)](./2020_10_Informs_Bochkarev.pdf)
 
 💻 **Software stack:** Python, R/ggplot, graphviz (dot), Gurobi solver, PBS, GNU parallel, bash, make, sphinx.
 
