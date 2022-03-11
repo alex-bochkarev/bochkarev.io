@@ -48,7 +48,7 @@ title = "A.B."
       weight=1
     [[menu.side]]
       name="i-envelope"
-      url="mailto:web@bochkarev.io"
+      url="mailto:a@bochkarev.io"
       weight=1
     [[menu.side]]
       name="i-key"

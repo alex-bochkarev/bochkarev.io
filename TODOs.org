@@ -11,6 +11,12 @@
 - https://stackoverflow.com/questions/4538447/how-to-create-two-columns-on-a-web-page
 - 
 * Current project TODOs
+** TODO Updating the key info.
+:LOGBOOK:
+CLOCK: [2022-03-11 Fri 12:21]
+CLOCK: [2022-03-11 Fri 11:27]--[2022-03-11 Fri 11:32] =>  0:05
+CLOCK: [2022-03-11 Fri 11:10]--[2022-03-11 Fri 11:22] =>  0:12
+:END:
 ** TODO fix the gap between the footer and the content (on some pages)
  [2021-09-18 Sat 22:54]
 ** TODO Maybe revise and publish my "mega-config" repo?..
