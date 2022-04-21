@@ -1,0 +1,317 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/bochkarev/projects/bochkarev.io/TODOs.org
+
+
+* DONE Updating the keys info.
+CLOSED: [2022-04-21 Thu 13:56]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:56
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+- State "DONE"       from "TODO"       [2022-04-21 Thu 13:56]
+:LOGBOOK:
+CLOCK: [2022-03-11 Fri 12:21]--[2022-03-11 Fri 12:53] =>  0:32
+CLOCK: [2022-03-11 Fri 11:27]--[2022-03-11 Fri 11:32] =>  0:05
+CLOCK: [2022-03-11 Fri 11:10]--[2022-03-11 Fri 11:22] =>  0:12
+:END:
+
+* DONE add CV
+CLOSED: [2022-04-21 Thu 13:56]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:56
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+- State "DONE"       from "TODO"       [2022-04-21 Thu 13:56]
+ [2021-09-18 Sat 22:36]
+
+* DONE Make menus responsive
+   CLOSED: [2021-01-13 Wed 23:03]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:56
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-10 Tue 22:41]
+(see =.css=, I guess) -- so the top menu would work on a phone.
+seems like there is a manual: https://w3bits.com/css-html-menu/
+
+Maybe a better source is: https://1stwebdesigner.com/how-to-create-a-responsive-dropdown-navigation-using-only-css/
+
+Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
+
+* DONE Make the theme a separate repo
+   CLOSED: [2021-01-03 Sun 23:34]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:56
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Automate footer/header social icons
+   CLOSED: [2021-01-03 Sun 23:34]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-10 Tue 23:02]
+
+ Sometime, for the theme...
+
+* DONE Create tags indices
+   CLOSED: [2021-01-13 Wed 23:03]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:34]
+
+ must be automatic, though
+
+* DONE Contacts page
+   CLOSED: [2021-01-13 Wed 23:03]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:38]
+
+* DONE Disclaimer, terms, privacy policy, and such technical pages
+   CLOSED: [2021-01-13 Wed 23:03]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:40]
+ (I have these already, I believe)
+
+* DONE Custom 404 page!
+   CLOSED: [2021-01-13 Wed 23:03]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:42]
+
+* DONE Correct sticker icons
+   CLOSED: [2021-01-13 Wed 23:03]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+(add as necessary)
+- menu items (lists)
+- posts themselves
+
+* CANCELED I think, maybe add =download= icon?
+   CLOSED: [2021-01-13 Wed 23:04]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: CANCELED
+:END:
+For downloading from the same website
+
+* DONE Fix the fonts
+   CLOSED: [2021-01-13 Wed 23:04]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+   The symbol in the header does not show up on another system??..
+
+* DONE Fix =ul= CSS: =<ul>= after =<p>= has too large margins/padding   :css:
+   CLOSED: [2021-01-13 Wed 23:04]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Main page with photo
+   CLOSED: [2020-11-24 Tue 22:56]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:37]
+
+ (two cols layout)
+
+* DONE Metadata: introduce stickers
+   CLOSED: [2020-11-15 Sun 00:26]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+PDF, Source, etc.
+
+
+* DONE Floating TOC and such bells.
+   CLOSED: [2020-11-14 Sat 23:45]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:38]
+
+* DONE Deal with long lines in =src= blocks.
+   CLOSED: [2020-11-14 Sat 23:21]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:57
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 10:30]
+
+* DONE Transfer custom css classes from the previous edition
+   CLOSED: [2020-11-14 Sat 23:20]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:58
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 10:34]
+ Mostly dealing with images.
+
+* DONE Tables CSS (nice one)
+   CLOSED: [2020-11-14 Sat 23:20]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:58
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Source code blocks
+   CLOSED: [2020-11-14 Sat 23:20]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:58
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+- long lines;
+- expand on hover;
+- padding;
+- (maybe lang name?)
+
+* DONE Metadata block CSS
+   CLOSED: [2020-11-14 Sat 22:46]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:58
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+ [2020-11-13 Fri 09:36]
+
+ Smaller fonts, gray (deaccent).
+
+* DONE link/href icons
+   CLOSED: [2020-11-14 Sat 18:04]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:58
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+wikipedia, github, local, external.
+
+* DONE Make sticky menu look better (no overlay, maybe?)
+   CLOSED: [2020-11-14 Sat 18:16]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 13:58
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Add info on prog / tech into "Tools"
+CLOSED: [2022-04-21 Thu 14:29]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 14:29
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+- State "DONE"       from "TODO"       [2022-04-21 Thu 14:29]
+ [2021-09-18 Sat 22:36]
+
+* DONE Research page with the INFORMS talk.
+CLOSED: [2022-04-21 Thu 14:29]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 14:29
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: DONE
+:END:
+- State "DONE"       from "TODO"       [2022-04-21 Thu 14:29]
+ [2020-11-13 Fri 09:37]
+
+* CANCELED Create Archive page
+CLOSED: [2022-04-21 Thu 14:29]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-21 Thu 14:29
+:ARCHIVE_FILE: ~/projects/bochkarev.io/TODOs.org
+:ARCHIVE_OLPATH: Current project TODOs
+:ARCHIVE_CATEGORY: TODOs
+:ARCHIVE_TODO: CANCELED
+:END:
+ [2020-11-13 Fri 09:37]

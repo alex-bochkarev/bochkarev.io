@@ -5,7 +5,7 @@ hidetoc: true
 ---
 
 Here is a brief summary of my current research projects. Please feel free to
-reach out if you are interested in details.
+reach out if you are interested in details. 
 
 ### 1) On collections of BDDs and "order-associated" diagrams.
 ![Branch and Bound tree](./siftup.png#full-shadow)
@@ -49,9 +49,11 @@ benefits (especially when we'd need to re-solve the problem
 with different numerical data) and sensitivity information.
 </details>
 
-🖊️ **Working paper:** Bochkarev, Alexey, and J. Cole Smith. “On Aligning Non-Order-Associated Binary Decision Diagrams.” Revision submitted to *INFORMS Journal on Computing*.
+🖊️ **Working paper:** Bochkarev, Alexey, and J. Cole Smith. “On Aligning Non-Order-Associated Binary Decision Diagrams.” Under revision in *INFORMS Journal on Computing*.
 
 💬 **Presentation:** at INFORMS Annual Meeting 2020. [(slides)](./2020_10_Informs_Bochkarev.pdf)
+
+💾 **Code and data:** work in progress ([current version](./align-BDD/code-docs/overview.html "current code docs"))
 
 💻 **Software stack:** Python, R/ggplot, graphviz (dot), Gurobi solver, PBS, GNU parallel, bash, make, sphinx.
 
@@ -86,7 +88,8 @@ the optimal game cost, the literature on heuristics
 look to fill in this gap by leveraging some ideas from the
 realm of simulations and game playing research. </details>
 
-🖊️ **Working paper:**
-in preparation, with Dr. J. Cole Smith.
+🖊️ **Working paper:** in preparation, with Dr. J. Cole Smith. (Abstract submitted/accepted
+to [INOC-2022](https://sites.google.com/view/inoc2022 "International Network
+Optimization Conference 2022"))
 
-💻 **Software stack:** Julia, graphviz (dot), R/ggplot, PBS (so far).
+💻 **Software stack:** Julia, graphviz (dot), R/ggplot, PBS, make (so far).

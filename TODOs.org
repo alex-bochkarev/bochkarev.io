@@ -1,7 +1,9 @@
-* Actual working space
+#+TITLE: Website-related items and notes
+#+STARTUP: show2levels
+
+* Working space / random links
 - http://bettermotherfuckingwebsite.com/
 - https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/
-
   
 ** On sidenotes
 - https://www.inkandswitch.com/local-first.html#git
@@ -10,32 +12,32 @@
 - https://themes.gohugo.io/theme/academic/
 - https://stackoverflow.com/questions/4538447/how-to-create-two-columns-on-a-web-page
 - 
+
 * Current project TODOs
-** TODO Updating the key info.
+** DONE fix the link to =MATH8100_Project= repo 
+CLOSED: [2022-04-21 Thu 14:03]
+- State "DONE"       from "TODO"       [2022-04-21 Thu 14:03]
 :LOGBOOK:
-CLOCK: [2022-03-11 Fri 12:21]
-CLOCK: [2022-03-11 Fri 11:27]--[2022-03-11 Fri 11:32] =>  0:05
-CLOCK: [2022-03-11 Fri 11:10]--[2022-03-11 Fri 11:22] =>  0:12
+CLOCK: [2022-04-21 Thu 13:58]--[2022-04-21 Thu 14:03] =>  0:05
 :END:
+[2022-03-24 Thu 15:40]
+[[file:~/projects/bochkarev.io/content-org/notes/stack.org::- For a high-performance code, besides Julia, I would go with C++ or Java. (My last experience involved implementing \[\[https://en.wikipedia.org/wiki/Ellipsoid_method\]\[Ellipsoid method\]\] for LPs as a \[\[https://github.com/alex-bochkarev/MATH8100_Project\]\[course project\]\].)]]
+
+(this underscore doesn't work with GitHub, as usual...)
+** DONE Add code docs for align-BDD
+CLOSED: [2022-04-21 Thu 14:28]
+- State "DONE"       from "TODO"       [2022-04-21 Thu 14:28]
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 14:00]--[2022-04-21 Thu 14:28] =>  0:28
+:END:
+** TODO Think about metadata / schema.org / microformats?
+How to make pages machine-readable by search engines and (possibly) custom bots?
+Also, improves sharing, etc. Seen a note on this in Xiaoxing's notes (see [[file:../../zettelkasten/20201003093034-blogs.org][🕮:blogs]]) 
+
 ** TODO fix the gap between the footer and the content (on some pages)
  [2021-09-18 Sat 22:54]
 ** TODO Maybe revise and publish my "mega-config" repo?..
  [2021-09-18 Sat 22:36]
-** TODO add CV
- [2021-09-18 Sat 22:36]
-** TODO Add info on prog / tech into "Tools"
- [2021-09-18 Sat 22:36]
-** DONE Make menus responsive
-   CLOSED: [2021-01-13 Wed 23:03]
- [2020-11-10 Tue 22:41]
-(see =.css=, I guess) -- so the top menu would work on a phone.
-seems like there is a manual: https://w3bits.com/css-html-menu/
-
-Maybe a better source is: https://1stwebdesigner.com/how-to-create-a-responsive-dropdown-navigation-using-only-css/
-
-Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
-** DONE Make the theme a separate repo
-   CLOSED: [2021-01-03 Sun 23:34]
 ** TODO Think: maybe pack into a tangled =.org= file?
 - at least the =CSS= file...
 - but also page structure seems interesting?.. would it be worth the hassle, though?
@@ -44,62 +46,24 @@ Maybe a solution is: https://w3schoolweb.com/hamburger-menu-css-responsive/
 ** TODO remove =short= tag
 (was used in Jekyll to affect the summary view. Not needed anymore)
 
-** DONE Automate footer/header social icons
-   CLOSED: [2021-01-03 Sun 23:34]
- [2020-11-10 Tue 23:02]
-
- Sometime, for the theme...
-** DONE Create tags indices
-   CLOSED: [2021-01-13 Wed 23:03]
- [2020-11-13 Fri 09:34]
-
- must be automatic, though
-** TODO Research page with the INFORMS talk.
- [2020-11-13 Fri 09:37]
-** TODO Create Archive page
- [2020-11-13 Fri 09:37]
- [[file:~/projects/bochkarev.io/themes/gardenish/layouts/_default/list.html::</div>]]
 ** TODO Create GPG page 
  [2020-11-13 Fri 09:38]
 - the necessary keys are there already.
 - see links to notes at https://oscarnajera.com/cv/
-** DONE Contacts page
-   CLOSED: [2021-01-13 Wed 23:03]
- [2020-11-13 Fri 09:38]
 ** TODO Sidenotes and a shortcode for that. :someday:
  [2020-11-13 Fri 09:38]
  https://danilafe.com/blog/sidenotes/
 ** TODO Metapost
  [2020-11-13 Fri 09:40]
-** DONE Disclaimer, terms, privacy policy, and such technical pages
-   CLOSED: [2021-01-13 Wed 23:03]
- [2020-11-13 Fri 09:40]
- (I have these already, I believe)
-** DONE Custom 404 page!
-   CLOSED: [2021-01-13 Wed 23:03]
- [2020-11-13 Fri 09:42]
 ** TODO Implement the =pi= button :)
  [2020-11-13 Fri 10:33]
- [[file:~/projects/bochkarev.io/TODOs.org::*Deal with long lines in =src= blocks.][Deal with long lines in =src= blocks.]]
-** DONE Correct sticker icons
-   CLOSED: [2021-01-13 Wed 23:03]
-(add as necessary)
-- menu items (lists)
-- posts themselves
 ** TODO correct =svg= icons / single vs. multiple files
 ** TODO Correct local links in posts
 (dirname issue)
 ** TODO Add RSS/Atom feed!
 ** TODO Migrate =biosnippets= repo, maybe?
    seems slightly better, I guess, for snippets...
-** CANCELED I think, maybe add =download= icon?
-   CLOSED: [2021-01-13 Wed 23:04]
-For downloading from the same website
 ** TODO Add legend to the meta-post.
-** TODO Think about metadata
-How to make pages machine-readable by search engines and (possibly) custom bots?
-Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[file:../../zettelkasten/20201003093034-blogs.org][🕮:blogs]]) 
-
 ** TODO Review site accessibility
  [2020-11-10 Tue 22:49]
 
@@ -110,56 +74,12 @@ Also, improves sharing, etc. Seen the note on this in Xiaoxing's notes (see [[fi
 ** TODO Make a shortcode for svg-icon!
  [2021-01-14 Thu 12:08]
  
-** TODO Add bio-snippets page
-   [2021-01-05 Tue 02:15]
 ** TODO Add 1- or 0.5-line space after the footer
-** DONE Fix the fonts
-   CLOSED: [2021-01-13 Wed 23:04]
-   The symbol in the header does not show up on another system??..
-** DONE Fix =ul= CSS: =<ul>= after =<p>= has too large margins/padding  :css:
-   CLOSED: [2021-01-13 Wed 23:04]
 ** Documentation
 *** front-matter parameters
     - icons
     - hidetoc
     - image (twitter-card)
-** DONE Main page with photo
-   CLOSED: [2020-11-24 Tue 22:56]
- [2020-11-13 Fri 09:37]
-
- (two cols layout)
-** DONE Metadata: introduce stickers
-   CLOSED: [2020-11-15 Sun 00:26]
-PDF, Source, etc.
-
-** DONE Floating TOC and such bells.
-   CLOSED: [2020-11-14 Sat 23:45]
- [2020-11-13 Fri 09:38]
-** DONE Deal with long lines in =src= blocks.
-   CLOSED: [2020-11-14 Sat 23:21]
- [2020-11-13 Fri 10:30]
-** DONE Transfer custom css classes from the previous edition
-   CLOSED: [2020-11-14 Sat 23:20]
- [2020-11-13 Fri 10:34]
- Mostly dealing with images.
-** DONE Tables CSS (nice one)
-   CLOSED: [2020-11-14 Sat 23:20]
-** DONE Source code blocks
-   CLOSED: [2020-11-14 Sat 23:20]
-- long lines;
-- expand on hover;
-- padding;
-- (maybe lang name?)
-** DONE Metadata block CSS
-   CLOSED: [2020-11-14 Sat 22:46]
- [2020-11-13 Fri 09:36]
-
- Smaller fonts, gray (deaccent).
-** DONE link/href icons
-   CLOSED: [2020-11-14 Sat 18:04]
-wikipedia, github, local, external.
-** DONE Make sticky menu look better (no overlay, maybe?)
-   CLOSED: [2020-11-14 Sat 18:16]
 ** TODO Fix =li= elements
  [2021-02-05 Fri 20:44]
 
@@ -167,6 +87,5 @@ wikipedia, github, local, external.
 ** TODO Fix org-babel blocks =RESULTS= CSS 
  [2021-02-05 Fri 21:03]
 Add some styling
-** TODO Add a blinking cursor :)
+** TODO Add a blinking cursor?
  [2021-02-06 Sat 23:50]
- [[file:~/projects/bochkarev.io/content-org/tools/ts-cmd.org::*Day I: looking around (Linux)][Day I: looking around (Linux)]]

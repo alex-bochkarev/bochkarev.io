@@ -46,7 +46,7 @@ Probability theory. The ultimate goal was to build (together with the students)
 a usable, practical, but consistent mathematical model of random events.
 
 **More details:** for syllabus, a few methodological notes, and links to
-actual teaching materials (slides / jupyter notebooks) see 👉 [here](/teaching/smtb-probs).
+actual teaching materials (slides / jupyter notebooks) see 👉 [here](/teaching/smtb-prob).
 
 
 ## Seminars at Clemson University
