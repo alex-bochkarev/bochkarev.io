@@ -30,6 +30,14 @@ CLOSED: [2022-04-21 Thu 14:28]
 :LOGBOOK:
 CLOCK: [2022-04-21 Thu 14:00]--[2022-04-21 Thu 14:28] =>  0:28
 :END:
+** TODO Add a dissertation presentation
+** TODO Add Aachen presentation when ready.
+** TODO revise image cards
+- [ ] crop / adjust the image for twitter cards
+- [ ] add OpenGraph
+- [ ] maybe add schema.org here?
+** TODO Add a note on JavaScript in =privacy.md=
+SCHEDULED: <2022-05-04 Wed>
 ** TODO Think about metadata / schema.org / microformats?
 How to make pages machine-readable by search engines and (possibly) custom bots?
 Also, improves sharing, etc. Seen a note on this in Xiaoxing's notes (see [[file:../../zettelkasten/20201003093034-blogs.org][🕮:blogs]]) 

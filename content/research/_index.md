@@ -88,8 +88,9 @@ the optimal game cost, the literature on heuristics
 look to fill in this gap by leveraging some ideas from the
 realm of simulations and game playing research. </details>
 
-🖊️ **Working paper:** in preparation, with Dr. J. Cole Smith. (Abstract submitted/accepted
-to [INOC-2022](https://sites.google.com/view/inoc2022 "International Network
-Optimization Conference 2022"))
+🖊️ **Working paper:** in preparation, with Dr. J. Cole Smith. 
+
+💬 **Presentation:** [INOC-2022](https://sites.google.com/view/inoc2022 "International Network
+Optimization Conference 2022") in Aachen. See also [Book of Abstracts](https://www.math2.rwth-aachen.de/files/inoc2022/bookofabstracts.pdf), Session 4B (Interdiction), p. 129.
 
 💻 **Software stack:** Julia, graphviz (dot), R/ggplot, PBS, make (so far).
