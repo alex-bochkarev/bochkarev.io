@@ -10,7 +10,7 @@ details on these, along with a full list of my shorter notes that
 I think might be useful for teaching in one or another way.
 
 ## Mini-courses
-I have designed from scratch and delivered two mini-courses for [School for
+I have designed from scratch and delivered three mini-courses for [School for
 Molecular and Theoretical Biology](https://molbioschool.org/en/) (SMTB) and
 Puschino Winter School. Both were aimed at (gifted) high school students and
 undergrads. They had nothing to do with the high school program, but I obviously
@@ -34,7 +34,7 @@ computational aspects as well.)
 **More details:** for syllabus, a few methodological notes, and links to
 actual teaching materials (slides / jupyter notebooks) see 👉 [here](/teaching/smtb-algo).
 
-### "Practical Introduction to Probability Theory"
+### "Practical Introduction to Probability Theory."
 ![Experiment with sample mean and variance](./smtb_probs.png#full-shadow)
 
 **Summary:** This is a *theoretical* course, i.e., aimed in first place to
@@ -47,6 +47,19 @@ a usable, practical, but consistent mathematical model of random events.
 
 **More details:** for syllabus, a few methodological notes, and links to
 actual teaching materials (slides / jupyter notebooks) see 👉 [here](/teaching/smtb-prob).
+
+### "How to teach machines: simple examples on ML."
+![Experiment with sample mean and variance](./smtb_ml.png#full-shadow)
+
+**Summary:** The idea was to provide a glimpse into ML by discussing three
+fundamental model types: predicting a number (linear regression), predicting a
+yes-or-no answer (logistic regression), and predicting... whatever (neural
+network). Each topic included a simple numerical illustration (such as this
+three-node network above), and a simple-but-practically-reasonable exercise
+(such as handwritten number recognition with MNIST dataset, using the same
+logic, but more neurons and layers.)
+
+**More details:** syllabus and methodological notes (including teaching materials / jupyter notebooks) are 👉 [here](https://github.com/alex-bochkarev/ML-SMTB-2022).
 
 
 ## Seminars at Clemson University

@@ -10,7 +10,7 @@ summary: This is a quick computational intro to algorithms and data structures i
 
 links:
 - icon: "i-gh"
-  name: "Syllabus (2021)"
+  name: "Syllabus (2022)"
   url: "https://github.com/alex-bochkarev/Algo-SMTB-2021"
 - icon: "i-ipynb"
   name: "Notebook (2020)"
@@ -41,6 +41,7 @@ materials are available via the links above. Comments / questions / suggestions 
 
 -   `Version 1, Workshop (2020):` ca. 2 hours session, online. Russian (presentation) / English (materials),
 -   `Version 2, Minicourse (2021):` four sessions, one hour each, online. Russian and English (materials in English only).
+-   `Version 3, Minicourse (2022):` four sessions, one hour each, online. Russian (materials in English only).
 
 
 ## Background {#background}

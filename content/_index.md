@@ -31,4 +31,4 @@ focus on infrastructure projects, strategy and efficiency in transmission grids.
 Please refer to my [CV](/bochkarev_cv.pdf) and the [programming stack](/notes/stack/) I use for more details.
 
 <br/>
-<div style="text-align: right; font-size: 0.5em;"> <a href="https://github.com/alex-bochkarev/bio-snippets" class="nav-link">♥</a></div>
+<div style="text-align: right; font-size: 0.5em;"> <a href="https://github.com/alex-bochkarev/bio-snippets" class="nav-link">⃝</a></div>
