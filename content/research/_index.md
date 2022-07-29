@@ -53,7 +53,7 @@ with different numerical data) and sensitivity information.
 
 💬 **Presentation:** at INFORMS Annual Meeting 2020. [(slides)](./2020_10_Informs_Bochkarev.pdf)
 
-💾 **Code and data:** work in progress ([current version](./align-BDD/code-docs/overview.html "current code docs"))
+💾 **Code and data:** work in progress; [code docs](./align-BDD/code-docs/overview.html "current code docs"), [repository](https://github.com/alex-bochkarev/align-BDD "github repository")
 
 💻 **Software stack:** Python, R/ggplot, graphviz (dot), Gurobi solver, PBS, GNU parallel, bash, make, sphinx.
 
