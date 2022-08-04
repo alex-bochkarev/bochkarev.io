@@ -49,7 +49,7 @@ benefits (especially when we'd need to re-solve the problem
 with different numerical data) and sensitivity information.
 </details>
 
-🖊️ **Working paper:** Bochkarev, Alexey, and J. Cole Smith. “On Aligning Non-Order-Associated Binary Decision Diagrams.” Under revision in *INFORMS Journal on Computing*.
+🖊️ **Working paper:** Bochkarev, Alexey, and J. Cole Smith. “On Aligning Non-Order-Associated Binary Decision Diagrams.” Under revision in *INFORMS Journal on Computing*. [(preprint)](https://optimization-online.org/2022/08/on-aligning-non-order-associated-binary-decision-diagrams/)
 
 💬 **Presentation:** at INFORMS Annual Meeting 2020. [(slides)](./2020_10_Informs_Bochkarev.pdf)
 
