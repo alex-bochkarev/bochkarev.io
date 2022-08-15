@@ -2,11 +2,18 @@
 title: "My programming stack"
 author: ["admin"]
 date: 2021-09-27
-lastmod: 2022-04-21T14:34:40+02:00
+lastmod: 2022-08-15T23:33:03+02:00
 categories: ["notes"]
 draft: false
 summary: A brief summary of the core software stack I use for research.
 
+links:
+- icon: "i-gh"
+  name: "dotfiles"
+  url: "https://github.com/alex-bochkarev/dotfiles"
+- icon: "i-gh"
+  name: "(Space-) Emacs config"
+  url: "https://github.com/alex-bochkarev/my-spacemacs-dotfiles"
 ---
 
 I am not a software engineer, but we do a lot of programming and computational
