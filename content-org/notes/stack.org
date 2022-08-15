@@ -15,6 +15,13 @@
 #+begin_src yaml :front_matter_extra t
 summary: A brief summary of the core software stack I use for research.
 
+links:
+- icon: "i-gh"
+  name: "dotfiles"
+  url: "https://github.com/alex-bochkarev/dotfiles"
+- icon: "i-gh"
+  name: "(Space-) Emacs config"
+  url: "https://github.com/alex-bochkarev/my-spacemacs-dotfiles"
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,
