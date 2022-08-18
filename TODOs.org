@@ -30,6 +30,12 @@ CLOSED: [2022-04-21 Thu 14:28]
 :LOGBOOK:
 CLOCK: [2022-04-21 Thu 14:00]--[2022-04-21 Thu 14:28] =>  0:28
 :END:
+** DONE fix CSS for local links
+CLOSED: [2022-08-18 Thu 21:32]
+- State "DONE"       from "TODO"       [2022-08-18 Thu 21:32]
+:LOGBOOK:
+CLOCK: [2022-08-18 Thu 21:25]--[2022-08-18 Thu 21:32] =>  0:07
+:END:
 ** TODO Add a dissertation presentation
 ** TODO Add Aachen presentation when ready.
 ** TODO revise image cards
