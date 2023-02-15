@@ -11,20 +11,21 @@ tags: ["foo", "bar"]
 </div>
 
 A researcher in Operations Research / Industrial Engineering focusing on
-mathematical optimization. 
+mathematical optimization. Postdoc at [RPTU Kaiserslautern](https://www.mathematik.uni-kl.de/en/opt).
 
-**Research interests:** mathematical programming, combinatorial optimization, networks, interdiction, decision diagrams, dynamic programming, reinforcement learning. 
+**Research interests:** mathematical programming, combinatorial optimization, networks, interdiction, decision diagrams, dynamic programming, reinforcement learning, quantum computing.
 
-I am broadly interested in combinatorial optimization and networks. My [current
-projects](/research/) take different perspectives on capturing and leveraging
+I am broadly interested in combinatorial optimization and networks. My
+[current projects](/research/) take different perspectives on capturing and leveraging
 structure in optimization problems involving graphs. I am trying to achieve this
-using binary decision diagrams and, more recently, game playing and
-reinforcement learning methods.
+using binary decision diagrams and game playing and reinforcement learning
+methods. Getting involved into quantum computing and the opportunities it creates
+for optimization.
 
 **Education**: PhD OR/IE (2021; [dissertation](https://tigerprints.clemson.edu/all_dissertations/2915/)) from
 Clemson University, with Dr.&nbsp;[J.&nbsp;Cole Smith](https://scholar.google.com/citations?user=87CaUHYAAAAJ), MSc Appl. Maths & Physics (2010), MA Economics (2010).
 
-**Before the academia:** management consulting and electric energy, 
+**Before the academia:** management consulting and electric energy,
 focus on infrastructure projects, strategy and efficiency in transmission grids.
 
 

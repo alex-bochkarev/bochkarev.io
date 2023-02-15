@@ -2,10 +2,10 @@
 title: Contact
 hidetoc: true
 ---
-- **email (preferred)** 
+- **email (preferred)**
   + private: a (one letter) "at" bochkarev dot io [[🔑](/abochkarev-pubkey.asc)];
-  + CU-related: [abochka@g.clemson.edu](mailto:abochka@g.clemson.edu) [[🔑](/abochka-pubkey.asc)];
-- **twitter:** [@a_bochka](https://twitter.com/a_bochka)
+  + work: a (dot) bochkarev "at" rptu (again, dot) de;
+- **microblogs:** [@a_bochka](https://twitter.com/a_bochka) Twitter / [@bochkarev@qoto.org](https://qoto.org/@bochkarev) Mastodon
 - **for urgent matters:** please consider [Signal](https://signal.org/), or: [@abochka](https://t.me/abochka) on
     [Telegram](https://telegram.org/faq#q-how-is-telegram-different-from-whatsapp) (note that the latter is not encrypted by default)
 - **other social media:** I used [LinkedIn](https://www.linkedin.com/in/aabochkaryov) to keep my general public [CV](/bochkarev_cv.pdf). (Not active elsewhere.)
