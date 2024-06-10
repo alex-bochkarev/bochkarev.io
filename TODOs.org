@@ -14,6 +14,13 @@
 - 
 
 * Current project TODOs
+** TODO Update the "Teaching" section
+[2024-06-10 Mo 10:57]
+
+(add supervision)
+** TODO Update the CV (master + public)
+[2024-06-10 Mo 10:56]
+
 ** DONE fix the link to =MATH8100_Project= repo 
 CLOSED: [2022-04-21 Thu 14:03]
 - State "DONE"       from "TODO"       [2022-04-21 Thu 14:03]

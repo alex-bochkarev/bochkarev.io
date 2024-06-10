@@ -1,3 +1,6 @@
 [submodule "themes/desk"]
 	path = themes/desk
 	url = git@github.com:alex-bochkarev/hugo-desk-theme.git
+[submodule "public"]
+	path = public
+	url = git@github.com:alex-bochkarev/alex-bochkarev.github.io.git

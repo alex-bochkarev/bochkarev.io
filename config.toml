@@ -56,7 +56,7 @@ title = "A.B."
       weight=1
     [[menu.side]]
       name="i-twitter"
-      url="https://twitter.com/a_bochka"
+      url="https://x.com/a_bochka"
       weight=3
     [[menu.side]]
       name="i-gh"
