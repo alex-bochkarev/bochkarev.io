@@ -4,10 +4,19 @@ nocat: true
 hidetoc: false
 ---
 
-Here is a brief summary of my current research projects. Please feel free to
+Here is a brief summary of my research projects. Please feel free to
 reach out if you are interested in details. 
 
+See also my [ORCID](https://orcid.org/0000-0002-8325-5759) or [G-Scholar](https://scholar.google.com/citations?user=bebV7sEAAAAJ&hl=en) profiles for a full list of papers.
+
 ## Quantum computing for discrete optimization: a highlight of three technologies.
+<div class="h2-links">
+{{< h-link href="https://arxiv.org/abs/2405.14353" text="arXiv:2409.01373" >}}
+{{< h-link href="/research/qopt-overview.bib" text="citation (bib)" >}}
+{{< h-link href="https://github.com/alex-bochkarev/qopt-overview" text="code & data" icon="i-gh" >}}
+{{< h-link href="https://alex-bochkarev.github.io/qopt-overview" text="code docs" icon="i-gh" >}}
+</div>
+
 ![QAOA scheme, figure with runtime and a table with qubit requirements](./qopt-overview/img/main-pic.png#full-shadow)
 
 **Summary:** presenting a practice-focused, OR scientist's perspective on
@@ -36,7 +45,7 @@ annealer from D-Wave, and a gate-based device from IBM .
 
 </details>
 
-🖊️ **Working paper:**  A. Bochkarev, R. Heese, S. Jäger, P. Schiewe, A. Schöbel. "Quantum computing for discrete optimization: a highlight of three technologies." (in preparation)
+🖊️ **Authors:**  <u>A. Bochkarev</u>, R. Heese, S. Jäger, P. Schiewe, A. Schöbel.
 
 💬 **Presentations:** GOR-2023 (Hamburg, DE), GOR WG "Simulation und Optimierung komplexer
 Systeme" 2023 (Ingolstadt, DE), MIC-2024 (Lorient, FR).
@@ -44,6 +53,12 @@ Systeme" 2023 (Ingolstadt, DE), MIC-2024 (Lorient, FR).
 💻 **Software stack:** Python (qiskit, D-Wave's Ocean, aws/bracket), R/ggplot, Gurobi solver, bash, make.
 
 ## Bayesian optimisation with improved information sharing for the variational quantum eigensolver
+<div class="h2-links">
+{{< h-link href="https://arxiv.org/abs/2405.14353" text="arXiv:2405.14353" >}}
+{{< h-link href="/research/bois.bib" text="citation (bib)" >}}
+{{< h-link href="https://github.com/milena-roehrs/BOIS-with-immediate-sharing" text="code & data" icon="i-gh" >}}
+</div>
+
 ![Figure of deviations of the found energy values from the reference.](./bois.png#full-shadow)
 
 **Summary:** analyzing Bayesian optimization framework in the context of VQE
@@ -70,11 +85,14 @@ magnitude.
 
 </details>
 
-🖊️ **Working paper:** Milena Röhrs, Alexey Bochkarev, Arcesio C. Medina, "Bayesian optimisation with improved information sharing for the variational quantum eigensolver." [arXiv:2405.14353](https://arxiv.org/abs/2405.14353)
-
-💾 **Code and data:** [github repo](https://github.com/milena-roehrs/BOIS-with-immediate-sharing) by Milena Röhrs.
+🖊️ **Authors:** Milena Röhrs, <u>Alexey Bochkarev</u>, Arcesio C. Medina
 
 ## An RL-powered heuristic for Dynamic Shortest-Path Interdiction
+<div class="h2-links">
+{{< h-link href="https://doi.org/10.1002/net.22243" text="paper" >}}
+{{< h-link href="/research/mcts_dspi.bib" text="citation (bib)" >}}
+</div>
+
 ![Tree picture](./dspi_tree.png#full-shadow)
 
 **Summary:** Designing algorithms to "play the game" of [Dynamic Shortest-Path
@@ -105,7 +123,7 @@ the optimal game cost, the literature on heuristics
 look to fill in this gap by leveraging some ideas from the
 realm of simulations and game playing research. </details>
 
-🖊️ **Working paper:** in preparation, with Dr. J. Cole Smith.  (Currently under review)
+🖊️ **Authors:** <u>Alexey Bochkarev</u>, J. Cole Smith.
 
 💬 **Presentation:** [INOC-2022](https://sites.google.com/view/inoc2022 "International Network
 Optimization Conference 2022") in Aachen. See also [Book of Abstracts](https://www.math2.rwth-aachen.de/files/inoc2022/bookofabstracts.pdf), Session 4B (Interdiction), p. 129.
@@ -113,6 +131,15 @@ Optimization Conference 2022") in Aachen. See also [Book of Abstracts](https://w
 💻 **Software stack:** Julia, graphviz (dot), R/ggplot, PBS, make.
 
 ## On collections of BDDs and "order-associated" diagrams.
+<div class="h2-links">
+{{< h-link href="https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1293" text="paper" >}}
+{{< h-link href="https://optimization-online.org/2022/08/on-aligning-non-order-associated-binary-decision-diagrams/" text="preprint" >}}
+{{< h-link href="./2020_10_Informs_Bochkarev.pdf" text="slides" icon="i-pdf" >}}
+{{< h-link href="/research/align-BDD.bib" text="citation (bib)" >}}
+{{< h-link href="https://github.com/alex-bochkarev/align-BDD " text="code & data" icon="i-gh" >}}
+{{< h-link href="./align-BDD/code-docs/overview.html" text="code docs" icon="i-gh" >}}
+</div>
+
 ![Branch and Bound tree](./siftup.png#full-shadow)
 
 **Summary:** Designing a heuristic to find a "good" shared order
@@ -154,10 +181,8 @@ benefits (especially when we'd need to re-solve the problem
 with different numerical data) and sensitivity information.
 </details>
 
-🖊️ **Paper:** Alexey Bochkarev and J. Cole Smith. “On Aligning Non-Order-Associated Binary Decision Diagrams.” *INFORMS Journal on Computing*. [(paper)](https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1293),  [(preprint)](https://optimization-online.org/2022/08/on-aligning-non-order-associated-binary-decision-diagrams/)
+🖊️ **Authors:** <u>Alexey Bochkarev</u> and J. Cole Smith. 
 
-💬 **Presentation:** at INFORMS Annual Meeting 2020. [(slides)](./2020_10_Informs_Bochkarev.pdf)
-
-💾 **Code and data:** [code docs](./align-BDD/code-docs/overview.html "current code docs"), [repository](https://github.com/alex-bochkarev/align-BDD "github repository")
+💬 **Presentation:** INFORMS Annual Meeting 2020.
 
 💻 **Software stack:** Python, R/ggplot, graphviz (dot), Gurobi solver, PBS, GNU parallel, bash, make, sphinx.
