@@ -11,7 +11,7 @@ See also my [ORCID](https://orcid.org/0000-0002-8325-5759) or [G-Scholar](https:
 
 ## Quantum computing for discrete optimization: a highlight of three technologies.
 <div class="h2-links">
-{{< h-link href="https://arxiv.org/abs/2405.14353" text="arXiv:2409.01373" >}}
+{{< h-link href="https://arxiv.org/abs/2409.01373" text="arXiv:2409.01373" >}}
 {{< h-link href="/research/qopt-overview.bib" text="citation (bib)" >}}
 {{< h-link href="https://github.com/alex-bochkarev/qopt-overview" text="code & data" icon="i-gh" >}}
 {{< h-link href="https://alex-bochkarev.github.io/qopt-overview" text="code docs" icon="i-gh" >}}
