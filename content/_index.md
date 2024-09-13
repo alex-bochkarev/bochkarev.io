@@ -13,7 +13,7 @@ tags: ["foo", "bar"]
 A researcher in Operations Research / Industrial Engineering focusing on
 mathematical optimization. Postdoc at [RPTU Kaiserslautern](https://www.mathematik.uni-kl.de/en/opt).
 
-**Research interests:** mathematical programming, combinatorial optimization, networks, interdiction, decision diagrams, dynamic programming, reinforcement learning, quantum computing.
+**Research interests:** mathematical programming, combinatorial optimization, networks, interdiction, decision diagrams, dynamic programming, reinforcement learning, quantum computing.  ([ORCID](https://orcid.org/0000-0002-8325-5759), [G-Scholar](https://scholar.google.com/citations?user=bebV7sEAAAAJ&hl=en))
 
 I am broadly interested in combinatorial optimization and networks. My
 [current projects](/research/) take different perspectives on capturing and leveraging

@@ -11,9 +11,11 @@
 ** On main page
 - https://themes.gohugo.io/theme/academic/
 - https://stackoverflow.com/questions/4538447/how-to-create-two-columns-on-a-web-page
-- 
 
 * Current project TODOs
+** TODO implement GPG keys discovery
+** TODO add Mastodon profile link (with =rel "me"=)
+** TODO publish code & data for MCTS-DSPI
 ** TODO Update the "Teaching" section
 [2024-06-10 Mo 10:57]
 
@@ -21,28 +23,6 @@
 ** TODO Update the CV (master + public)
 [2024-06-10 Mo 10:56]
 
-** DONE fix the link to =MATH8100_Project= repo 
-CLOSED: [2022-04-21 Thu 14:03]
-- State "DONE"       from "TODO"       [2022-04-21 Thu 14:03]
-:LOGBOOK:
-CLOCK: [2022-04-21 Thu 13:58]--[2022-04-21 Thu 14:03] =>  0:05
-:END:
-[2022-03-24 Thu 15:40]
-[[file:~/projects/bochkarev.io/content-org/notes/stack.org::- For a high-performance code, besides Julia, I would go with C++ or Java. (My last experience involved implementing \[\[https://en.wikipedia.org/wiki/Ellipsoid_method\]\[Ellipsoid method\]\] for LPs as a \[\[https://github.com/alex-bochkarev/MATH8100_Project\]\[course project\]\].)]]
-
-(this underscore doesn't work with GitHub, as usual...)
-** DONE Add code docs for align-BDD
-CLOSED: [2022-04-21 Thu 14:28]
-- State "DONE"       from "TODO"       [2022-04-21 Thu 14:28]
-:LOGBOOK:
-CLOCK: [2022-04-21 Thu 14:00]--[2022-04-21 Thu 14:28] =>  0:28
-:END:
-** DONE fix CSS for local links
-CLOSED: [2022-08-18 Thu 21:32]
-- State "DONE"       from "TODO"       [2022-08-18 Thu 21:32]
-:LOGBOOK:
-CLOCK: [2022-08-18 Thu 21:25]--[2022-08-18 Thu 21:32] =>  0:07
-:END:
 ** TODO Add a dissertation presentation
 ** TODO Add Aachen presentation when ready.
 ** TODO revise image cards
@@ -96,17 +76,21 @@ Also, improves sharing, etc. Seen a note on this in Xiaoxing's notes (see [[file
  [2021-01-14 Thu 12:08]
  
 ** TODO Add 1- or 0.5-line space after the footer
-** Documentation
-*** front-matter parameters
-    - icons
-    - hidetoc
-    - image (twitter-card)
 ** TODO Fix =li= elements
  [2021-02-05 Fri 20:44]
 
  (so I don't need double newlines after a sub-list)
-** TODO Fix org-babel blocks =RESULTS= CSS 
+** TODO Fix org-babel blocks =RESULTS= CSS
  [2021-02-05 Fri 21:03]
 Add some styling
 ** TODO Add a blinking cursor?
  [2021-02-06 Sat 23:50]
+
+* Documentation
+** TODO write a proper theme README
+** front-matter parameters
+    - icons
+    - hidetoc
+    - image (twitter-card)
+** shortcodes
+    - =h-link= with =h2-links= class to remove whitespace after =<h2>=
