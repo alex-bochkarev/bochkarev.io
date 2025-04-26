@@ -14,6 +14,9 @@
 
 * Current project TODOs
 ** TODO implement GPG keys discovery
+** TODO make a pop-up bib entry
+See https://codepen.io/imprakash/pen/GgNMXO
+(perhaps, takes another shortcode, ={{< bibref >}}=, but must be simple)
 ** TODO add Mastodon profile link (with =rel "me"=)
 ** TODO publish code & data for MCTS-DSPI
 ** TODO Update the "Teaching" section
