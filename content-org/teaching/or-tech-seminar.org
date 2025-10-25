@@ -13,7 +13,7 @@
 #+hugo_categories: "teaching"
 
 #+begin_src yaml :front_matter_extra t
-summary: A quick note on OR Tech Seminar topics and logistics.
+summary: A summary note on OR Tech Seminar topics and logistics. (A "research toolbox" discussion, a series of seminars organized under the umbrella of CU INFORMS Student Chapter.)
 hidetoc: t
 
 description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
@@ -29,7 +29,7 @@ aliases:
   - /edu/or-tech-seminar/
   - /tools/or-tech-seminar/
 
-hide_from_list: true
+hide_from_list: false
 #+end_src
 
 # available links are: i-envelope, i-twitter, i-tg, i-key, i-keybase, i-gh,

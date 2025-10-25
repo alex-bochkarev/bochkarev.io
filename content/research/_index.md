@@ -11,6 +11,7 @@ See also my [ORCID](https://orcid.org/0000-0002-8325-5759) or [G-Scholar](https:
 
 ## Quantum computing for discrete optimization: a highlight of three technologies.
 <div class="h2-links">
+{{< h-link href="https://doi.org/10.1016/j.ejor.2025.07.063" text="paper" icon="i-paper" >}}
 {{< h-link href="https://arxiv.org/abs/2409.01373" text="arXiv:2409.01373" >}}
 {{< h-link href="/research/qopt-overview.bib" text="citation (bib)" >}}
 {{< h-link href="https://github.com/alex-bochkarev/qopt-overview" text="code & data" icon="i-gh" >}}
@@ -89,7 +90,7 @@ magnitude.
 
 ## An RL-powered heuristic for Dynamic Shortest-Path Interdiction
 <div class="h2-links">
-{{< h-link href="https://doi.org/10.1002/net.22243" text="paper" >}}
+{{< h-link href="https://doi.org/10.1002/net.22243" text="paper" icon="i-paper">}}
 {{< h-link href="/research/mcts_dspi.bib" text="citation (bib)" >}}
 </div>
 
@@ -132,8 +133,8 @@ Optimization Conference 2022") in Aachen. See also [Book of Abstracts](https://w
 
 ## On collections of BDDs and "order-associated" diagrams.
 <div class="h2-links">
-{{< h-link href="https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1293" text="paper" >}}
-{{< h-link href="https://optimization-online.org/2022/08/on-aligning-non-order-associated-binary-decision-diagrams/" text="preprint" >}}
+{{< h-link href="https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1293" text="paper" icon="i-paper" >}}
+{{< h-link href="https://optimization-online.org/2022/08/on-aligning-non-order-associated-binary-decision-diagrams/" text="preprint" icon="i-paper" >}}
 {{< h-link href="./2020_10_Informs_Bochkarev.pdf" text="slides" icon="i-pdf" >}}
 {{< h-link href="/research/align-BDD.bib" text="citation (bib)" >}}
 {{< h-link href="https://github.com/alex-bochkarev/align-BDD " text="code & data" icon="i-gh" >}}

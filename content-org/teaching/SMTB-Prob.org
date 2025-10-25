@@ -17,7 +17,7 @@ summary: This is a quick numerical intro to probability theory in the form of a 
 links:
 - icon: "i-gh"
   name: "Syllabus (ENG)"
-  url: "https://github.com/alex-bochkarev/Probs-SMTB-2021"
+  url: "https://github.com/alex-bochkarev/Probs-SMTB-21"
 - icon: "i-gh"
   name: "Syllabus (RUS)"
   url: "https://github.com/alex-bochkarev/zpsh-21-probs"

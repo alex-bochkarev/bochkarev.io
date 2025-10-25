@@ -2,14 +2,51 @@
 title: "Teaching"
 nocat: true
 ---
+I like teaching, and I really enjoy the moments when I am able to convey not
+only the technical results or algorithms per se, but get the core ideas and the
+underlying mathematical intuition across. Sometimes it seems even possible to
+convey such intuition with remarkably limited prerequisites --- such as in our
+(mini-)courses aimed at high-school students interested in STEM. Admittedly, it
+is not easy to get such a group together physically, hence my special interest
+towards remote studies.
 
-My recent teaching experience comprises two parts: I have been teaching
-"mini-courses" for summer/winter schools, and participating in some activities
-in my current university (mostly organizing seminars). This page provides some
-details on these, along with a full list of my shorter notes that
-I think might be useful for teaching in one or another way.
+This page contains notes related to my teaching experience, which happens to
+span, roughly, undergraduate and graduate university- (including continued
+education), and partly high-school levels.
 
-## Mini-courses
+## University-level courses
+
+### "Mathematics of Quantum Computing"
+![RPTU Course picture](./rptu-course.png#full-shadow)
+
+Together with Dr. Schöbel, we taught a two-semester course `MAT-59-15-V-7` at
+RPTU aimed at BSc and MSc students, where I was responsible for a semester worth
+of material (second part) called "Quantum Algorithms", with a special emphasis on
+quantum optimization.
+
+### "Mathematical Foundations of Quantum Technology"
+
+In the framework of [QuanTUK project](https://www.quantensysteme.info/projektatlas/projekte/q/quantuk)
+funded by [BMFTR](https://www.bmftr.bund.de/EN/Home/home_node.html), we developed an MSc program ["Quantum Technologies"](https://fernstudium.rptu.de/en/distance-learning-programmes/technology-engineering-and-natural-sciences/quantum-technologies) for our (awesome!) Distance and Independent Studies Center ([DISC](https://fernstudium.rptu.de/en)). I authored two courses in the program, the second one in co-authorship with Dr. Schöbel.
+
+!["Math Foundations" course picture](./qmath.png#full-shadow)
+
+The first one covered the mathematical foundations of quantum computing,
+including a few remarks about complex numbers, an introduction to linear algebra
+in the context of quantum computing, and a few further ideas specific to quantum
+algorithms (such as quantum teleportation, entanglement and oracle-based
+algorithms).
+
+### Quantum Algorithms and Quantum Optimization
+
+!["Quantum Algorithms" course picture](./qalg.png#full-shadow)
+
+The second course developed in the QuanTUK project, called "Quantum Computing
+Part I" in the program, zoomed in on the topics of quantum algorithms in
+general, and those relevant for quantum optimization in particular (including
+the exposition related to Adiabatic theorem, annealing, and QAOA).
+
+## Mini-courses aimed at high-school students
 I have designed from scratch and delivered three mini-courses for [School for
 Molecular and Theoretical Biology](https://molbioschool.org/en/) (SMTB) and
 Puschino Winter School. Both were aimed at (gifted) high school students and
@@ -61,19 +98,6 @@ logic, but more neurons and layers.)
 
 **More details:** syllabus and methodological notes (including teaching materials / jupyter notebooks) are 👉 [here](https://github.com/alex-bochkarev/ML-SMTB-2022).
 
-
-## Seminars at Clemson University
-I believe that learning need not necessarily happen in the
-form of courses, so we have been working with the CU INFROMS Student Chapter on
-two series of seminars:
-- **OR Tech Seminar** (Spring 2021): discussion of the "researchers' toolbox".
-  I have presented a series of four one-hour seminars on working with the
-  literature, organizing notes, version control, command line, etc. [(more
-  details)](/edu/or-tech-seminar/)
-- **Journal club** on network optimization and interdiction (Fall 2021): we have
-  organized regular meetings, basically, to learn how to read papers
-  and how to do (good) science.
-
 ## Full index of other "teaching" notes
-Below is a complete list of my notes and materials related to teaching. Any feedback /
+Below is a complete list of my other notes and materials related to teaching. Any feedback /
 suggestions / corrections are very welcome!

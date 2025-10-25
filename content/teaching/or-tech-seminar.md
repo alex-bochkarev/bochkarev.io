@@ -2,11 +2,11 @@
 title: "💬 OR Tech Seminar: outline"
 author: ["Alexey Bochkarev"]
 date: 2021-01-14
-lastmod: 2021-09-28T22:33:00-04:00
+lastmod: 2025-10-25T14:56:48+02:00
 tags: ["tech-seminar"]
 categories: ["teaching"]
 draft: false
-summary: A quick note on OR Tech Seminar topics and logistics.
+summary: A summary note on OR Tech Seminar topics and logistics. (A "research toolbox" discussion, a series of seminars organized under the umbrella of CU INFORMS Student Chapter.)
 hidetoc: t
 
 description: "OR Tech Seminar with CU INFORMS Student Chapter: an outline."
@@ -22,7 +22,7 @@ aliases:
   - /edu/or-tech-seminar/
   - /tools/or-tech-seminar/
 
-hide_from_list: true
+hide_from_list: false
 ---
 
 {{< figure src="/images/TechSeminar_logo.png" >}}
@@ -32,7 +32,7 @@ This is an overview page for "OR Tech Seminar" organized with support from
 finished, unless we decide there are more topics we would like to talk about.
 
 Some more notes will be posted here soon. (Clemson login is required to access
-the [recordings](https://clemson.box.com/s/p75mzqb9sfw5u2my61axi15qqzu8y4nc).) Comments and suggestions are very [welcome](mailto:tech%5Fseminar@bochkarev.io) -- both on past and
+the [recordings](https://clemson.box.com/s/p75mzqb9sfw5u2my61axi15qqzu8y4nc).) Comments and suggestions are very [welcome](mailto:tech_seminar@bochkarev.io) -- both on past and
 possible future seminars.
 
 
@@ -41,7 +41,7 @@ possible future seminars.
 We will be discussing various tools (in a very broad sense) we, as
 researchers, use -- to share experience, configs, and ideas. Each seminar will
 consist of a speaker presentation with a discussion along the way, at most
-one hour in total. <br/> <br/>
+one hour in total. &lt;br/&gt; &lt;br/&gt;
 
 
 ## Core discussion {#core-discussion}
