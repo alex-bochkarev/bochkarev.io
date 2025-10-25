@@ -5,7 +5,7 @@ nocat: true
 I like teaching, and I really enjoy the moments when I am able to convey not
 only the technical results or algorithms per se, but get the core ideas and the
 underlying mathematical intuition across. Sometimes it seems even possible to
-convey such intuition with remarkably limited prerequisites --- such as in our
+convey such intuition assuming remarkably limited prerequisites --- such as in our
 (mini-)courses aimed at high-school students interested in STEM. Admittedly, it
 is not easy to get such a group together physically, hence my special interest
 towards remote studies.
@@ -19,8 +19,8 @@ education), and partly high-school levels.
 ### "Mathematics of Quantum Computing"
 ![RPTU Course picture](./rptu-course.png#full-shadow)
 
-Together with Dr. Schöbel, we taught a two-semester course `MAT-59-15-V-7` at
-RPTU aimed at BSc and MSc students, where I was responsible for a semester worth
+Together with Dr. Schöbel, we taught a one-semester (14 weeks) course `MAT-59-15-V-7` at
+RPTU aimed at BSc and MSc students, where I was responsible for a half-semester worth
 of material (second part) called "Quantum Algorithms", with a special emphasis on
 quantum optimization.
 
